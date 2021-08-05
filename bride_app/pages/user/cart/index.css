@@ -1,0 +1,43 @@
+
+checkbox{zoom: 80%;}
+
+
+/* 全部列表 */
+.cart_list{padding-bottom:50px;position: relative;}
+
+
+/* 产品列表 */
+#pro_info{position: relative;}
+#pro_info .list-group{padding: 10px;}
+#pro_info .zheng{line-height: 70px;}
+#pro_info .pro_img{margin: 0 10px;}
+#pro_info .pro_img image{height: 70px;width: 70px;display: flex;}
+#pro_info .info{position: relative;min-height: 80px;}
+#pro_info .info .title{line-height: 18px;height: 36px;overflow: hidden;}
+#pro_info .info .type{line-height: 14px;height: 14px;font-size: 24rpx;margin-bottom: 4px;}
+#pro_info .info .price{line-height: 20px;}
+#pro_info .info .sum{color: #999;}
+#pro_info .info .buy_num{position: absolute;bottom: 0;right: 0;padding-right: 0;}
+#pro_info .del{position:absolute;right:0;top: 0;border-radius: 50%;width: 26px;height: 26px;line-height: 26px;text-align: center;}
+
+
+
+.pro_lists .cms_cover .img{width: 70px;height: 70px;}
+.pro_lists .no-tag{line-height: 70px;margin-right: 4px;}
+.pro_lists .no-tag .span{background: #a3a3a3;}
+.pro_lists .pro_info{position: relative;}
+.pro_lists .del{position:absolute;right: 0;bottom: 0;border-radius: 50%;width: 26px;height: 26px;line-height: 26px;text-align: center;}
+
+
+/* 结算 */
+#cartfooter{height: 50px;line-height: 50px;position: fixed;left: 0;bottom: 0;width: 100%;background:#fff;z-index:9;display: flex;}
+#cartfooter .lInfo{display: flex;justify-content: space-between;flex: 1;width: 100%;overflow: hidden;}
+#cartfooter .lInfo .group{display: flex;align-items: center;}
+#cartfooter .zheng{padding: 0 5px 0 10px;height: 50px;display: flex;align-items: center;}
+#cartfooter .zheng checkbox{display: flex;}
+#cartfooter .submit{width: 100px;text-align: center;height: 50px;line-height: 50px;border-radius: 0;}
+
+
+.cart-empty{text-align: center;}
+.cart-empty .img{width: 90px;height: 90px;}
+.cart-empty .btn{border: 1px #FF721F solid;background: transparent;border-radius: 36px;height: 36px;line-height: 36px;width: 120px;margin: 0 auto;color: #FF721F;font-size: 14px;}

@@ -1,0 +1,5 @@
+/* 轮播 */
+.swiper_box image{width: 100%;}
+
+.tread{justify-content: space-between;padding: 0 20upx;}
+.tread .tread-info{padding: 0;margin: 0;}

@@ -1,0 +1,17 @@
+.show-block{margin-bottom: 16rpx;background-color: #fff;border-radius: 16rpx;}
+.show-block .sec-title{font-size: 32rpx;font-weight: bold;padding: 30rpx 0;line-height: 1;}
+
+
+/* 介绍 */
+.info-sec{margin-top: -16rpx;position: relative;z-index: 1;padding: 0 40rpx;}
+.info-sec .header{display: flex;align-items: flex-end;justify-content: space-between;position: relative;z-index: 9;}
+.info-sec .head-img{width: 200rpx;height: 200rpx;display: flex;border-radius: 16rpx;margin-top: -100rpx;}
+.info-sec .label-group{display: flex;align-items: center;line-height: 1;font-size: 30rpx;padding-bottom: 30rpx;border-bottom: 1rpx #eee solid;}
+.info-sec .label{padding-right: 20rpx;margin-right: 20rpx;border-right: 2rpx #777 solid;}
+.info-sec .label:last-child{border-right: 0;}
+.info-sec .intro .content{color: #434343;line-height: 2;font-size: 30rpx;text-align: justify;padding: 20rpx 0;}
+
+
+/* 标签 */
+.tag-group{display: flex;flex-wrap: wrap;}
+.tag-group .tag{background-color: #f3f3f3;height: 28px;line-height: 28px;padding: 0 12px;border-radius: 14px;font-size: 13px;margin: 0 10px 10px 0;}

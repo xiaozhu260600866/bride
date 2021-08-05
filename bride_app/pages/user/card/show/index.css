@@ -1,0 +1,27 @@
+/* 滑动的联系信息 */
+.card-info{width: 100%;overflow: hidden;white-space: nowrap;}
+.card-info .info-item{display: inline-block;border-radius: 4rpx;-moz-box-shadow:0 0 16rpx #dedede;-webkit-box-shadow:0 0 16rpx #dedede;box-shadow:0 0 16rpx #dedede;margin-right: 20rpx;min-width: 200rpx;padding: 20rpx 30rpx;background: #fff;}
+.card-info .info-item .p{font-size: 28rpx;}
+.card-info .info-item .p1{color: #666;}
+.card-info .info-item .iconfont{color: #387ef8;padding-right: 10rpx;}
+
+
+/* 关注点 */
+.attention{display: flex;padding: 20rpx;background: #fff;}
+.attention .head-item{width: 100%;display: flex;min-height: 40rpx;}
+.attention .head-item .img{height: 40rpx;width: 40rpx;border-radius: 6rpx;margin-right: 6rpx;}
+.attention_bd{flex: 1;}
+.attention_ft{padding-left: 30rpx;text-align: center;}
+
+
+/* 版块标题 */
+.sec-title{padding: 40rpx 20rpx;}
+.sec-title .name{font-size: 34rpx;color: #000;display: block;line-height: 1;font-weight: bold;}
+.sec-nav{display: flex;background-color: #fff;border-bottom: 1rpx #f5f5f5 solid;}
+.sec-nav .name{height: 88rpx;line-height: 88rpx;text-align: center;font-size: 32rpx;color: #333;width: 100%;}
+.sec-nav .cur{color: #3c84d9;position: relative;font-weight: bold;}
+.sec-nav .cur::before{content: '';display: block;position: absolute;left: 50%;bottom: 0;margin-left: -40rpx;width: 80rpx;height: 6rpx;background-color: #3c84d9;border-radius: 6rpx;}
+
+
+.nw-sec .sec-con .img{width: 100%;}
+.nw-sec .nodata{font-size: 28rpx;color: #999;text-align: center;padding: 60rpx 0;}

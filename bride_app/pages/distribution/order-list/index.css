@@ -1,0 +1,22 @@
+page{padding-bottom: 10px!important;}
+
+/* 滚动标题 */
+.msc_tabs {white-space: nowrap; display: flex;background: #fff;}
+.msc_tabs .liNav {display: inline-block;position: relative;padding: 10px 0;margin: 0 15px;font-size: 14px;color: #666;line-height: 26px;}
+.msc_tabs .cur{color: #ff721f;}
+.msc_tabs .cur:before{content: "";display: block;position: absolute;bottom: 0;left: 0;height: 3px;width: 100%;background: #ff721f;}
+
+
+.time-date{top: 92px;}
+
+
+.order-list{margin: 10px;background-color: #fff;border-radius: 6px;}
+.order-list .title{display: flex;align-items: center;}
+.order-list .title .head{width: 30px;height: 30px;border-radius: 50%;display: flex;}
+.order-list .title .name{flex: 1;overflow: hidden;width: 100%;}
+.order-list .cart-tb{display: flex;}
+.order-list .cart-tb .pro-img image{width: 60px;height: 60px;display: flex;}
+.order-list .pro-info .pro-name{width: 100%;flex: 1;overflow: hidden;}
+.order-list .pro-info .pro-name .name{line-height: 18px;height: 36px;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;margin-bottom: 8px;}
+.order-list .pro-info .pro-name .group{line-height: 16px;display: flex;justify-content: space-between;}
+.order-list .pro-info .infob{display: flex;justify-content: space-between;}

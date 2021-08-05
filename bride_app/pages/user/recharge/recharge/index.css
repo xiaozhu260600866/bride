@@ -1,0 +1,23 @@
+page{background: #fff;}
+
+.weui-btn-area .btn{padding: 8px 15px;}
+
+.recharge-input{color: #ff721f;font-size: 24px;text-align: right;}
+
+
+.recharge-cells{border: 1px #ddd solid;}
+
+
+/* 充值 */
+.rechage-price{display: flex;flex-wrap: wrap;}
+.rechage-price .selectAmount{width:calc(33.33% - 10px);margin: 5px;border: 1px #e1e1e1 solid;border-radius: 4px;padding: 10px 0;text-align: center;}
+.rechage-price .selectAmount ._p{color: #aaa;text-align: center;}
+.rechage-price .selectAmount ._p.price{font-size: 18px;color: #ff721f;}
+.rechage-price .selectAmount ._p.flow{font-size: 14px;}
+.rechage-price .selectAmount.select{background: #ff721f;border-color: #ff721f;}
+.rechage-price .selectAmount.select ._p.price{color: #fff!important;}
+
+
+#footer-btn{height: 60px;}
+#footer-btn myform{width: 100%;}
+#footer-btn .f-btn-red {height: 50px;line-height: 50px;font-size: 17px;}

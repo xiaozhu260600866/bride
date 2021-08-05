@@ -1,0 +1,39 @@
+/* 轮播 */
+.swiper_box image{width: 100%;}
+.tread{justify-content: space-between;padding: 0 20upx;}
+.tread .tread-info{padding: 0;margin: 0;}
+
+
+/* 标题 */
+.ass-title{display: flex;justify-content: space-between;}
+.ass-title .name{line-height: 16px;height: 16px;border-left: 4px #FF5400 solid;padding-left: 8px;}
+.ass-title .icon{width: 80px;text-align: right;line-height: 16px;height: 16px;}
+.Isec{background: #fff;margin: 10px;border-radius: 6px;}
+
+
+/* 广告图 */
+.ad_banner:nth-child(2n){margin-bottom: 10px;padding-top: 0!important;}
+.ad_group .item{width: calc(100%- 10px);margin-right: 10px;flex: 1;}
+.ad_group .item:nth-child(2n){margin-right: 0;}
+.ad_group .item .img{width: 100%;display: flex;}
+
+
+/* 组广告 */
+.groupAd{background-color: #fff;}
+.groupAd .img{width: 100%;display: flex;height: 200upx;border-radius: 12upx;}
+.groupAd image{width: 100%!important;}
+
+
+.index-card{background-color: #fff;}
+.index-card .conn-item{margin: 0 30rpx!important;border-bottom: 1rpx #eee solid;border-radius: 0!important;padding: 30rpx 0!important;}
+.index-card .conn-item:last-child{border-bottom: 0;}
+
+
+
+.cross-people{white-space: nowrap; display: flex;padding-left: 24rpx;}
+.cross-people-item{display: inline-block;position: relative;height: 280rpx;width: 220rpx;border-radius: 12rpx;overflow: hidden;margin-right: 12rpx;}
+.cross-people-item .cover{max-width: 100%;max-height: 100%;display: flex;}
+.cross-people-item .txt{position: absolute;bottom: 0;left: 0;width: 100%;color: #fff;padding: 12rpx;line-height: 1;z-index: 10;}
+.cross-people-item .name{font-size: 30rpx;}
+.cross-people-item .data{font-size: 24rpx;margin-top: 10rpx;}
+.cross-people-item .bg{position: absolute;bottom: 0;left: 0;width: 100%;z-index: 9;height: 120rpx;background-image: linear-gradient(transparent , rgba(0,0,0,0.8));}

@@ -1,0 +1,30 @@
+/* 商品信息 */
+.pro-info .cart-tb {position: relative;padding: 10px;}
+.pro-info .cart-tb .pro-img {position: absolute;top: 10px;left: 10px;padding-right: 5px;}
+.pro-info .cart-tb .pro-img image {width: 60px;height: 60px;}
+.pro-info .pro-name {vertical-align: top;padding: 0 0 0 70px;}
+.pro-info .pro-name .mark{line-height: 16px;height: 16px;margin-bottom: 6px;font-size: 22rpx;color: #999;}
+.pro-info .pro-name .num{color: #666;}
+.pro-info .pro-price {text-align: right;position: absolute;bottom: 10px;right: 10px;width: 75px;margin-left: 5px;color: #FF4422;}
+.pro-info .infob {padding: 10px;display: flex;}
+.pro-info .infob .p {margin: 0;color: #999;width: 100%;font-size: 13px;}
+
+
+.pro_info{background: #fff;display: flex;}
+.pro_info .pro_img .img{width: 70px;height: 70px;display: flex;border-radius: 10upx;}
+.pro_info .pro_right{flex: 1;overflow: auto;width: 100%;display: flex;align-content: space-between;height: 70px;flex-wrap: wrap;}
+
+
+.text-area{align-items: flex-start;}
+.text-area ._textarea{width: 100%;line-height: 22px;padding: 0!important;}
+
+.cinfo .weui-label{width: 80px;color: #999;}
+.cinfo .weui-label .fc-red,.cinfo .weui-label ._span,.cinfo .weui-label span{display: none;}
+.cinfo .weui-cell__bd{min-height: 34px!important;line-height: 34px!important;}
+.cinfo .picker{font-size: 15px;height: 34px!important;min-height: 34px!important;line-height: 34px!important;}
+.cinfo .text-area .weui-input{line-height: 24px;width: 100%;}
+
+
+/* 结算脚部 */
+#footer .f_left {width: 65%;color: #FF4351;font-weight: bold;padding-left: 10px;font-size: 16px;font-weight: 400;}
+#footer .f_right {width: 35%;text-align: center;color: #fff;background: #FF4351;font-size: 18px;border-radius: 0;line-height: 50px;}

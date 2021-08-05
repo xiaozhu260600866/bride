@@ -1,0 +1,5 @@
+/* 头部 */
+.info-header {width: 100%;display: flex;}
+.info-header .ih-item {width: 100%;text-align: center;}
+.info-header .ih-item .num{}
+.info-header .ih-item .name {color: #333;}

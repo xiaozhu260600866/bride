@@ -1,0 +1,4 @@
+.modeSelect{display: flex;white-space: nowrap;}
+.modeSelect .modePic{width: 122px;padding: 5px;display: inline-block}
+.modeSelect .modePic .img{width: 112px;height: 64px;border-radius: 10px;-moz-box-shadow:0px 0px 8px #aaa; -webkit-box-shadow:0px 0px 8px #aaa; box-shadow:0px 0px 8px #aaa;border: 3px transparent solid;}
+.modeSelect .modePic.cur .img{border: 3px #3c84d9 solid;}

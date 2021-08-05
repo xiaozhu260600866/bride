@@ -1,0 +1,15 @@
+.coupon-list .list_item{display: flex;position: relative;border-radius: 12upx;padding: 20upx;}
+.coupon-list .list_item .item_left .img{width: 220upx;height: 220upx;display: flex;margin-right: 20upx;border-radius: 12upx;}
+.coupon-list .list_item .item_right{width: 100%;display: flex;flex-wrap: wrap;align-content: space-between;position: relative;z-index: 2;flex: 1;}
+.coupon-list .list_item .ir-bottom{align-items: center;}
+.coupon-list .list_item .ir-bottom .time{font-family: Calibri;}
+.coupon-list .list_item .item_right .state{border: 1upx #33c45d solid;border-radius: 40upx;color: #fff;width: 160upx;text-align: center;background-color: #33c45d;}
+.coupon-list .list_item .item_right .gouser{border-color: #ff721f;color: #ff721f;background: #fff;}
+.coupon-list .list_item .item_right .yesuser{border-color: #aaa;color: #999;background: #fff;}
+
+.completed{position: absolute;top: 0;right: 0;z-index: 1;}
+.completed .img{width: 160upx;height: 160upx;}
+
+.empty{text-align: center;margin-top: 60px;}
+.empty .img{width: 75px;height: 75px;}
+.empty .btn{border: 1px #FF721F solid;background: transparent;border-radius: 36px;height: 36px;line-height: 36px;width: 120px;margin: 10px auto 0;color: #FF721F;font-size: 14px;}

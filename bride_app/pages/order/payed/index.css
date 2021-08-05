@@ -1,0 +1,22 @@
+page{background: #FFf;}
+
+.payed-content{width:100%;}
+.payed-content .con{width:100%;display: flex;align-content: center;justify-content: center;flex-wrap: wrap;padding: 30px 0;}
+.payed-content .con .row{width: 100%;text-align: center;}
+.payed-content .con .iconfont{font-size: 70px;}
+.payed-content .con .content{font-size: 18px;}
+
+.button{width:90%;margin:0 auto;height:50px;line-height:50px;text-align:center;border-radius: 3px;}
+
+
+.coupon-bg{position: fixed;top: 0;left: 0;bottom: 0;right: 0;z-index: 0;}
+.coupon-body{padding: 140upx 20upx 40upx;}
+.coupon-box{background-color: #fff;border-radius: 12upx;position: relative;z-index: 1;}
+.coupon-box .top{position: relative;border-bottom: 2upx dashed #f2f2f2;}
+.coupon-box .top::before,.coupon-box .top::after{content: '';display: block;position: absolute;bottom: -10upx;width: 24upx;height: 24upx;border-radius: 50%;background-color: #33c45d;}
+.coupon-box .top::before{left: -12upx;}
+.coupon-box .top::after{right: -12upx;}
+.coupon-box .info{text-align: center;}
+.coupon-box .info .head{width: 120upx;height: 120upx;border-radius: 50%;position: absolute;top: -60upx;left: 50%;margin-left: -60upx;z-index: 2;}
+.coupon-box .coupon-name{text-align: center;font-size: 40upx;font-weight: bold;padding: 30upx 0;}
+.coupon-box .ad{border-bottom: 2upx dashed #f2f2f2;}

@@ -1,0 +1,32 @@
+page{padding-bottom: 0!important;}
+
+/* 轮播 */
+.swiper_box image{width: 100%!important;}
+.business .title{display: flex;justify-content: space-between;align-items: center;}
+.tread{justify-content: space-between;padding: 0 20upx;}
+.tread .tread-info{padding: 0;margin: 0;}
+
+
+.ass-title{display: flex;justify-content: space-between;}
+.ass-title .name{line-height: 16px;height: 16px;border-left: 4px #FF5400 solid;padding-left: 8px;}
+.ass-title .icon{width: 80px;text-align: right;line-height: 16px;height: 16px;}
+.Isec{background: #fff;margin: 10px;border-radius: 6px;}
+
+
+/* 广告图 */
+.ad_banner:nth-child(2n){margin-bottom: 10px;padding-top: 0!important;}
+.ad_group .item{width: calc(100%- 10px);margin-right: 10px;flex: 1;}
+.ad_group .item:nth-child(2n){margin-right: 0;}
+.ad_group .item .img{width: 100%;display: flex;}
+
+
+/* 统计 */
+.data-count .item{width: 100%;text-align: center;line-height: 1;}
+.data-count .num{font-size: 36rpx;}
+.data-count .txt{font-size: 24rpx;color: #999;padding-top: 16rpx;}
+
+
+/* 填写 */
+.data-sub .dx-cell{border-bottom: 0!important;padding: 20rpx 0!important;}
+.data-sub .dx-label{text-align: right;width: 120rpx!important;}
+.data-sub .dx-input{border-radius: 8rpx;background-color: #eee;padding: 0 20rpx;}

@@ -1,0 +1,21 @@
+/* 头部 */
+.list-class{display: flex;}
+.list-class .nav-tab{height: 88upx;line-height: 88upx;text-align: center;font-size: 30upx;color: #333;width: 100%;}
+.list-class .selected {color: #f31b0c;border-bottom: 6upx solid #f31b0c;}
+.list-class .del-icon{border-radius: 50%;width: 52upx;height: 52upx;line-height: 52upx;text-align: center;}
+
+
+/* 列表 */
+.pro_info{background: #fff;}
+.pro_info .order_date{height: 80upx;line-height: 80upx;display: flex;justify-content: space-between;}
+.pro_info .order_info{display: flex;}
+.pro_info .order_info .pro_img .img{width: 160upx;height: 160upx;display: flex;border-radius: 10upx;}
+.pro_info .order_count{height: 80upx;line-height: 80upx;display: flex;justify-content: flex-end;}
+.pro-qrcode.weui-cell:before{border: 0;}
+
+
+/* 支付项目 */
+.pro_info .btn-item{display: flex;justify-content: flex-end;}
+.pro_info .btn-item .btn-nav{min-width: 180upx;height: 60upx;line-height: 58upx;border: 1upx #838383 solid;border-radius: 30upx;color: #232325;font-size: 30upx;text-align: center;margin: 0 0 0 20upx;display: block;background-color: transparent;padding: 0 20rpx;}
+.pro_info .btn-item .btn-nav:last-child{border-color: #f31b0c;color: #fff;line-height: 58upx;color: #f31b0c;}
+.pro_info .btn-item .obtn{border-color: #838383!important;color: #232325!important;}

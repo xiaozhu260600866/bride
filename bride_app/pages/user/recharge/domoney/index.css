@@ -1,0 +1,64 @@
+.m-input .dx-cell{padding: 0!important;border: 0!important;flex: 1;}
+.m-input .dx-input{font-size: 70upx!important;line-height: 100upx!important;min-height: 100upx!important;height: 100upx!important;}
+
+
+.action{background: #fff;padding: 10px;}
+.action .action-icon{width: 80%;margin: 20px auto;text-align: center;}
+.action .action-icon .name{margin: 20px 0 10px;}
+.action .action-icon .price-red .price{font-size: 46px;}
+
+
+.disabledBtn {color: white;background: #dfdfdd !important;border: none  !important ;}
+
+.layermchild {border: none;border-radius: 0;background: white;}
+
+.layermchild {opacity: 1;transform: scale(1);-webkit-transform: scale(1);}
+
+
+.bounceIn{width:95%;margin:0 auto;z-index: 1;position:fixed;top:50%;left:2.5%; -webkit-animation-duration: 0.2s;animation-duration: 0.2s;-webkit-animation-name: bounceIn;animation-name: bounceIn;margin-top: -100px;}
+
+.Captcha{font-size:14px;width:60%;height:34px;box-sizing:border-box;padding:7px;color:#999;border:1px solid #dfdfdd;display: inline-block}
+.disabledBtn {color: white;background: #dfdfdd !important;border: none  !important ;
+}
+
+@keyframes bounceIn {
+    from,
+    20%,
+    40%,
+    60%,
+    80%,
+    to {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(0, 0, 0);
+        transform: scale3d(0, 0, 0);
+    }
+    20% {
+        opacity: 0.2;
+        -webkit-transform: scale3d(0.2, 0.2, 0.2);
+        transform: scale3d(0.2, 0.2, 0.2);
+    }
+    40% {
+        opacity: 0.4;
+        -webkit-transform: scale3d(0.4, 0.4, 0.4);
+        transform: scale3d(0.4, 0.4, 0.4);
+    }
+    60% {
+        opacity: 0.6;
+        -webkit-transform: scale3d(0.6, 0.6, 0.6);
+        transform: scale3d(0.6, 0.6, 0.6);
+    }
+    80% {
+        opacity: 0.8;
+        -webkit-transform: scale3d(0.8, 0.8, 0.8);
+        transform: scale3d(0.8, 0.8, 0.8);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}

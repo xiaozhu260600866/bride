@@ -1,0 +1,11 @@
+.onetxt .nav-name{padding: 0 16upx;}
+/* 轮播 */
+.swiper_box image{width: 100%;}
+.business .title{display: flex;justify-content: space-between;align-items: center;}
+.tread{justify-content: space-between;padding: 0 20upx;}
+.tread .tread-info{padding: 0;margin: 0;}
+
+
+.box-title .name{position: relative;display: inline-block;}
+.box-title .name:before{content: '';display: block;position: absolute;top: 50%;margin-top: -1px;height: 2px;width: 16px;background: #999;left: -24px;}
+.box-title .name:after{content: '';display: block;position: absolute;top: 50%;margin-top: -1px;height: 2px;width: 16px;background: #999;right: -24px;}

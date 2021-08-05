@@ -1,0 +1,10 @@
+.order_no{text-align: center;padding: 40upx 0;font-size: 34upx;}
+
+#pay_price {font-size: 80upx;font-family: 'Arial';text-align: center;padding-bottom: 40upx;font-weight: bold;}
+
+#pay_info {border-top: 1upx #eee solid;}
+#pay_info .list-group {line-height: 92upx;display: flex;justify-content: space-between;border-bottom: 1upx #eee solid;padding: 0 30upx;background-color: #fff;}
+#pay_info .list-group .iconfont {color: #888;}
+#pay_info .list-group .txt_l {font-size: 34upx;color: #888;width: 140upx;}
+#pay_info .list-group .txt_r {font-size: 34upx;flex: 1;overflow: hidden;padding-left: 30upx;text-align: right;}
+#pay_submit{margin: 40upx;background: #FF4351;height: 100upx;line-height: 100upx;text-align: center;color: #fff;border-radius: 10upx;font-size: 42upx;}

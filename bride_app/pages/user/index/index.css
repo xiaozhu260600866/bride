@@ -1,0 +1,54 @@
+/* 局元素 */
+.ugorup-box{border-radius: 24upx;margin: 24upx;background-color: #fff;overflow: hidden;}
+
+
+/* 头部 */
+.head-info{position: relative;}
+.head-bg .img{width: 100%;display: flex;}
+.utop{padding: 60upx 30upx 130upx;}
+.utop .uinfo{display: flex;align-items: center;}
+.utop .uinfo .header-img .img{width: 60px;height: 60px;border-radius: 50%;border: 2px #fff solid;display: flex;}
+.utop .uinfo .info{line-height: 22px;flex: 1;overflow: hidden;}
+.utop .uinfo .info .group{display: flex;align-items: center;}
+.utop .uinfo .gosign{height: 60rpx;line-height: 60rpx;border: 1rpx #fff solid;border-radius: 40rpx;text-align: center;padding: 0 30rpx;}
+.utop .login-nav{background-color: rgba(0,0,0,0.25);border-radius: 30rpx;line-height: 56rpx;padding: 0 40rpx 0 30rpx;margin: 0 30rpx;}
+
+
+/* 功能按钮组 */
+.ulist-group{display: flex;flex-wrap: wrap;}
+.ulist-group myform,.ulist-group>section{display: block;width: 25%;}
+.ulist-group .ulist-item{text-align: center;padding: 20rpx 10rpx;margin: 0;}
+.ulist-group button.ulist-item{background-color: #fff;width: 25%;}
+.ulist-group .item-icon{height: 60rpx;line-height: 60rpx;display: flex;align-items: center;justify-content: center;}
+.ulist-group .item-icon .iconfont{font-size: 40rpx;}
+.ulist-group .item-icon .img{width: 56rpx;height: 56rpx;display: flex;}
+.ulist-group .item-name{font-size: 28rpx;line-height: 40rpx;color: #555;}
+
+
+/* 统计 */
+.head-count{display: flex;margin-top: -70upx;position: relative;z-index: 1;}
+.head-count myform,.head-count>section{width: 100%;}
+.head-count .c-item{text-align: center;padding: 30upx 0;position: relative;}
+.head-count .c-item::before{content: '';display: block;position: absolute;top: 50%;right: 0;margin-top: -32upx;width: 1upx;height: 64upx;background: #eee;}
+.head-count .c-item:last-child::before{display: none;}
+.head-count .num{line-height: 48upx;font-size: 40upx;}
+.head-count .num .unit{font-size: 24upx;}
+.head-count .name{line-height: 40upx;font-size: 28upx;}
+
+
+/* 订单标题 */
+.black{border-radius: 24upx;margin: 24upx;}
+.black-title{display: flex;justify-content: space-between;padding: 20upx 30upx;align-items: center;}
+.black-title .name{font-size: 30upx;line-height: 48upx;font-weight: bold;color: #333;}
+.ugorup-box .black-title{padding: 16upx 30upx;}
+
+
+/* 订单按钮 */
+.unav{width: 100%;display: flex;}
+.unav myform,.unav section{width: 100%;}
+.unav .item{width: 100%;text-align: center;margin: 20upx 0 40upx;}
+.unav .item .unav-tab{position: relative;}
+.unav .item .unav-tab .num{position: absolute;width: 36upx;border-radius: 50%;text-align: center;color: white;background: #FA4444;left: 46upx;line-height: 36upx;font-size: 20upx;}
+.unav .item .unav-tab{height: 60upx;width: 60upx;margin: 0 auto;line-height: 60upx;}
+.unav .item .unav-tab .icon{width: 80%;height: 80%;display: flex;margin: 0 auto;}
+.unav .item .nav-txt{line-height: 40upx;font-size: 26upx;color: #666;}

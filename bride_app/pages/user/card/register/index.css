@@ -1,0 +1,23 @@
+page{background-color: #fff;}
+
+.top-sec{position: relative;}
+.top-bg{background-color: #387ef8;height: 200rpx;}
+
+/* 性别 */
+.sex-sec{}
+.sex-sec .pic{display: flex;justify-content: center;flex-wrap: wrap;margin: 25px 0;}
+.sex-sec .act{position: relative;}
+.sex-sec .act::before{content: '';display: block;position: absolute;width: 272rpx;height: 272rpx;border: 6rpx #f79 solid;border-radius: 50%;left: 50%;top: 0;margin-left: -136rpx;box-sizing: border-box;z-index: 1;}
+.sex-sec .img{width: 272rpx;height: 272rpx;display: flex;}
+.sex-sec .txt{font-size: 30rpx;padding-top: 6rpx;width: 100%;text-align: center;}
+
+
+/* 同意条款 */
+.agreement{width: 100%;}
+.agreement checkbox{zoom: 70%;display: flex;}
+
+
+.second-step .dx-cell{padding: 20rpx 0!important;border-bottom: 0!important;}
+.second-step .dx-label{width: 190rpx!important;}
+.second-step .dx-label .star{display: none;}
+.second-step .dx-input{text-align: right!important;}

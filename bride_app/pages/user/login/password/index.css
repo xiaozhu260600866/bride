@@ -1,0 +1,11 @@
+page{background: #fff;}
+
+
+.register .weui-label{width: 80px;font-size: 16px!important;}
+.register .weui-input,.register .weui-cell__bd ._div{font-size: 16px!important;}
+.register .weui-cell__bd ._div,.register .date-picker, .order-picker{height:2.58823529em;min-height:2.58823529em;line-height:2.58823529em;}
+.register .order-picker .picker{font-size: 16px!important;}
+
+.i-cart{display: flex;align-items: center;}
+.i-cart .cart{text-align: center;}
+.i-cart .cart .weui-cell_input{border-bottom: 0;}

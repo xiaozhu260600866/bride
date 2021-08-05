@@ -1,0 +1,53 @@
+@font-face {
+  font-family: 'iconfont';  /* Project id 680922 */
+  src: url('//at.alicdn.com/t/font_680922_b004rpue5k.woff2?t=1627119297616') format('woff2'),
+       url('//at.alicdn.com/t/font_680922_b004rpue5k.woff?t=1627119297616') format('woff'),
+       url('//at.alicdn.com/t/font_680922_b004rpue5k.ttf?t=1627119297616') format('truetype');
+}
+
+/* 3314024140@qq.com  dx3229010  融E推 */
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.icon-wechat-add:before{content: "\e657";}/* 添加 */
+.icon-wechat-all:before{content: "\e66b";}/* 微信 */
+.icon-right:before{content: "\e600";}/* 右 */
+.icon-pay-success:before{content: "\e676";color: #09BB07;}/* 支付成功 */
+.icon-pay-fail:before{content: "\e988";color: #E84335;}/* 支付失败 */
+
+.icon-location:before{content: "\e647";}/* 一键导航 */
+.icon-tel:before{content: "\e7f9";}/* 一键拨号 */
+.icon-letter:before{content: "\e803";}/* 邮件-填 */
+.icon-company:before{content: "\e751";}/* 公司 */
+.icon-phone:before{content: "\e63c";}/* 手机 */
+
+.icon-release-tel:before{content: "\e606";}/* 电话 */
+.icon-release-location:before{content: "\e647";}/* 位置 */
+
+.icon-praise:before{content: "\e870";}/* 点赞实心 */
+.icon-praise-o:before{content: "\e871";}/* 点赞空心 */
+.icon-demand-thumb:before{content: "\e717";}/* 点赞空心 */
+.icon-demand-thumb-fill:before{content: "\e870";}/* 点赞实心 */
+.icon-demand-see:before{content: "\e658";}/*  */
+
+.icon-home:before{content: "\e70e";}/* 首页 */
+.icon-home-fill:before{content: "\e716";}/* 首页 */
+.icon-share:before{content: "\e93e";}/* 分享 */
+.icon-staryes:before{content: "\e62b";}/* 收藏 */
+.icon-starno:before{content: "\e656";}/* 收藏 */
+
+.icon-count-plus:before{content: "\e64e";}/* 添加 */
+.icon-user-integral-sign:before{content: "\e654";}/* 签到 */
+.icon-intergral-record:before{content: "\e69a";}/* 兑换记录 */
+.icon-address-book:before{content: "\e623";}/* 通讯录 */
+.icon-address-book-o:before{content: "\e6b4";}/* 通讯录 */
+
+.icon-float-feedback:before{content: "\e62c";}/* 留言 */
+
+.icon-:before{content: "\e";}/*  */

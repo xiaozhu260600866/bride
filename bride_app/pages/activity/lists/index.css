@@ -1,0 +1,7 @@
+.pro_info{position: relative;}
+.pro_info .pro-cart{position: absolute;right: 0;bottom: 24px; width: 30px;height: 30px;line-height: 30px;text-align: center;border-radius: 50%;
+	background: -webkit-linear-gradient(#fe7853, #ff4141); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(#fe7853, #ff4141); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(#fe7853, #ff4141); /* Firefox 3.6 - 15 */
+	background: linear-gradient(#fe7853, #ff4141); /* 标准的语法 */
+}

@@ -1,0 +1,89 @@
+/* page,.pages-user-card-verified-index{background-color: #232830!important;} */
+
+
+/* 个人信息 */
+.Tuser{padding: 60rpx 30rpx 120rpx;display: flex;align-items: center;background-color: #232830;}
+.Tuser .header{margin-right: 10rpx;}
+.Tuser .header .img{width: 80rpx;height: 80rpx;border-radius: 50%;display: flex;}
+.Tuser .info .name{font-size: 32rpx;color: #fff;line-height: 1;}
+.Tuser .info .time{font-size: 24rpx;color: rgba(255,255,255,0.4);line-height: 1;margin-top: 20rpx;}
+.Tuser .info .time .Arial{color: #C3AA8D;font-size: 26rpx;}
+
+
+/* VIPtab */
+.ver-tab{display: flex;justify-content: space-between;margin-top: -60rpx;position: relative;z-index: 9;}
+.ver-tab .item{width: 45%;position: relative;}
+.ver-tab .item-box{display: flex;align-items: center;background-color: #fff;border-radius: 26rpx 20rpx 0 0;justify-content: center;height: 100rpx;position: relative;z-index: 1;overflow: hidden;}
+.ver-tab .left.right{border-radius: 26rpx 20rpx 0 0;}
+.ver-tab .item .icon{font-size: 44rpx;padding-right: 20rpx;}
+.ver-tab .item .info{text-align: center;}
+.ver-tab .item .name{font-size: 30rpx;font-weight: bold;}
+.ver-tab .item .tips{font-size: 26rpx;}
+.ver-tab .left::after{content:'';display: block;position: absolute;top: 0;right: -88rpx;width: 0;height: 0;border-width: 50rpx;border-color: transparent transparent #ff0 #ff0;border-style: solid;border-radius: 20rpx 20rpx 0 0;}
+.ver-tab .right::after{content:'';display: block;position: absolute;top: 0;left: -86rpx;width: 0;height: 0;border-width: 50rpx;border-color: transparent #f00 #f00 transparent;border-style: solid;border-radius: 20rpx 20rpx 0 0;}
+
+/* VIP */
+.tabOne .left .item-box{background-color: #FEF5FA;}
+.tabOne .left::after{z-index: 10;border-color: transparent transparent #FEF5FA #FEF5FA;}
+.tabOne .left .icon{color: #B64FE4;}
+.tabOne .left .name{color: #434343;}
+.tabOne .left .tips{color: #434343;}
+.tabOne .right .item-box{background-color: #E5D0E3;}
+.tabOne .right::after{border-color: transparent #E5D0E3 #E5D0E3 transparent;}
+.tabOne .right .icon{color: #C49ACA;}
+.tabOne .right .name{color: #996DA0;}
+.tabOne .right .tips{color: #996DA0;}
+
+/* SVIP */
+.tabTwo .left .item-box{background-color: #EEE0C6;}
+.tabTwo .left::after{border-color: transparent transparent #EEE0C6 #EEE0C6;}
+.tabTwo .left .icon{color: #C6AC87;}
+.tabTwo .left .name{color: #84745D;}
+.tabTwo .left .tips{color: #84745D;}
+.tabTwo .right .item-box{background-color: #FEFBF4;}
+.tabTwo .right::after{z-index: 10;border-color: transparent #FEFBF4 #FEFBF4 transparent;}
+.tabTwo .right .icon{color: #D9A349;}
+.tabTwo .right .name{color: #845A14;}
+.tabTwo .right .tips{color: #845A14;}
+
+
+/* 价格 */
+.ver-price{background-color: #fff;}
+.price-length{display: flex;padding: 40rpx 60rpx;justify-content: space-between;}
+.price-length .item{width: 32%;border: 6rpx #eee solid;border-radius: 12rpx;color: #42475B;text-align: center;}
+.price-length .time{font-size: 28rpx;padding-top: 20rpx;}
+.price-length .time .num{font-size: 32rpx;}
+.price-length .price{color: #42475B;font-size: 32rpx;line-height: 1;padding: 40rpx 0;}
+.price-length .price .num{font-size: 48rpx;}
+.price-length .average{font-size: 28rpx;line-height: 52rpx;}
+.subBtn{padding: 0 40rpx 40rpx;}
+.subBtn ::v-deep .dxi-btn{box-shadow: 0 0 10px 0 hsl(0deg 6% 58% / 20%);}
+
+/* VIP价格状态 */
+.verVip .cur{border-color: #9f4cfe;color: #9f4cfe;background-color: #FEF5FA;}
+.verVip .cur .price{color: #9f4cfe;}
+.verVip .subBtn ::v-deep .dxi-btn{background-image: linear-gradient(left,#ff5794,#7309e9);border: 0;}
+
+/* SVIP价格状态 */
+.verSVip .cur{border-color: #e8bf81;color: #7e5118;background-color: #FEFBF4;}
+.verSVip .cur .price{color: #7e5118;}
+.verSVip .subBtn ::v-deep .dxi-btn{background-image: linear-gradient(left,#efcf9e,#e8bc7b);border: 0;color: #7e5118;}
+.verSVip .cur .average{background-color: #e8bf81;}
+
+
+/* 特权介绍 */
+.ver-detail{background-color: #fff;margin-top: 16rpx;}
+.ver-detail .title{padding: 0 30rpx;position: relative;}
+.ver-detail .title::before{content: '';display: block;position: absolute;top: 50%;left: 0;height: 40rpx;margin-top: -20rpx;background-image: linear-gradient(top,#ff5794,#7309e9);width: 8rpx;}
+.ver-detail .title .name{padding: 24rpx 0;font-size: 34rpx;color: #444756;font-weight: bold;line-height: 1;border-bottom: 1rpx #eee solid;}
+.Svip-detail .title::before{background-image: linear-gradient(top,#efcf9e,#e8bc7b);;}
+
+
+.ver-success{padding: 80rpx 40rpx 0;text-align: center;}
+.ver-success .iconfont{font-size: 192rpx;line-height: 1;}
+.ver-success .txt{margin-top: 70rpx;font-size: 40rpx;}
+
+
+.pay-success{padding: 100rpx 60rpx 0;text-align: center;}
+.pay-success .img{width: 80%;}
+.pay-success .text{text-align: center;color: #434343;line-height: 1.5;font-size: 32rpx;margin: 30rpx 0 10rpx;}

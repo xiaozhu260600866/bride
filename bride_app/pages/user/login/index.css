@@ -1,0 +1,18 @@
+
+
+page{background: #fff;}
+
+
+.logo{display: flex;justify-content: center;}
+.logo .img{width: 80px;height: 80px;border-radius: 10px;display: flex;}
+
+
+.type{display: flex;justify-content: center;}
+.type .type-name{padding: 5px 15px;}
+.type .cur{font-weight: bold;position: relative;}
+.type .cur:before{content: "";display: block;position: absolute;bottom: 0;left: 50%;width: 30px;height: 3px;background: #33c45d;margin-left: -15px;}
+
+
+.login-list .weui-cell{padding: 10px 0;}
+.login-list .weui-label{width: 60px;font-size: 16px!important;}
+.login-list .weui-input{font-size: 16px!important;}

@@ -1,0 +1,14 @@
+
+/* 列表 */
+.pro_info{background: #fff;}
+.pro_info .order_date{height: 40px;line-height: 40px;display: flex;justify-content: space-between;}
+.pro_info .order_info{display: flex;}
+.pro_info .order_info .pro_img .img{width: 160upx;height: 160upx;display: flex;border-radius: 10upx;}
+.pro_info .order_count{height: 40px;line-height: 40px;display: flex;justify-content: flex-end;}
+
+
+.pro_info .pro_right{flex: 1;overflow: auto;width: 100%;display: flex;align-content: space-between;height: 160upx;flex-wrap: wrap;}
+
+
+.pro_info .btn-group{display: flex;justify-content: flex-end;}
+.pro_info .btn-item .btn-nav{width: 80px;height: 30px;line-height: 28px;border: 1px #ddd solid;border-radius: 6px;color: #555;font-size: 26upx;text-align: center;margin-left: 10px;display: block;}

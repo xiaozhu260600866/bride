@@ -1,0 +1,176 @@
+/* app.wxss */
+page{background: #f5f5f5;}
+view,sroll-view,swiper,icon,text,progress,button,checkbox,form,input,label,input,picker,radio,slider,switch,action-sheet,modal,toast,loading,navigator,audio,image,video,map,canvas,div,input,p,span,li,ul,textarea,select {box-sizing: border-box;}
+.fs_bold{font-weight: bold;}
+button::after{border: 0;}
+
+.block-sec{background-color: #fff;margin: 24upx;border-radius: 12upx;overflow: hidden;}
+.dx-cell,.dx-cell input{font-size: 32upx!important;}
+.swiper-banner image{width: 100%!important;}
+
+.float-group{z-index: 100!important;}
+
+
+.loading{background-color:#eee;color:#eee;width: 160upx;}
+.loadingWidth100{background-color:#eee;color:#eee;width:100%;}
+.share-overlay{position: fixed;top: 0px;right: 0;bottom: 0;left: 0;z-index: 99;width: 100%; height: 1600upx; background-color: rgba(0,0,0,0.6)}
+
+.main-color{color: #ed5296!important;}
+.main-bg{background: #ed5296!important;}
+.main-border{border-color: #ed5296!important;}
+.dx-btn-green,.dx-btn-blue{background: #ed5296!important;border-radius: 8upx;color: #fff;}
+.dx-btn-green-o,.dx-btn-blue-o{border: 2upx #ed5296 solid!important;background: #fff;border-radius: 8upx;color: #ed5296!important;}
+.dxi-btn-primary{background-color: #ed5296!important;border-color: #ed5296!important;}
+.fc-4{color: #434343!important;}
+
+
+/* 块标题 */
+.sec-title{font-size: 36rpx;padding: 26rpx 30rpx;line-height: 1;color: #000;font-weight: bold;}
+
+
+/* 定位底部 */
+.b_fixed {position: fixed;bottom: 0;left: 0;}
+
+
+/* banner轮播 */
+.swiper_box image {width: 100%;}
+#banner image{width: 100%;}
+.swiper-item image{display: flex;}
+#banner{position: relative;padding: 20upx;background: #fff;width: 100%;}
+#banner ._img,#banner image,#banner img{width: 100%!important;border-radius: 12upx;}
+
+
+
+/* 标题 */
+.TopNav {white-space: nowrap; display: flex;background: #fff;padding: 0 24rpx;}
+.TopNav .liNav {text-align: center;display: inline-block;position: relative;height: 92rpx;line-height: 92rpx;padding: 0 24rpx;}
+.TopNav .liNav .ANav {font-size: 32rpx;color: #333;font-weight: bold;}
+.TopNav .cur:before {content: "";display: block;position: absolute;bottom: 0;left: 50%;margin-left: -16rpx;height: 12rpx;width: 32rpx;background: #ed5296;border-radius: 12rpx;}
+.TopNav .cur .ANav{color: #000;font-size: 36rpx;}
+
+
+/* 量统计 */
+.tread{display: flex;justify-content: flex-end;}
+.tread .tread-info{font-size: 26upx;color: #666;padding: 6upx 20upx;margin-left: 50upx;}
+.tread .tread-info .Arial{padding: 0 4upx;}
+
+
+/* 按钮组:start */
+	/* 脚部按钮 */
+	#footer-btn{position: fixed;bottom: 0;left: 0;height: 112upx;display: flex;padding: 10upx 20upx;width: 100%;box-sizing: border-box;background: #fff;z-index: 10;border-top: 1upx #f7f7f7 solid;}
+	
+	#footer-btn .f-dx-btn{height: 92upx!important;line-height: 92upx!important;text-align: center;}
+	
+	#footer-box{position: fixed;bottom: 0;left: 0;width: 100%;background: #fff;z-index: 10;border-top: 1upx #f7f7f7 solid;}
+
+/* 按钮组:ending */
+
+
+/* 新闻列表 */
+.news-list .list-group-item {border-radius: 0;padding: 20upx;position: relative;border-bottom: 2upx solid #ededed;}
+.news-list .npic {float: left;margin-right: 20upx;width: 140upx;height: 140upx;}
+.news-list .h5 {font-weight: 400;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;font-size: 32upx;margin-bottom: 10upx;}
+.news-list .list-group-item-text {line-height: 32upx;height: 72upx;overflow: hidden;color: #666;font-size: 28upx;}
+.news-list .p2 {display: flex;line-height: 40upx;color: #666;font-size: 28upx;}
+.news-list .p2 .num {width: 140upx;}
+
+
+/* 暂无数据 */
+.no-data {padding: 100upx 0;text-align: center;font-size: 28upx;color: #999;}
+
+
+/* 定单 */
+.order-sec{background-color: #fff;border-radius: 12upx;margin-bottom: 24upx;}
+
+
+/* 视频 */
+.video {position: relative;width: 100%}
+.video .image {width: 100%;height: 300upx;}
+.video .playDiv {position: absolute;width: 120upx;height: 120upx;z-index: 101;top: 50%;margin-top: -60upx;left: 50%;margin-left: -60upx;border-radius: 50%;border: 6upx solid white}
+.video .playDiv .innerDiv {width: 100%;height: 100%;opacity: 0.6;background-color: #000;border-radius: 50%;display: flex;justify-content: center;align-items: center;}
+.video .playDiv .playImg {width: 35%;height: 50%;}
+
+
+/* 导航按钮 */
+.Nav_btn{padding: 10upx;background: white;display: flex;flex-wrap: wrap;}
+.Nav_btn .item{width: 20%;padding: 10upx 0;text-align: center;}
+.Nav_btn .item .Nav_img {text-align: center;text-align: -webkit-center;}
+.Nav_btn .item .Nav_img .img{width: 100upx;height: 100upx;display: flex;justify-content: center;border-radius: 50%;}
+.Nav_btn .item .txt{padding-top: 10upx;font-size: 28upx;color: #333;line-height: 40upx;text-align: center;}
+.Nav_btn .item_4{width: 25%;}
+
+
+/* 详情脚部 */
+#show_footer{height: 100upx;position: fixed;left: 0;bottom: 0;width: 100%;background: #fff;z-index:99;display: flex;}
+#show_footer:before{content: '';position: absolute;top: 0;right: 0;left: 0;border-top: 1upx solid #eaeef1;-webkit-transform: scaleY(0.5);-ms-transform: scaleY(0.5);transform: scaleY(0.5);}
+#show_footer .left{display: flex;}
+#show_footer .left .btn-item{padding: 8upx 0;margin: 0;width: 100upx;text-align: center;background: transparent;}
+#show_footer .left_w40 .btn-item{width: 80upx;}
+#show_footer .left .iconfont{height: 52upx;line-height: 56upx;font-size: 40upx;color: #666;}
+#show_footer .left .txt{height: 32upx;line-height: 32upx;font-size: 24upx;color: #666;}
+#show_footer .left .cart{position: relative;}
+#show_footer .left .cart .sum{position: absolute;top: 0px;right: 6upx;background: #FF7900;color: #fff;font-size: 20upx;border-radius: 50%;height: 32upx;width: 32upx;text-aling:center;line-height: 32upx;}
+#show_footer .right{line-height: 100upx;display: flex;flex: 1;overflow: hidden;align-items: center;}
+#show_footer .right myform{width: 100%;}
+#show_footer .right .r-nav{width: 100%;padding: 10upx 6upx;}
+#show_footer .right .r-item{text-align: center;font-size: 32upx;color: #fff;height: 80upx;line-height: 80upx;border-radius: 40upx;}
+#show_footer .right .r-item-yellow{background-color: #FF7900;} 
+#show_footer .right .r-item-red{background-color: #f30600;}
+#show_footer .right .r-item-green{background-color: #ed5296;}
+#show_footer .right .r-item-default{background-color: #eee;color: #999;}
+#show_footer .right .r-opacity{opacity: 0.5;}
+
+
+/* 上传图片 */
+.upload-img .imageLists .il-item{height: 120upx!important;}
+.upload-img .imageLists image {width: 120upx!important;height: 120upx!important;}
+
+
+
+/* 帖子 */
+.demandL-list .info-right .dxi-btn{padding: 14upx 20upx!important;}
+
+
+/* 头部统计 */
+.Tcount{display: flex;justify-content: space-between;padding: 16upx 20upx 6upx;font-size: 26upx;color: #666;}
+
+
+/* 选择区域弹出层 */
+.selectArea .dx-cell{border: 2upx #ddd solid!important;margin: 24upx 0;border-radius: 8upx;padding: 10upx 20upx!important;}
+.selectArea .dx-select .dx-cell_bd .picker{text-align: left!important;}
+.ms_select .ms_item{font-size: 32rpx!important;height: 80rpx!important;line-height: 80rpx!important;}
+
+
+/*  #ifdef  H5 */
+.Tsearch{padding-right: 20upx;}
+.Tsearch .searchbox{width: 100%;}
+.float-group{bottom: 140upx!important;}
+
+.dx-btn-big span{font-size: 34upx;}
+.dx-btn{border-radius: 12upx!important;}
+
+
+/*  #endif  */
+
+/* 旧类别 */
+.order-classify{display: flex;background-color: #fff;border-bottom: 1rpx #f5f5f5 solid;}
+.order-classify .nav-tab{height: 88rpx;line-height: 88rpx;text-align: center;font-size: 32rpx;color: #333;width: 100%;}
+.order-classify .selected{color: #ed5296;position: relative;}
+.order-classify .selected::before{content: '';display: block;position: absolute;left: 50%;bottom: 0;margin-left: -40rpx;width: 80rpx;height: 6rpx;background-color: #ed5296;border-radius: 6rpx;}
+
+
+/* 版权所有 */
+.copyright{font-size: 26rpx;padding: 40rpx;color: #999;display: flex;justify-content: center;}
+
+
+/* 小程序swiper点样式 */
+.bannerSwiper .swiper .wx-swiper-dot{width: 8rpx;height: 8rpx;background-color: rgba(255,255,255,0.3)!important;border-radius: 8rpx!important;}
+.bannerSwiper .swiper .wx-swiper-dot-active {background-color: rgba(255,255,255,0.8)!important;width: 24rpx;}
+.navSwiper .swiper .wx-swiper-dot{width: 8rpx;height: 8rpx;background-color: rgba(237, 82, 150,0.3)!important;border-radius: 8rpx!important;}
+.navSwiper .swiper .wx-swiper-dot-active {background-color: rgba(237, 82, 150,0.5)!important;width: 24rpx;}
+
+/* H5swiper点样式 */
+.bannerSwiper .swiper .uni-swiper-dot{width: 8rpx;height: 8rpx;background-color: rgba(255,255,255,0.3)!important;border-radius: 8rpx!important;}
+.bannerSwiper .swiper .uni-swiper-dot-active {background-color: rgba(255,255,255,0.8)!important;width: 24rpx;}
+.navSwiper .swiper .uni-swiper-dot{width: 8rpx;height: 8rpx;background-color: rgba(237, 82, 150,0.3)!important;border-radius: 8rpx!important;}
+.navSwiper .swiper .uni-swiper-dot-active {background-color: rgba(237, 82, 150,0.5)!important;width: 24rpx;}

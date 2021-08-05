@@ -1,0 +1,64 @@
+.con ._p,.con p{font-size: 15px;color: #333;line-height: 22px;margin: 0 0 10px 0;}
+
+
+.read{display: flex;justify-content: space-between;align-items: center;line-height: 36upx;padding: 24upx 30upx;}
+.read .right{display: flex;justify-content: flex-end;align-items: center;}
+.read-nav{display: flex;align-items: center;color: #636363;margin-left: 50upx;}
+.read-nav .iconfont{padding-right: 10upx;font-size: 34upx;}
+.read-nav .span{font-size: 12px;color: #636363;}
+
+
+.img-item{padding: 20upx 30upx;text-align: center;}
+.img-item .img{width: 100%;}
+
+.row_border{position: relative;}
+.row_border::after{content:'';display: block;position: absolute;left: 30upx;right: 30upx;height: 2upx;background-color: #eee;bottom: 0;}
+
+
+.class-label{font-size: 24upx;color: #fff;padding: 0 8upx;border-radius: 8upx;height: 40upx;line-height: 40upx;margin-right: 20upx;}
+
+
+/* ============ 红包 ============ */
+/* 浮标 */
+.hongbao-icon{position: fixed;bottom: 160upx;right: 10upx;width: 140upx;z-index: 99;}
+.hongbao-icon .img{width: 100%;}
+
+
+/* 弹层 */
+::v-deep .hongbao-diag .dxi-diag-box{height: 832upx;background-color: transparent!important;}
+
+/* 未领红包状态 */
+::v-deep .hongbao-off{background-size: 100% 100%;height: 100%;text-align: center;}
+::v-deep .hongbao-off .sendHead{display: flex;justify-content: center;padding-top: 100upx;}
+::v-deep .hongbao-off .sendHead .img{width: 100upx;height: 100upx;display: flex;border-radius: 50%;}
+::v-deep .hongbao-off .sendName{padding-top: 20upx;color: #ffe2c0;font-size: 30upx;line-height: 1;}
+::v-deep .hongbao-off .tiptxt{height: 172upx;}
+::v-deep .hongbao-off .txt1{padding-top: 40upx;color: #f1e8db;font-size: 28upx;line-height: 1;}
+::v-deep .hongbao-off .txt2{padding-top: 60upx;color: #ffe2c0;font-size: 44upx;line-height: 1;}
+::v-deep .hongbao-off .open-icon{display: flex;justify-content: center;padding-top: 120upx;}
+::v-deep .hongbao-off .open-icon .img{width: 180upx;height: 180upx;display: flex;}
+::v-deep .hongbao-off .open{animation: 3s move infinite;transform-style: preserve-3d;}
+@keyframes move{
+	0% {
+		transform: rotateY(0deg);
+		-webkit-transform: rotateY(0deg);
+	}
+	100% {
+		transform: rotateY(360deg);
+		-webkit-transform: rotateY(360deg);
+	}
+}
+
+/* 已领红包状态 */
+::v-deep .hongbao-open{background-size: 100% 100%;height: 100%;}
+::v-deep .hongbao-open .userHead{display: flex;justify-content: center;padding-top: 140upx;}
+::v-deep .hongbao-open .userHead .img{width: 100upx;height: 100upx;display: flex;border-radius: 50%;}
+::v-deep .hongbao-open .userName{padding-top: 20upx;color: #c7a98f;font-size: 30upx;line-height: 1;text-align: center;}
+::v-deep .hongbao-open .hongbao-price{line-height: 1;padding: 280upx 0 0 40upx;color: #ca2b30;}
+::v-deep .hongbao-open .hongbao-tip{color: #d88f54;}
+::v-deep .hongbao-open .dxi-btn{color: #ca2b30!important;margin: 200upx 30upx 0;display: block!important;font-weight: bold!important;}
+/* ============ 红包 ============ */
+
+
+/* 红包领取列表 */
+.hongbao-list ::v-deep .dxi-list-cell .cell-name{flex: 2;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}

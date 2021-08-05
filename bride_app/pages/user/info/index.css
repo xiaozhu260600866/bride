@@ -1,0 +1,17 @@
+page{background: #fff;}
+
+
+.register .weui-label{width: 105px;font-size: 16px!important;margin-right: 5px;}
+.register .group .g-name{padding: 10px 15px 0;font-size: 16px;}
+.register .group .weui-label{width: 0;}
+.register .weui-input,.register .weui-cell__bd ._div{font-size: 16px!important;}
+.register .weui-cell:before{border: 0;}
+.register .industry .weui-cell__bd{height:2em;min-height:2em;line-height:2em;}
+.register .order-picker .picker,.register .date-picker .picker{font-size: 16px!important;}
+.register ._textarea{width: 100%;border: 1px solid #ddd;padding: 10px;box-sizing: border-box;justify-content: space-between}
+
+.i-cart{}
+.i-cart .cart{display: flex;align-items: center;}
+.i-cart .cart .weui-cell_input{border-bottom: 0;}
+
+.detail .weui-cell_input{border-bottom: 0;}

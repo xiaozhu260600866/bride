@@ -1,0 +1,587 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/main",
+			"style": {
+				"navigationBarTitleText": "新良缘",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/A/index",
+			"style": {
+				"navigationBarTitleText": "suaa",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/search/business/main",
+			"style": {
+				"navigationBarTitleText": "商家搜索",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/search/card/main",
+			"style": {
+				"navigationBarTitleText": "名片搜索",
+				"enablePullDownRefresh": true
+			}
+		},
+
+		{
+			"path": "pages/search/product/main",
+			"style": {
+				"navigationBarTitleText": "好物搜索",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/search/product2/main",
+			"style": {
+				"navigationBarTitleText": "精品搜索",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/search/demand/main",
+			"style": {
+				"navigationBarTitleText": "搜索需求",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/user/coupon/list/main",
+			"style": {
+				"navigationBarTitleText": "领取优惠券",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/user/collection/index",
+			"style": {
+				"navigationBarTitleText": "我的收藏",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/distribution/login/main",
+			"style": {
+				"navigationBarTitleText": "分享达人",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/distribution/down/dis/main",
+			"style": {
+				"navigationBarTitleText": "下级代理人",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/distribution/down/client/main",
+			"style": {
+				"navigationBarTitleText": "下级客户",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/distribution/index/main",
+			"style": {
+				"navigationBarTitleText": "分享达人",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/distribution/ad/main",
+			"style": {
+				"navigationBarTitleText": "广告中心",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/distribution/commission/index",
+			"style": {
+				"navigationBarTitleText": "分销佣金",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/distribution/add/main",
+			"style": {
+				"navigationBarTitleText": "分享达人注册",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/distribution/client/main",
+			"style": {
+				"navigationBarTitleText": "我的客户",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/distribution/domoney/main",
+			"style": {
+				"navigationBarTitleText": "申请提现",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/distribution/order-list/main",
+			"style": {
+				"navigationBarTitleText": "我的订单",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/distribution/record-list/main",
+			"style": {
+				"navigationBarTitleText": "提现记录",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/distribution/team/main",
+			"style": {
+				"navigationBarTitleText": "我的团队",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/distribution/qrcode/main",
+			"style": {
+				"navigationBarTitleText": "我的二维码",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/distribution/qrcode/poster/index",
+			"style": {
+				"navigationBarTitleText": "分享二维码",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/user/address/lists/main",
+			"style": {
+				"navigationBarTitleText": "我的地址",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/user/address/create_edit/main",
+			"style": {
+				"navigationBarTitleText": "地址管理",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/order/pay_center/main",
+			"style": {
+				"navigationBarTitleText": "支付中心",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/order/payed/main",
+			"style": {
+				"navigationBarTitleText": "支付结果",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/order/buy/main",
+			"style": {
+				"navigationBarTitleText": "订单详情",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/order/map/main",
+			"style": {
+				"navigationBarTitleText": "导航",
+				"enablePullDownRefresh": true
+			}
+		},
+
+		{
+			"path": "pages/product/show/main",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/product/show2/main",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/product/lists/main",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/user/cart/main",
+			"style": {
+				"navigationBarTitleText": "购物车",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/user/index/main",
+			"style": {
+				"navigationBarTitleText": "我的",
+				"enablePullDownRefresh": true,
+				"navigationBarBackgroundColor": "#ed5296",
+				"navigationBarTextStyle": "white",
+				"backgroundColorTop": "#ed5296"
+			}
+		},
+		{
+			"path": "pages/order/lists/main",
+			"style": {
+				"navigationBarTitleText": "我的订单",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/order/after-sale/main",
+			"style": {
+				"navigationBarTitleText": "申请售后",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/order/evaluate/main",
+			"style": {
+				"navigationBarTitleText": "评价",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/order/service/main",
+			"style": {
+				"navigationBarTitleText": "退款/纠纷",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/news/show/main",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/search/searchCity/main",
+			"style": {
+				"navigationBarTitleText": "城市",
+				"enablePullDownRefresh": true
+			}
+		},
+		
+		// 21-7-9新增
+		{
+			"path": "pages/user/card/register/index",
+			"style": {
+				"navigationBarTitleText": "注册",
+				"enablePullDownRefresh": true,
+				"navigationBarBackgroundColor": "#ed5296",
+				"navigationBarTextStyle": "white",
+				"backgroundColorTop": "#ed5296"
+			}
+		},
+		{
+			"path": "pages/user/card/edit/index",
+			"style": {
+				"navigationBarTitleText": "编辑名片",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/user/card/edit/layouts/intro",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/user/card/template/index",
+			"style": {
+				"navigationBarTitleText": "名片模版",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/user/card/lists/index",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/user/card/show/index",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/user/card/count/index",
+			"style": {
+				"navigationBarTitleText": "名片数据",
+				"enablePullDownRefresh": true,
+				"navigationBarBackgroundColor": "#ed5296",
+				"navigationBarTextStyle": "white",
+				"backgroundColorTop": "#ed5296"
+			}
+		},
+		{
+			"path": "pages/user/card/verified/index",
+			"style": {
+				"navigationBarTitleText": "名片认证",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/demand/index/main",
+			"style": {
+				"navigationBarTitleText": "动态",
+				"enablePullDownRefresh": true
+		
+			}
+		},
+		{
+			"path": "pages/demand/lists/index",
+			"style": {
+				"navigationBarTitleText": "动态",
+				"enablePullDownRefresh": true
+		
+			}
+		},
+		{
+			"path": "pages/demand/show/index",
+			"style": {
+				"navigationBarTitleText": "动态详情",
+				"enablePullDownRefresh": true
+		
+			}
+		},
+		{
+			"path": "pages/water-mall/main",
+			"style": {
+				"navigationBarTitleText": "好物",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/user/demand/create_edit/index",
+			"style": {
+				"navigationBarTitleText": "发布需求",
+				"enablePullDownRefresh": true,
+				"navigationBarBackgroundColor": "#ed5296",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/user/demand/lists/index",
+			"style": {
+				"navigationBarTitleText": "发布需求",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/user/demand/create_edit/payed/main",
+			"style": {
+				"navigationBarTitleText": "支付结果",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/user/service/create_edit/index",
+			"style": {
+				"navigationBarTitleText": "发布企业服务",
+				"enablePullDownRefresh": true,
+				"navigationBarBackgroundColor": "#ed5296",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/user/service/lists/index",
+			"style": {
+				"navigationBarTitleText": "发布企业服务",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/user/service/create_edit/payed/main",
+			"style": {
+				"navigationBarTitleText": "支付结果",
+				"enablePullDownRefresh": true
+			}
+		},
+		
+		// 积分商城
+		{
+			"path": "pages/integral/lists/main",
+			"style": {
+				"navigationBarTitleText": "积分商城",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/integral/order/buy/main",
+			"style": {
+				"navigationBarTitleText": "订单详情",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/integral/show/main",
+			"style": {
+				"navigationBarTitleText": "商品详情",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/user/integral/count/main",
+			"style": {
+				"navigationBarTitleText": "我的积分",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/user/integral/list/main",
+			"style": {
+				"navigationBarTitleText": "积分明细",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/user/integral/order/lists/main",
+			"style": {
+				"navigationBarTitleText": "我的订单",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/user/integral/sign/main",
+			"style": {
+				"navigationBarTitleText": "签到",
+				"enablePullDownRefresh": true
+			}
+		},
+		// 我的钱包
+		{
+			"path": "pages/user/recharge/count/main",
+			"style": {
+				"navigationBarTitleText": "我的钱包",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/user/recharge/domoney/main",
+			"style": {
+				"navigationBarTitleText": "申请提现",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/user/recharge/list/main",
+			"style": {
+				"navigationBarTitleText": "明细",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/user/recharge/pay_center/main",
+			"style": {
+				"navigationBarTitleText": "支付中心",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/user/recharge/recharge/main",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/people/show/index",
+			"style": {
+				"navigationBarTitleText": "详情",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/people/show/layouts/dynamic",
+			"style": {
+				"navigationBarTitleText": "TA的动态",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/activity/lists/index",
+			"style": {
+				"navigationBarTitleText": "活动",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/activity/show/index",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": true
+			}
+		}
+		
+	],
+	"navigateToMiniProgramAppIdList": ["wxa6cfc3a417501b21"],
+	"permission": {
+		"scope.userLocation": {
+			"desc": "用于记录用户之间的距离，进行近的商家搜索"
+		}
+	},
+	"tabBar": {
+		"selectedColor": "#ed5296",
+		"list": [{
+			"pagePath": "pages/index/main",
+			"text": "首页",
+			"iconPath": "static/image/A01.png",
+			"selectedIconPath": "static/image/A02.png"
+		},{
+			"pagePath": "pages/demand/index/main",
+			"text": "动态",
+			"iconPath": "static/image/B01.png",
+			"selectedIconPath": "static/image/B02.png"
+		},{
+			"pagePath": "pages/activity/lists/index",
+			"text": "活动",
+			"iconPath": "static/image/C01.png",
+			"selectedIconPath": "static/image/C02.png"
+		},{
+			"pagePath": "pages/water-mall/main",
+			"text": "好物",
+			"iconPath": "static/image/F01.png",
+			"selectedIconPath": "static/image/F02.png"
+		},{
+			"pagePath": "pages/user/index/main",
+			"text": "我的",
+			"iconPath": "static/image/D01.png",
+			"selectedIconPath": "static/image/D02.png"
+		}]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	}
+}

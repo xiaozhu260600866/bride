@@ -1,0 +1,32 @@
+
+page {background: #f2f2f2;}
+/* 左侧导航布局 start*/
+
+/* 隐藏scroll-view滚动条*/
+
+::-webkit-scrollbar {width: 0;height: 0;color: transparent;}
+.tui-searchbox {width: 100%;height: 92upx;padding: 0 30upx;box-sizing: border-box;background: #fff;display: flex;align-items: center;justify-content: center;position: fixed;left: 0;top: 0;z-index: 999;}
+.tui-searchbox::after {content: '';position: absolute;border-bottom: 1upx solid #d2d2d2;-webkit-transform: scaleY(0.5);transform: scaleY(0.5);bottom: 0;right: 0;left: 0;}
+.tui-search-input {width: 100%;height: 60upx;background: #f1f1f1;border-radius: 30upx;font-size: 26upx;color: #999;display: flex;align-items: center;justify-content: center;}
+.tui-search-text {padding-left: 16upx;}
+.tab-view {/* height: 100%; */width: 200upx;position: fixed;left: 0;top: 92upx;z-index: 10;background: #f6f6f6;}
+.tab-bar-item {width: 200upx;height: 110upx;background: #f6f6f6;box-sizing: border-box;display: flex;align-items: center;justify-content: center;font-size: 26upx;color: #444;font-weight: 400;}
+.active {position: relative;color: #000;font-size: 30upx;font-weight: 600;background: #fcfcfc;}
+.active::before {content: "";position: absolute;border-left: 8upx solid #E41F19;height: 30upx;left: 0;}
+/* 左侧导航布局 end*/
+
+.right-box {width: 100%;position: fixed;padding-left: 200upx;box-sizing: border-box;left: 0;top: 92upx;background: #fff;}
+.page-view {width: 100%;overflow: hidden;box-sizing: border-box;padding-bottom: env(safe-area-inset-bottom);}
+.swiper {width: 100%;height: 220upx;border-radius: 12upx;overflow: hidden;transform: translateZ(0);}
+.swiper .wx-swiper-dot {width: 8upx;height: 8upx;display: inline-flex;background: none;justify-content: space-between;}
+.swiper .wx-swiper-dot::before {content: '';flex-grow: 1;background: rgba(255, 255, 255, 0.8);border-radius: 16upx;overflow: hidden;}
+.swiper .wx-swiper-dot-active::before {background: #fff;}
+.swiper .wx-swiper-dot.wx-swiper-dot-active {width: 16upx;}
+.slide-image {width: 100%;height: 220upx;}
+.class-box {}
+.class-item {background: #fff;width: 100%;box-sizing: border-box;padding: 20upx;margin-bottom: 20upx;border-radius: 12upx;}
+.class-name {font-size: 22upx;}
+.g-container {/* padding-top: 20upx; */display: flex;display: -webkit-flex;justify-content: flex-start;flex-direction: row;flex-wrap: wrap;}
+.g-box {width: 33.3333%;text-align: center;padding-top: 40upx;}
+.g-image {width: 120upx;height: 120upx;}
+.g-title {font-size: 22upx;}
