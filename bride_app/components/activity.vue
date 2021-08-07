@@ -7,31 +7,12 @@
 						<view class="row-left">
 							<view class="item title">{{ v.title }}</view>
 							<view class="item cost">
-								<view v-if="v.FlashState == true">
-									<view>人均消费：
-										<text class="price" v-if="v.price > 0">{{ v.price }}元</text>
-										<text v-else>免费</text>
-										<text class="pl8 num">已报{{v.orderRecord.people}}人</text>
-									</view>
-									<view>{{ v.Flash.payManner }}</view>
-								</view>
-								<view v-else>
-									<text class="price" v-if="v.amount > 0">{{ v.amount }}元</text>
-									<text v-else>免费</text>
-									<text class="pl8 num">已报{{v.orderRecord.people}}人</text>
-								</view>
+								<text class="price" v-if="v.amount > 0">{{ v.amount }}元</text>
+								<!-- <text class="pl8 num">已报{{v.orderRecord.people}}人</text> -->
 							</view>
 						</view>
 						<view class="item-pic">
 							<image class="img" :src="v.firstCover" mode="aspectFill"></image>
-							<view>
-								<view class="state state0" v-if="v.state == 0">已成行</view>
-								<view class="state state1" v-if="v.state == 1">报名中</view>
-								<view class="state state2" v-if="v.state == 2">已截止</view>
-								<view class="state state2" v-if="v.state == 3">已满员</view>
-								<view class="tag" v-if="v.fname">{{v.fname}}</view>
-							</view>
-							<view class="bg"></view>
 						</view>
 					</view>
 					

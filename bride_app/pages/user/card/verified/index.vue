@@ -118,9 +118,8 @@
 	import "@/components/gaoyia-parse/parse.css";
 	import uParse from '@/components/gaoyia-parse/parse.vue'
 	import dxResults from "doxinui/components/results/results"
-	import bwSwiper from '@/wxcomponents/bw-swiper/bw-swiper.vue'
 	export default {
-		components: {dxftButton,uParse,dxResults,bwSwiper },
+		components: {dxftButton,uParse,dxResults},
 		data() {
 			return {
 				formAction: '/user',

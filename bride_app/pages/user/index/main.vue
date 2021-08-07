@@ -19,7 +19,7 @@
 							<image class="img" :src="data.user.headerPic" />
 						</view>
 						<view class="pl15 fc-white info">
-							<myform class="w-b100" :ruleform="ruleform" :vaildate="vaildate" :append="true" >
+							<myform class="w-b100" :ruleform="ruleform" :vaildate="vaildate" :append="true">
 								<view slot="content" class="fc-white lh-24 fs-15">
 									<view class="group">
 										<view>{{data.user.userInfo.phone ? data.user.userInfo.name :data.user.nickname}}</view>
@@ -33,7 +33,7 @@
 								</view>
 							</myform>
 						</view>
-						<!-- <myform :ruleform="ruleform" :vaildate="vaildate" :append="true" :data="v" @callBack="goto('/pages/user/integral/sign/main',1)" >
+						<!-- <myform :ruleform="ruleform" :vaildate="vaildate" :append="true" :data="v" @callBack="goto('/pages/user/integral/sign/main',1)">
 							<view slot="content">
 								<view class="gosign fs-13 fc-white">
 									<span class="iconfont icon-user-integral-sign fc-white pr5 fs-12"></span>签到
@@ -45,13 +45,13 @@
 			</view>
 			<!-- <view class="ugorup-box head-count">
 				<myform :ruleform="ruleform" :vaildate="vaildate" :append="true" @callBack="goto('/pages/user/recharge/count/main',1)">
-					<view slot="content" class="c-item" >
+					<view slot="content" class="c-item">
 						<view class="num">{{data.amount}}<text class="unit">元</text></view>
 						<view class="name">钱包</view>
 					</view>
 				</myform>
 				<myform :ruleform="ruleform" :vaildate="vaildate" :append="true" @callBack="goto('/pages/user/integral/count/main',1)">
-					<view slot="content" class="c-item" >
+					<view slot="content" class="c-item">
 						<view class="num">{{data.integral}}<text class="unit">分</text></view>
 						<view class="name">积分</view>
 					</view>
@@ -93,7 +93,7 @@
 					<view class="name">我的特权</view>
 				</view>
 				<view class="ulist-group ptb8 plr5">
-					<myform :append="true" :data="v" @callBack="toCard('/pages/user/card/edit/index')" >
+					<myform :append="true" :data="v" @callBack="toCard('/pages/user/card/edit/index')">
 						<view slot="content">
 							<view class="ulist-item">
 								<view class="item-icon">
@@ -103,7 +103,7 @@
 							</view>
 						</view>
 					</myform>
-					<myform :append="true" :data="v" @callBack="toCard('/pages/user/card/edit/index')" >
+					<myform :append="true" :data="v" @callBack="toCard('/pages/user/card/count/index')"><!-- 我的访客 -->
 						<view slot="content">
 							<view class="ulist-item">
 								<view class="item-icon">
@@ -113,7 +113,7 @@
 							</view>
 						</view>
 					</myform>
-					<myform :append="true" :data="v" @callBack="toCard('/pages/user/card/edit/index')" >
+					<myform :append="true" :data="v"@callBack="toCard('/pages/user/card/count/index')"><!-- 名片夹 -->
 						<view slot="content">
 							<view class="ulist-item">
 								<view class="item-icon">
@@ -123,7 +123,7 @@
 							</view>
 						</view>
 					</myform>
-					<myform :append="true" :data="v" @callBack="toCard('/pages/user/card/edit/index')" >
+					<myform :append="true" :data="v" @callBack="toCard('/pages/user/card/edit/index')">
 						<view slot="content">
 							<view class="ulist-item">
 								<view class="item-icon">
@@ -158,13 +158,23 @@
 				</view>
 				<view class="ulist-group ptb8 plr5">
 				
-					<myform :append="true" :data="v" @callBack="toCard('/pages/user/card/show/index?user_id='+data.user.id)">
+					<myform :append="true" :data="v" @callBack="goto('/pages/order/lists/main?status=12&historyUrl=del',1)">
 						<view slot="content">
 							<view class="ulist-item">
 								<view class="item-icon">
 									<image class="img" src="https://card.doxinsoft.com/images/wap/unav-b7.png"></image>
 								</view>
 								<view class="item-name">我的订单</view>
+							</view>
+						</view>
+					</myform>
+					<myform :append="true" :data="v" @callBack="toCard2('/pages/user/demand/lists/index',1)">
+						<view slot="content">
+							<view class="ulist-item">
+								<view class="item-icon">
+									<image class="img" src="https://card.doxinsoft.com/images/wap/unav-b7.png"></image>
+								</view>
+								<view class="item-name">发布动态</view>
 							</view>
 						</view>
 					</myform>
@@ -178,7 +188,7 @@
 							</view>
 						</view>
 					</myform>
-					<myform :append="true" :data="v"  @callBack="toCard('/pages/user/card/count/index')">
+					<myform :append="true" :data="v" @callBack="goto('/pages/user/integral/count/main',1)">
 						<view slot="content">
 							<view class="ulist-item">
 								<view class="item-icon">

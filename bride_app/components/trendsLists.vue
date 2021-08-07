@@ -27,27 +27,24 @@
 							</view>
 						</view>
 					</view>
-					<view class="tabs mt15 mb20">
-						<span class="p">#{{v.tabs}}#</span>
-					</view>
 					<view class="bottom flex-middle fc-6">
 						<view class="item mr20">
 							<span :class="['iconfont icon-trends-thumbs fs-15', thumbs==true ? 'fc-red' : '']" @click="thumbs = !thumbs"></span>
 							<span class="num pl5">0</span>
 						</view>
-						<view class="item mr20">
+						<!-- <view class="item mr20">
 							<span class="iconfont icon-trends-evalute fs-15"></span>
 							<span class="num pl5">{{v.evalute.length}}</span>
-						</view>
+						</view> -->
 					</view>
-					<view class="plcon mt10" v-if="v.evalute.length">
+					<!-- <view class="plcon mt10" v-if="v.evalute.length">
 						<view class="pl-list fs-14" v-for="(item,key) in v.evalute" :key="key">
 							<view class="name" v-if="item.getUser.userName">{{ item.getUser.userName }}</view>
 							<view class="dateil plr3" v-if="item.getUser.userName">回复</view>
 							<view class="name">{{ item.userName }} ：</view>
 							<view class="dateil">{{ item.getUser.content ? item.getUser.content : item.content }}</view>
 						</view>
-					</view>
+					</view> -->
 				</view>
 			</view>
 		</view>

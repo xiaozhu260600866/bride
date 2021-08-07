@@ -20,7 +20,7 @@
 					<view>我已阅读并同意</view>
 					<view class="main-color" @click="goto('/pages/news/show?id=254',1)">《新良缘用户协议》</view>
 				</view>
-				<dx-button type="primary" round myclass="plr80 mt20" @click="step = 2">下一步</dx-button>
+				<dx-button type="primary" size="lg" round myclass="plr80 mt20" @click="step = 2">下一步</dx-button>
 			</view>
 			<view class="second-step" v-if="step == 2">
 				<view class="text-center">
@@ -30,11 +30,11 @@
 				<view class="mt25 plr20">
 					<weui-input v-model="ruleform.name" label="姓名" type="text" name="name" datatype="require"></weui-input>
 					<weui-input v-model="ruleform.phone" label="手机" type="text" name="phone" datatype="require"></weui-input>
-					<dx-address v-model="ruleform.addr_address" labeltxt="工作生活在"></dx-address>
+					<dx-address v-model="ruleform.addr_address" labeltxt="工作生活在" addressHidden></dx-address>
 					<weui-input v-model="ruleform.marital" label="婚姻状况" placeholder="请选择" name="marital" changeField="value" type="select" dataKey="maritalArr"></weui-input>
 				</view>
 				<view class="m20 text-center" @click="submit">
-					<dx-button type="primary" round myclass="plr80">提交</dx-button>
+					<dx-button type="primary" size="lg" round myclass="plr80">提交</dx-button>
 				</view>
 			</view>
 		</view>
