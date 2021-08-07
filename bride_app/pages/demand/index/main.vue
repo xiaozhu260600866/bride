@@ -45,7 +45,7 @@
 					</swiper>
 				</view>
 				<!-- 广告 -->
-				<div id="banner" class="pt5" v-if="data.silders.data.length">
+				<div id="banner" class="pt5" v-if="data.silders && data.silders.data.length">
 					<myswiper :lists="data.silders.data"></myswiper>
 				</div>
 				<view :class="[data.location_category.length<0?'mt8':'']">

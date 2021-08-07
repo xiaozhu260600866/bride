@@ -283,7 +283,10 @@
 		},
 		onLoad(options) {
 			wx.removeStorageSync('order_no');			wx.removeStorageSync('package');
-			this.$refs.diag.thisDiag = false;
+			this.$nextTick(()=>{
+				this.$refs.diag.thisDiag = false;
+			})
+			
 			this.ajax();
 		},
 		onShow(){
@@ -384,6 +387,6 @@
 				});
 			}
 		},
-		components: {}
+	
 	}
 </script>
