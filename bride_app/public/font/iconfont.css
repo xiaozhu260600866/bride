@@ -14,6 +14,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-right2::before{content: "\e6ee";}/* 右 */
 
 .icon-wechat-add:before{content: "\e657";}/* 添加 */
 .icon-wechat-all:before{content: "\e66b";}/* 微信 */

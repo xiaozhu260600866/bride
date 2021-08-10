@@ -10,7 +10,7 @@
 					<tui-icon name="search" :size='16' color='#333'></tui-icon>
 				</view>
 				<!-- #endif -->
-				<input confirm-type="search" placeholder="名片搜索" :focus="true" auto-focus placeholder-class="tui-input-plholder"
+				<input confirm-type="search" placeholder="寻找心仪的TA" :focus="true" auto-focus placeholder-class="tui-input-plholder"
 				 class="tui-input" v-model.trim="key"  @confirm="search"/>
 				<!-- #ifdef APP-PLUS || MP -->
 				<icon type="clear" :size='13' color='#bcbcbc' @tap="cleanKey" v-show="key"></icon>
@@ -21,7 +21,7 @@
 				</view>
 				<!-- #endif -->
 			</view>
-			<view class="tui-searchnav tui-tnav" @click="search">精准搜索</view>
+			<view class="tui-searchnav tui-tnav main-color" @click="search">精准搜索</view>
 			<!-- <view class="tui-cancle tui-tnav" @tap="back">取消</view> -->
 		</view>
 

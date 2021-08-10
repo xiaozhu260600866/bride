@@ -8,23 +8,12 @@
 			</div>
 		</page>
 		<div v-if="data.show">
-			<THeader :data="data" :callBack="true" :waterCityData="waterCityData"  title="搜索动态" searchUrl="/pages/search/demand/main" @callBack="$refs.selectCity.init()" noborder></THeader>
+			<!-- <THeader :data="data" :callBack="true" :waterCityData="waterCityData"  title="搜索动态" searchUrl="/pages/search/demand/main" @callBack="$refs.selectCity.init()" noborder></THeader> -->
 			<div>
 				<!-- 轮播图 -->
-				<div class="bg-f swiper-banner bannerSwiper" v-if="data.ad4.length">
+				<!-- <div class="bg-f swiper-banner bannerSwiper" v-if="data.ad4.length">
 					<myswiper :data="data.ad4" :tbPadding="0"></myswiper>
 				</div>
-				
-				<!-- <view class="tread bg-f pb10">
-					<view class="tread-info">
-						<text class="Arial">{{data.weather.date}}</text>
-						<text>星期{{data.weather.week}}</text>
-						<text class="Arial">{{data.weather.temperature}}°</text>
-						<text>{{data.weather.weather}}</text>
-					</view>
-					<view class="tread-info">总信息量<text class="Arial">{{data.articleOrderCount}}</text></view>
-					<view class="tread-info">总浏览<text class="Arial">{{data.viewsCount}}</text></view>
-				</view> -->
 				<view class="navSwiper" v-if="data.location_category.length">
 					<swiper class="swiper bgf mb8" :vertical="vertical" :autoplay="false" :indicator-dots="true" :duration="duration"
 					 :circular="circular" :style="data.location_category[0].length<=5 ? 'height: 100px;' : 'height: 410rpx;'" >
@@ -43,11 +32,11 @@
 							</div>
 						</swiper-item>
 					</swiper>
-				</view>
+				</view> -->
 				<!-- 广告 -->
-				<div id="banner" class="pt5" v-if="data.silders && data.silders.data.length">
+				<!-- <div id="banner" class="pt5" v-if="data.silders && data.silders.data.length">
 					<myswiper :lists="data.silders.data"></myswiper>
-				</div>
+				</div> -->
 				<view :class="[data.location_category.length<0?'mt8':'']">
 					<dx-tabs-scroll :tabs="tabs" v-model="showType" @change="listsShow = false;ajax()" :height="46" borderColor="#387ef8"
 					 :curSize="18" curColor="#000" curBold="bold" :nameSize="16" nameBold="bold" nameColor="#333" :borderHeight="6" :borderRadius="6"

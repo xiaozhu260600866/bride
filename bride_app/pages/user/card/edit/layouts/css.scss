@@ -1,0 +1,17 @@
+.dxi-drawer{width: 100%;position: fixed;left: 0;right: 0;bottom: 0;opacity: 1;transform: translate3d(0, 100%, 0);transform-origin: center;transition: all 0.3s ease-in-out;min-height: 20rpx;background-color: #fff;height: auto;z-index: 997;}
+
+.dxi-drawer_show{opacity: 1;transform: translate3d(0px, 0px, 0px);}
+
+.dxi-drawer-top_show,
+.dxi-drawer-bottom_show {opacity: 1;transform: translate3d(0, 0, 0);}
+.dxi-mask {position: fixed;top: 0;left: 0;right: 0;bottom: 0;background-color: rgba(0, 0, 0, 0.6);transition: all 0.3s ease-in-out;opacity: 0;visibility: hidden;}
+.dxi-mask_show {opacity: 1;visibility: visible;}
+
+.hobby-box{width: 100%;height: 712rpx;box-sizing: border-box;overflow: hidden;background-color: #fff;}
+.hobby-box .title{display: flex;align-items: center;}
+.hobby-box .title .name{flex: 1;padding: 20rpx 0 20rpx 140rpx;text-align: center;}
+.hobby-box .title .sure{padding: 20rpx 30rpx;width: 140rpx;text-align: center;}
+.hobby-lists{height: calc(612rpx);overflow-x: auto;}
+.hobby-label{display: flex;flex-direction: row;flex-wrap: wrap;align-items: center;justify-content: flex-start;padding: 0 10rpx 10rpx;}
+.hobby-label .label{background-color: #F5F6FA;color: #333;line-height: 80rpx;padding: 0 40rpx;margin: 10rpx;font-size: 28rpx;border: 1rpx #F5F6FA solid;}
+.hobby-label .label.cur{color: $uni-color-primary;border-color: $uni-color-primary;background-color: $uni-bg-color;}

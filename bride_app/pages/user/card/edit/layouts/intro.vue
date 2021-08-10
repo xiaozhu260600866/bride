@@ -2,13 +2,8 @@
 	<view class="pb60">
 		<page :parentData="data" :formAction="formAction"></page>
 		<view v-if="data.show">
-			<view class="block-sec edit-write" v-if="type == 'personal'">
-				<weui-input v-model="ruleform.remark" label="业务介绍" type="textarea" name="remark"></weui-input>
-				<weui-input v-model="ruleform.remark_pic" label="介绍图片" type="upload" upurl='user' allowUpLoadNum="5" name="remark_pic"></weui-input>
-			</view>
-			<view class="block-sec edit-write" v-if="type == 'company'">
-				<weui-input v-model="ruleform.remark_company" label="介绍内容" type="textarea" name="remark_company"></weui-input>
-				<weui-input v-model="ruleform.remark_pic_company" label="介绍图片" type="upload" upurl='user' allowUpLoadNum="5" name="remark_pic_company"></weui-input>
+			<view class="block-sec edit-write">
+				<weui-input v-model="ruleform.remark" label="个人独白" type="textarea" name="remark"></weui-input>
 			</view>
 			<dxftButton type="primary" size="lg" round @click="submit">确认</dxftButton>
 		</view>
@@ -54,11 +49,7 @@
 		},
 		onLoad(options) {
 			this.type = options.type;
-			if(this.type == 'personal'){
-				this.setTitle('业务介绍');
-			}else{
-				this.setTitle('公司简介');
-			}
+			this.setTitle('个人独白');
 			this.ajax();
 		},
 		onShareAppMessage() {

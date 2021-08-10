@@ -11,12 +11,12 @@
 				<div @click="goto('/pages/integral/lists/main',1)" class="list-group-item">
 					<image class="img" src="https://boss.doxinsoft.com/images/app/exchange.png" />
 					<p class="name">积分商城</p>
-					<p class="icon iconfont icon-right"></p>
+					<p class="icon iconfont icon-right2"></p>
 				</div>
 				<div @click="goto('/pages/user/integral/order/lists/main?status=3&historyUrl=del',1)" class="list-group-item">
 					<image class="img" src="https://boss.doxinsoft.com/images/app/orderlist.png" />
 					<p class="name">我的订单</p>
-					<p class="icon iconfont icon-right"></p>
+					<p class="icon iconfont icon-right2"></p>
 				</div>
 			</div>
 

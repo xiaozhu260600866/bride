@@ -6,7 +6,7 @@
 			</view> -->
 		</page>
 		<view v-if="data.show">
-			<THeader :data="data" :city="city" title="搜索会员" showCity searchUrl="/pages/search/card/main" noborder></THeader>
+			<THeader :data="data" :city="city" title="寻找心仪的TA" showCity searchUrl="/pages/search/card/main" noborder></THeader>
 			<view class="groupAd bannerSwiper">
 				<myswiper :data="data.ad1" :tbPadding="0"></myswiper>
 			</view>

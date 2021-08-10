@@ -4,7 +4,8 @@
 			"path": "pages/index/main",
 			"style": {
 				"navigationBarTitleText": "新良缘",
-				"enablePullDownRefresh": true
+				"enablePullDownRefresh": true,
+				"navigationStyle": "custom"
 			}
 		},
 		{
@@ -47,7 +48,8 @@
 			"path": "pages/search/demand/main",
 			"style": {
 				"navigationBarTitleText": "搜索需求",
-				"enablePullDownRefresh": true
+				"enablePullDownRefresh": true,
+				"navigationStyle": "custom"
 			}
 		},
 		{
@@ -64,104 +66,104 @@
 				"enablePullDownRefresh": true
 			}
 		},
-		{
-			"path": "pages/distribution/login/main",
-			"style": {
-				"navigationBarTitleText": "分享达人",
-				"enablePullDownRefresh": true
-			}
-		},
-		{
-			"path": "pages/distribution/down/dis/main",
-			"style": {
-				"navigationBarTitleText": "下级代理人",
-				"enablePullDownRefresh": true
-			}
-		},
-		{
-			"path": "pages/distribution/down/client/main",
-			"style": {
-				"navigationBarTitleText": "下级客户",
-				"enablePullDownRefresh": true
-			}
-		},
-		{
-			"path": "pages/distribution/index/main",
-			"style": {
-				"navigationBarTitleText": "分享达人",
-				"enablePullDownRefresh": true
-			}
-		},
-		{
-			"path": "pages/distribution/ad/main",
-			"style": {
-				"navigationBarTitleText": "广告中心",
-				"enablePullDownRefresh": true
-			}
-		},
-		{
-			"path": "pages/distribution/commission/index",
-			"style": {
-				"navigationBarTitleText": "分销佣金",
-				"enablePullDownRefresh": true
-			}
-		},
-		{
-			"path": "pages/distribution/add/main",
-			"style": {
-				"navigationBarTitleText": "分享达人注册",
-				"enablePullDownRefresh": true
-			}
-		},
-		{
-			"path": "pages/distribution/client/main",
-			"style": {
-				"navigationBarTitleText": "我的客户",
-				"enablePullDownRefresh": true
-			}
-		},
-		{
-			"path": "pages/distribution/domoney/main",
-			"style": {
-				"navigationBarTitleText": "申请提现",
-				"enablePullDownRefresh": true
-			}
-		},
-		{
-			"path": "pages/distribution/order-list/main",
-			"style": {
-				"navigationBarTitleText": "我的订单",
-				"enablePullDownRefresh": true
-			}
-		},
-		{
-			"path": "pages/distribution/record-list/main",
-			"style": {
-				"navigationBarTitleText": "提现记录",
-				"enablePullDownRefresh": true
-			}
-		},
-		{
-			"path": "pages/distribution/team/main",
-			"style": {
-				"navigationBarTitleText": "我的团队",
-				"enablePullDownRefresh": true
-			}
-		},
-		{
-			"path": "pages/distribution/qrcode/main",
-			"style": {
-				"navigationBarTitleText": "我的二维码",
-				"enablePullDownRefresh": true
-			}
-		},
-		{
-			"path": "pages/distribution/qrcode/poster/index",
-			"style": {
-				"navigationBarTitleText": "分享二维码",
-				"enablePullDownRefresh": true
-			}
-		},
+		// {
+		// 	"path": "pages/distribution/login/main",
+		// 	"style": {
+		// 		"navigationBarTitleText": "分享达人",
+		// 		"enablePullDownRefresh": true
+		// 	}
+		// },
+		// {
+		// 	"path": "pages/distribution/down/dis/main",
+		// 	"style": {
+		// 		"navigationBarTitleText": "下级代理人",
+		// 		"enablePullDownRefresh": true
+		// 	}
+		// },
+		// {
+		// 	"path": "pages/distribution/down/client/main",
+		// 	"style": {
+		// 		"navigationBarTitleText": "下级客户",
+		// 		"enablePullDownRefresh": true
+		// 	}
+		// },
+		// {
+		// 	"path": "pages/distribution/index/main",
+		// 	"style": {
+		// 		"navigationBarTitleText": "分享达人",
+		// 		"enablePullDownRefresh": true
+		// 	}
+		// },
+		// {
+		// 	"path": "pages/distribution/ad/main",
+		// 	"style": {
+		// 		"navigationBarTitleText": "广告中心",
+		// 		"enablePullDownRefresh": true
+		// 	}
+		// },
+		// {
+		// 	"path": "pages/distribution/commission/index",
+		// 	"style": {
+		// 		"navigationBarTitleText": "分销佣金",
+		// 		"enablePullDownRefresh": true
+		// 	}
+		// },
+		// {
+		// 	"path": "pages/distribution/add/main",
+		// 	"style": {
+		// 		"navigationBarTitleText": "分享达人注册",
+		// 		"enablePullDownRefresh": true
+		// 	}
+		// },
+		// {
+		// 	"path": "pages/distribution/client/main",
+		// 	"style": {
+		// 		"navigationBarTitleText": "我的客户",
+		// 		"enablePullDownRefresh": true
+		// 	}
+		// },
+		// {
+		// 	"path": "pages/distribution/domoney/main",
+		// 	"style": {
+		// 		"navigationBarTitleText": "申请提现",
+		// 		"enablePullDownRefresh": true
+		// 	}
+		// },
+		// {
+		// 	"path": "pages/distribution/order-list/main",
+		// 	"style": {
+		// 		"navigationBarTitleText": "我的订单",
+		// 		"enablePullDownRefresh": true
+		// 	}
+		// },
+		// {
+		// 	"path": "pages/distribution/record-list/main",
+		// 	"style": {
+		// 		"navigationBarTitleText": "提现记录",
+		// 		"enablePullDownRefresh": true
+		// 	}
+		// },
+		// {
+		// 	"path": "pages/distribution/team/main",
+		// 	"style": {
+		// 		"navigationBarTitleText": "我的团队",
+		// 		"enablePullDownRefresh": true
+		// 	}
+		// },
+		// {
+		// 	"path": "pages/distribution/qrcode/main",
+		// 	"style": {
+		// 		"navigationBarTitleText": "我的二维码",
+		// 		"enablePullDownRefresh": true
+		// 	}
+		// },
+		// {
+		// 	"path": "pages/distribution/qrcode/poster/index",
+		// 	"style": {
+		// 		"navigationBarTitleText": "分享二维码",
+		// 		"enablePullDownRefresh": true
+		// 	}
+		// },
 		{
 			"path": "pages/user/address/lists/main",
 			"style": {
@@ -240,7 +242,15 @@
 				"enablePullDownRefresh": true,
 				"navigationBarBackgroundColor": "#ed5296",
 				"navigationBarTextStyle": "white",
-				"backgroundColorTop": "#ed5296"
+				"backgroundColorTop": "#ed5296",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/user/my/activity/index",
+			"style": {
+				"navigationBarTitleText": "我的活动",
+				"enablePullDownRefresh": true
 			}
 		},
 		{
@@ -312,6 +322,27 @@
 			}
 		},
 		{
+			"path": "pages/user/card/edit/layouts/info",
+			"style": {
+				"navigationBarTitleText": "基础信息",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/user/card/edit/layouts/condition",
+			"style": {
+				"navigationBarTitleText": "择偶条件",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/user/card/edit/layouts/hobby",
+			"style": {
+				"navigationBarTitleText": "兴趣爱好",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
 			"path": "pages/user/card/template/index",
 			"style": {
 				"navigationBarTitleText": "名片模版",
@@ -377,7 +408,8 @@
 			"path": "pages/water-mall/main",
 			"style": {
 				"navigationBarTitleText": "好物",
-				"enablePullDownRefresh": true
+				"enablePullDownRefresh": true,
+				"navigationStyle": "custom"
 			}
 		},
 		{
@@ -531,7 +563,8 @@
 			"path": "pages/activity/lists/index",
 			"style": {
 				"navigationBarTitleText": "活动",
-				"enablePullDownRefresh": true
+				"enablePullDownRefresh": true,
+				"navigationStyle": "custom"
 			}
 		},
 		{

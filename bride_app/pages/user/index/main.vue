@@ -178,7 +178,7 @@
 							</view>
 						</view>
 					</myform>
-					<myform :append="true" :data="v" @callBack="toCard('/pages/user/card/show/index?user_id='+data.user.id)">
+					<myform :append="true" :data="v" @callBack="toCard('/pages/user/my/activity/index')">
 						<view slot="content">
 							<view class="ulist-item">
 								<view class="item-icon">
