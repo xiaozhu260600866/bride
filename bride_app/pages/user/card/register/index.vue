@@ -54,7 +54,7 @@
 				ruleform:{
 					phone:'13380951183'
 				},
-				step: 2,
+				step: 1,
 				maritalArr:[
 					{label: '未婚',value: 1},
 					{label: '已婚',value: 2},
