@@ -16,11 +16,11 @@
 					</view>
 				</view>
 				<view class="agreement flex-middle flex-center fs-13 fc-6">
-					<checkbox-group @change="checkboxChange"><checkbox :value="1"/></checkbox-group>
+					<checkbox-group @change="agree"><checkbox value="cb"/></checkbox-group>
 					<view>我已阅读并同意</view>
 					<view class="main-color" @click="goto('/pages/news/show?id=254',1)">《新良缘用户协议》</view>
 				</view>
-				<dx-button type="primary" size="lg" round myclass="plr80 mt20" @click="step = 2">下一步</dx-button>
+				<dx-button type="primary" size="lg" round myclass="plr80 mt20" @click="submit()">下一步</dx-button>
 			</view>
 			<view class="second-step" v-if="step == 2">
 				<view class="text-center">
@@ -52,7 +52,8 @@
 				data: this.formatData(this),
 				getSiteName: this.getSiteName(),
 				ruleform:{
-					phone:'13380951183'
+					phone:'13380951183',
+					agree:0
 				},
 				step: 1,
 				maritalArr:[
@@ -66,6 +67,16 @@
 		
 		},
 		methods: {
+		
+			agree(event){
+				if(event.target.value.length){
+					console.log("a")
+					this.ruleform.agree = 1;	
+				}else{
+					console.log("b")
+						this.ruleform.agree = 0;	
+				}
+			},
 			getPhoneNumber(e) {
 				this.getAuthPhoneNumber(e,msg=>{
 					 this.ruleform.phone = msg.data.phoneNumber;
@@ -74,14 +85,22 @@
 				});
 			},
 			submit(){
-				this.vaildForm(this, res => {
-					if(res){
-						this.postAjax("/user/info",this.ruleform).then(msg=>{
-							 uni.setStorageSync('openCardDiag',1);
-							this.goto("/pages/user/card/verified/index",1);
-						});
+				if(this.step == 1){
+					if(!this.ruleform.agree){
+						return this.getError("请同意协议");	
 					}
-				})
+					this.step =2;
+				}else{
+					this.vaildForm(this, res => {
+						if(res){
+							this.postAjax("/user/info",this.ruleform).then(msg=>{
+								 uni.setStorageSync('openCardDiag',1);
+								this.goto("/pages/user/card/verified/index",1);
+							});
+						}
+					})
+				}
+				
 			},
 			ajax() {
 				this.getAjax(this).then(msg => {

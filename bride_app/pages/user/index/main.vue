@@ -16,7 +16,7 @@
 					</view>
 					<view class="uinfo" v-else>
 						<view class="header-img">
-							<image class="img" :src="data.user.headerPic" />
+							<image class="img" :src="data.user.headimgurl" />
 						</view>
 						<view class="pl15 fc-white info">
 							<myform class="w-b100" :ruleform="ruleform" :vaildate="vaildate" :append="true">
