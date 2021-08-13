@@ -126,24 +126,14 @@ myfun.install = (Vue, options) => {
 			}
 		})
 	}
-	Vue.prototype.checkUser = (url, type) => {
-		console.log(url);
-		wx.getStorage({
-			key: 'userInfo',
-			success(res) {
-				if (res.data && res.data.is_bing) {
-					Vue.prototype.goto(url, type);
-					return false;
-				} else {
-					Vue.prototype.goto("/pages/user/login/main", 1);
-					return false;
-				}
-			},
-			fail(res) {
-				Vue.prototype.goto("/pages/user/login/main", 1);
-				return false;
-			}
-		})
+	Vue.prototype.checkUser = (user,url, type) => {
+	   if(!user.userInfo.phone){
+		   return Vue.prototype.goto("/pages/user/card/register/index", 1);
+	   }else if(!user.is_authentication){
+			  return Vue.prototype.goto("/pages/user/card/verified/index", 1);
+	   }
+	   return 	Vue.prototype.goto(url, type);
+		
 	}
 
 }

@@ -47,9 +47,9 @@
 					<text>基础信息</text>
 					<text class="main-color edit-nav" @click="goto('/pages/user/card/edit/layouts/info',1)">编辑</text>
 				</view>
-				<view class="tag-group pl12">
+				<!-- <view class="tag-group pl12">
 					<view class="tag" v-for="item in condTags">{{ item }}</view>
-				</view>
+				</view> -->
 			</view>
 			
 			<view class="block-sec edit-write">

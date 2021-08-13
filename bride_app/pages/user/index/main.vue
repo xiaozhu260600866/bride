@@ -8,9 +8,11 @@
 						<view class="header-img">
 							<image class="img" :src="getSiteName +'/images/nouser01.png'" />
 						</view>
-						<myform :ruleform="ruleform" :vaildate="vaildate" :append="true" :data="v" @callBack="goto('/pages/user/card/register/index',1)">
+						<myform :ruleform="ruleform" :vaildate="vaildate" :append="true" :data="v"
+							@callBack="goto('/pages/user/card/register/index',1)">
 							<view slot="content">
-								<view class="login-nav fc-white fs-14">登录/注册<span class="iconfont icon-right fs-10 pl3"></span></view>
+								<view class="login-nav fc-white fs-14">登录/注册<span
+										class="iconfont icon-right fs-10 pl3"></span></view>
 							</view>
 						</myform>
 					</view>
@@ -22,10 +24,13 @@
 							<myform class="w-b100" :ruleform="ruleform" :vaildate="vaildate" :append="true">
 								<view slot="content" class="fc-white lh-24 fs-15">
 									<view class="group">
-										<view>{{data.user.userInfo.phone ? data.user.userInfo.name :data.user.nickname}}</view>
-										<view class="qrcode plr8" v-if="data.user.member_lev"><span class="iconfont icon-user-qrcode fs-18 fc-white"></span></view>
+										<view>{{data.user.userInfo.phone ? data.user.userInfo.name :data.user.nickname}}
+										</view>
+										<view class="qrcode plr8" v-if="data.user.member_lev"><span
+												class="iconfont icon-user-qrcode fs-18 fc-white"></span></view>
 									</view>
-									<view v-if="data.user.userInfo.phone">电话号码：<text class="Arial">{{data.user.userInfo.phone}}</text></view>
+									<view v-if="data.user.userInfo.phone">电话号码：<text
+											class="Arial">{{data.user.userInfo.phone}}</text></view>
 									<view class="group" v-if="data.user.member_lev">
 										<view class="pr8"><span class="iconfont icon-vip fs-16"></span></view>
 										<view class="fs-14">{{data.user.member_lev}}</view>
@@ -87,13 +92,13 @@
 			<view class="ugorup-box" v-if="data.diag && data.diag.pic" @click="goto(data.diag.url,1)">
 				<image class="w-b100 flex" :src="getSiteName+'/upload/images/poster/800_'+ data.diag.pic" mode="widthFix"></image>
 			</view> -->
-			
+
 			<view class="ulist ugorup-box " style="margin-top: -70rpx;position: relative;z-index: 6;">
 				<view class="black-title">
 					<view class="name">我的特权</view>
 				</view>
 				<view class="ulist-group ptb8 plr5">
-					<myform :append="true" :data="v" @callBack="toCard('/pages/user/card/edit/index')">
+					<myform :append="true" :data="v" @callBack="checkUser(data.user,'/pages/user/card/edit/index')">
 						<view slot="content">
 							<view class="ulist-item">
 								<view class="item-icon">
@@ -103,7 +108,8 @@
 							</view>
 						</view>
 					</myform>
-					<myform :append="true" :data="v" @callBack="toCard('/pages/user/card/count/index')"><!-- 我的访客 -->
+					<myform :append="true" :data="v" @callBack="checkUser(data.user,'/pages/user/card/count/index')">
+						<!-- 我的访客 -->
 						<view slot="content">
 							<view class="ulist-item">
 								<view class="item-icon">
@@ -113,7 +119,8 @@
 							</view>
 						</view>
 					</myform>
-					<myform :append="true" :data="v"@callBack="toCard('/pages/user/card/count/index')"><!-- 名片夹 -->
+					<myform :append="true" :data="v" @callBack="checkUser(data.user,'/pages/user/card/count/index')">
+						<!-- 名片夹 -->
 						<view slot="content">
 							<view class="ulist-item">
 								<view class="item-icon">
@@ -123,7 +130,7 @@
 							</view>
 						</view>
 					</myform>
-					<myform :append="true" :data="v" @callBack="toCard('/pages/user/card/edit/index')">
+					<myform :append="true" :data="v" @callBack="checkUser(data.user,'/pages/user/card/edit/index')">
 						<view slot="content">
 							<view class="ulist-item">
 								<view class="item-icon">
@@ -133,7 +140,7 @@
 							</view>
 						</view>
 					</myform>
-					<myform :append="true" :data="v" @callBack="toCard('/pages/user/card/verified/index',1)">
+					<myform :append="true" :data="v" @callBack="checkUser(data.user,'/pages/user/card/verified/index',1)">
 						<view slot="content">
 							<view class="ulist-item">
 								<view class="item-icon">
@@ -151,14 +158,15 @@
 					</button>
 				</view>
 			</view>
-			
+
 			<view class="ulist ugorup-box">
 				<view class="black-title">
 					<view class="name">工具与服务</view>
 				</view>
 				<view class="ulist-group ptb8 plr5">
-				
-					<myform :append="true" :data="v" @callBack="goto('/pages/order/lists/main?status=12&historyUrl=del',1)">
+
+					<myform :append="true" :data="v"
+						@callBack="checkUser(data.user,'/pages/order/lists/main?status=12&historyUrl=del',1)">
 						<view slot="content">
 							<view class="ulist-item">
 								<view class="item-icon">
@@ -168,7 +176,7 @@
 							</view>
 						</view>
 					</myform>
-					<myform :append="true" :data="v" @callBack="toCard2('/pages/user/demand/lists/index',1)">
+					<myform :append="true" :data="v" @callBack="checkUser(data.user,'/pages/user/demand/lists/index',1)">
 						<view slot="content">
 							<view class="ulist-item">
 								<view class="item-icon">
@@ -178,7 +186,7 @@
 							</view>
 						</view>
 					</myform>
-					<myform :append="true" :data="v" @callBack="toCard('/pages/user/my/activity/index')">
+					<myform :append="true" :data="v" @callBack="checkUser(data.user,'/pages/user/my/activity/index')">
 						<view slot="content">
 							<view class="ulist-item">
 								<view class="item-icon">
@@ -188,7 +196,7 @@
 							</view>
 						</view>
 					</myform>
-					<myform :append="true" :data="v" @callBack="goto('/pages/user/integral/count/main',1)">
+					<myform :append="true" :data="v" @callBack="checkUser(data.user,'/pages/user/integral/count/main',1)">
 						<view slot="content">
 							<view class="ulist-item">
 								<view class="item-icon">
@@ -212,62 +220,24 @@
 			</view>
 			<view class="copyright" @click="phone('13318639080')">版权所有：广东科阅云</view>
 		</view>
-		<dx-diag :open="false" ref="diag" width="76%">
-			<!-- 未注册显示 -->
-			<block v-if="!data.user.userInfo.phone">
-				<view class="content text-center fs-18 fw-bold fc-0 lh-24 pt40 pb60">你还没有注册电子名片</view>
-				<view class="btn">
-					<dx-button size="lg" type="primary" round block @click="goto('/pages/user/card/register/index',1)">创建名片</dx-button>
-				</view>
-			</block>
-			<!-- 注册完成，未完善资料显示 -->
-			<block v-else>
-				<view class="content text-center pt20 pb40">
-					<view class="fs-18 fw-bold fc-0 lh-24">名片注册成功</view>
-					<view class="fs-17 fc-0 lh-24 mt15">进一步完善数字名片资料，分享推广！</view>
-				</view>
-				<view class="btn flex-middle">
-					<!-- <view class="mr5 w-b100">
-						<dx-button size="lg" type="primary" round block @click="$refs.diag.thisDiag = false;ajax()">返回</dx-button>
-					</view> -->
-					<view class="w-b100">
-						<dx-button size="lg" type="primary" round block @click="$refs.diag.thisDiag = false;goto('/pages/user/card/edit/index',1)">完善名片</dx-button>
-					</view>
-				</view>
-			</block>
-		</dx-diag>
-		
-		
-		<dx-diag :open="false" ref="diag2" width="76%">
-			<!-- 未认证显示 -->
-		<block>
-			<view class="content text-center pt20 pb40">
-				<view class="fs-18 fw-bold fc-0 lh-24">名片认证</view>
-				<view class="fs-16 fc-0 lh-24 mt15">你的名片还未认证，请认证后发布需求，企业服务！</view>
-			</view>
-			<view class="btn flex-middle">
-				<view class="ml5 w-b100">
-					<dx-button size="lg" type="primary" round block @click="$refs.diag2.thisDiag = false;goto('/pages/user/card/verified/index',1)">进入名片认证</dx-button>
-				</view>
-			</view>
-		</block>
-		</dx-diag>
+
 	</view>
 </template>
 <script>
 	import "./index.css";
 	import dxNavClass from "doxinui/components/nav-class/nav-class"
-	import dxDiag from "doxinui/components/diag/diag"
 	export default {
-		components:{dxNavClass,dxDiag},
+		components: {
+			dxNavClass
+		},
 		data() {
 			return {
 				formAction: '/shop/user',
 				mpType: 'page', //用来分清父和子组件
 				data: this.formatData(this),
 				getSiteName: this.getSiteName(),
-				ruleform:{},
-				vaildate:{}
+				ruleform: {},
+				vaildate: {}
 			}
 		},
 		onReachBottom() {
@@ -279,114 +249,32 @@
 		},
 		onShareAppMessage() {
 			if (this.data.dis) this.data.query.distribution = this.data.dis.id;
-			return this.shareSource(this, '456在线','1');
+			return this.shareSource(this, '456在线', '1');
 		},
 		onLoad(options) {
-			wx.removeStorageSync('order_no');			wx.removeStorageSync('package');
-			this.$nextTick(()=>{
-				this.$refs.diag.thisDiag = false;
-			})
+			wx.removeStorageSync('order_no');
+			wx.removeStorageSync('package');
 			
+
 			this.ajax();
 		},
-		onShow(){
+		onShow() {
 			this.onShow(this);
 		},
 		methods: {
-			toCard2(url){
-				if(this.data.user.userInfo.phone && this.data.user.is_authentication){
-					return this.goto(url,1)
-				}else{
-					if(!this.data.user.userInfo.phone){
-						return this.$refs.diag.thisDiag = true;
-						return this.goto("/pages/user/card/register/index",1)
-					}else{
-						return this.$refs.diag2.thisDiag = true;
-						return this.goto("/pages/user/card/verified/index",1)
-					}
-				}
-			},
-			toCard(url){
-				if(this.data.user.userInfo.phone){
-					return this.goto(url,1)
-				}else{
-					if(url !="/pages/user/card/show/index?user_id="+this.data.user.id){
-						return this.$refs.diag.thisDiag = true;
-					}else{
-						return this.goto("/pages/user/card/register/index",1);
-					}
-				}
-			},
-			gotoDis(){
-				if(this.data.user.userInfo.phone && this.data.user.is_authentication){
-					return this.goto(this.data.isDis ? '/pages/distribution/index/main' :'/pages/distribution/add/main' ,1)
-				}else{
-					if(!this.data.user.userInfo.phone){
-						return this.$refs.diag.thisDiag = true;
-						return this.goto("/pages/user/card/register/index",1)
-					}else{
-						return this.$refs.diag2.thisDiag = true;
-						return this.goto("/pages/user/card/verified/index",1)
-					}
-				}
+			gotoDis() {
 				
 			},
-			checkAuth(v){
-				return this.goto(v.url,v.type);
+			checkAuth(v) {
+				return this.goto(v.url, v.type);
 			},
-			text(){
-				
-					this.ajax()
-					this.ajax()
-				
-			},
-			toMerchant(){
-				uni.navigateToMiniProgram({
-					appId: 'wxb135e689e76457d2',
-					path: 'pages/index/main',
-					extraData: {
-						'data1': 'test'
-					},
-					success(res) {
-					// 打开成功
-					}
-				})
-			},
-			toZtd(){
-				uni.navigateToMiniProgram({
-				  appId: 'wxa6cfc3a417501b21',
-				  path: 'pages/ztd/index/main',
-				  extraData: {
-				    'data1': 'test'
-				  },
-				  success(res) {
-				    // 打开成功
-				  }
-				})
-			},
-			toManager(){
-				uni.navigateToMiniProgram({
-				  appId: 'wxf15d3bf6eb13b8dd',
-				  path: 'pages/manager/index/main',
-				  extraData: {
-				    'data1': 'test'
-				  },
-				  success(res) {
-				    // 打开成功
-				  }
-				})
-			},
-			
 			ajax() {
 				this.getAjax(this).then(msg => {
-					//openCardDiag
-					 if(uni.getStorageSync('openCardDiag')){
-						 this.$refs.diag.thisDiag = true;
-						 uni.removeStorageSync('openCardDiag');
-					 }
+
+					
 				});
 			}
 		},
-	
+
 	}
 </script>

@@ -30,8 +30,8 @@
 				<view class="mt25 plr20">
 					<weui-input v-model="ruleform.name" label="姓名" type="text" name="name" datatype="require"></weui-input>
 					<weui-input v-model="ruleform.phone" label="手机" type="text" name="phone" datatype="require"></weui-input>
-					<dx-address v-model="ruleform.addr_address" labeltxt="工作生活在" addressHidden></dx-address>
-					<weui-input v-model="ruleform.marital" label="婚姻状况" placeholder="请选择" name="marital" changeField="value" type="select" dataKey="maritalArr"></weui-input>
+					<dx-address v-model="ruleform.address" labeltxt="工作生活在" addressHidden></dx-address>
+					<weui-input v-model="ruleform.married" label="婚姻状况" placeholder="请选择" name="married"  datatype="require" changeField="value" type="select" dataKey="maritalArr"></weui-input>
 				</view>
 				<view class="m20 text-center" @click="submit">
 					<dx-button type="primary" size="lg" round myclass="plr80">提交</dx-button>
@@ -55,11 +55,12 @@
 					phone:'13380951183',
 					agree:0
 				},
-				step: 1,
+				vaildate:{},
+				step: 2,
 				maritalArr:[
-					{label: '未婚',value: 1},
-					{label: '已婚',value: 2},
-					{label: '离异',value: 3},
+					{label: '未婚',value: '未婚'},
+					{label: '已婚',value: '已婚'},
+					{label: '离异',value: '离异'},
 				]
 			}
 		},
@@ -94,8 +95,11 @@
 					this.vaildForm(this, res => {
 						if(res){
 							this.postAjax("/user/info",this.ruleform).then(msg=>{
-								 uni.setStorageSync('openCardDiag',1);
-								this.goto("/pages/user/card/verified/index",1);
+								if(msg.data.status ==2){
+									uni.setStorageSync('openCardDiag',1);
+									this.goto("/pages/user/card/verified/index",1);
+								}
+								
 							});
 						}
 					})
