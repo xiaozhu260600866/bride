@@ -130,7 +130,7 @@
 							</view>
 						</view>
 					</myform>
-					<myform :append="true" :data="v" @callBack="checkUser(data.user,'/pages/user/card/edit/index')">
+					<myform :append="true" :data="v" @callBack="checkUser(data.user,'/pages/user/card/photo/index')">
 						<view slot="content">
 							<view class="ulist-item">
 								<view class="item-icon">
@@ -140,7 +140,9 @@
 							</view>
 						</view>
 					</myform>
-					<myform :append="true" :data="v" @callBack="checkUser(data.user,'/pages/user/card/verified/index',1)">
+					<myform :append="true" :data="v"
+						@callBack="checkUser(data.user,'/pages/user/card/verified/index',1)"
+						v-if="data.user.is_authentication == 0">
 						<view slot="content">
 							<view class="ulist-item">
 								<view class="item-icon">
@@ -176,7 +178,8 @@
 							</view>
 						</view>
 					</myform>
-					<myform :append="true" :data="v" @callBack="checkUser(data.user,'/pages/user/demand/lists/index',1)">
+					<myform :append="true" :data="v"
+						@callBack="checkUser(data.user,'/pages/user/demand/lists/index',1)">
 						<view slot="content">
 							<view class="ulist-item">
 								<view class="item-icon">
@@ -196,7 +199,8 @@
 							</view>
 						</view>
 					</myform>
-					<myform :append="true" :data="v" @callBack="checkUser(data.user,'/pages/user/integral/count/main',1)">
+					<myform :append="true" :data="v"
+						@callBack="checkUser(data.user,'/pages/user/integral/count/main',1)">
 						<view slot="content">
 							<view class="ulist-item">
 								<view class="item-icon">
@@ -254,7 +258,7 @@
 		onLoad(options) {
 			wx.removeStorageSync('order_no');
 			wx.removeStorageSync('package');
-			
+
 
 			this.ajax();
 		},
@@ -263,7 +267,13 @@
 		},
 		methods: {
 			gotoDis() {
-				
+				if (!this.data.user.userInfo.phone) {
+					return this.goto("/pages/user/card/register/index", 1);
+				} else if (!this.data.user.is_authentication) {
+					return this.goto("/pages/user/card/verified/index", 1);
+				}
+				console.log("aaa")
+				return this.goto(this.data.isDis ? '/pages/distribution/index/main' :'/pages/distribution/add/main' ,1)
 			},
 			checkAuth(v) {
 				return this.goto(v.url, v.type);
@@ -271,7 +281,7 @@
 			ajax() {
 				this.getAjax(this).then(msg => {
 
-					
+
 				});
 			}
 		},

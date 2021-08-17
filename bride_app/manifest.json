@@ -95,6 +95,13 @@
         "devServer" : {
             "https" : false
         },
-        "template" : "C:/Users/doxin/Desktop/demo.html"
+        "template" : "C:/Users/doxin/Desktop/demo.html",
+        "sdkConfigs" : {
+            "maps" : {
+                "qqmap" : {
+                    "key" : "LT6BZ-ZAOC6-KUFSB-MR4F4-OOMX5-S6BTW"
+                }
+            }
+        }
     }
 }

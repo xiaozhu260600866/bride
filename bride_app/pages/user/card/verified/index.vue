@@ -51,7 +51,7 @@
 					</view>
 				</view>
 			</view>
-			<dx-results txt="支付成功" @click="goto('/pages/index/main',2)" v-if="step == 2"></dx-results>
+		
 
 			<!-- <block v-if="data.user.is_authentication == 0 ">
 				<view v-if="step == 1">
@@ -73,6 +73,7 @@
 			</block> -->
 
 		</view>
+		<dxResults txt="支付成功" @click="goto('/pages/index/main',2)" v-if="step == 2"></dxResults>
 	</view>
 </template>
 

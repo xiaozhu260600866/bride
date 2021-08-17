@@ -2,6 +2,7 @@
 	<view class="dynamic-box" :class="[myclass,type==1?'':'plr20']">
 		<!-- 个人详情显示 -->
 		<block v-if="type == 1">
+			
 			<view class="dynamic-item" v-for="(item,key) in data" :key="key" v-if="key < 3">
 				<view class="left">
 					<view class="day Arial fs-22 lh-30">{{ item.day }}</view>
@@ -10,7 +11,7 @@
 				<view class="right">
 					<view class="title" v-if="item.title">{{ item.title }}</view>
 					<view class="photo" :class="[item.title?'':'mt5']">
-						<image class="img" :src="v" v-for="v in item.photo" mode="aspectFill" @click="previewImage(v)"></image>
+						<image class="img" :src="v.img" v-for="v in item.getCover" mode="aspectFill" @click="previewImage(v.img)"></image>
 					</view>
 				</view>
 			</view>
@@ -18,6 +19,7 @@
 		</block>
 		<!-- 个人列表显示 -->
 		<block v-if="type == 2">
+			
 			<view class="dynamic-item" v-for="(item,key) in data" :key="key">
 				<view class="left">
 					<view class="day Arial fs-22 lh-30">{{ item.day }}</view>

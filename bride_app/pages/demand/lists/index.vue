@@ -2,6 +2,7 @@
 	<view>
 		<page :parentData="data" :formAction="formAction"></page>
 		<view v-if="data.show">
+			
 			<view class="banner"><myswiper :data="data.categoryCover"></myswiper></view>
 			<!-- <dx-tabs-scroll :tabs="data.children" :nameSize="14" v-model="data.query.category" curColor="#13cc0c" borderColor="#13cc0c" @change="ajax" v-if="!data.query.red_packet"></dx-tabs-scroll> -->
 			<dx-nav-class v-if="data.children.length >1" :data="data.children" myclass="mb12" filedCover="getcover" @click="changeChildren" :num="5" :isturnpage="true" :pageNum="10"></dx-nav-class>

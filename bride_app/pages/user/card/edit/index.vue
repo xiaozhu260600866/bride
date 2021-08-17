@@ -1,7 +1,7 @@
 <template>
 	<view class="pb60">
 		<page :parentData="data" :formAction="formAction"></page>
-		<view v-if="show">
+		<view v-if="data.show">
 			<view class="block-sec edit-write mt5">
 				
 			</view>
@@ -61,7 +61,7 @@
 					<text class="main-color edit-nav" @click="goto('/pages/user/card/edit/layouts/condition',1)">编辑</text>
 				</view>
 				<view class="tag-group pl12">
-					<view class="tag" v-for="item in condTags">{{ item }}</view>
+					<view class="tag" v-for="item in ruleform.marry_condition" v-if="item">{{ item }}</view>
 				</view>
 			</view>
 			
@@ -91,7 +91,7 @@
 		components:{cardTemplate,dxftButton,dxImages},
 		data() {
 			return {
-				formAction: '/shop/user',
+				formAction: '/user',
 				mpType: 'page', //用来分清父和子组件
 				data: this.formatData(this),
 				getSiteName: this.getSiteName(),
@@ -101,7 +101,7 @@
 			
 				infoTags:['1980年','160cm','本科','5000~10000','广东江门','IT工程师'],
 				condTags:['25~30岁','160cm以上','大专以上','5000~10000','广东江门','未婚','介意有子女'],
-				hobbyTags:['篮球','跑步','探险','看书','美食']
+				hobbyTags:[]
 			}
 		},
 		mounted() {
@@ -122,30 +122,39 @@
 				});
 			},
 			getThisAddress(res, canUpdate) {
-				uni.request({
-					url: 'https://apis.map.qq.com/ws/geocoder/v1/?location=' + res.latitude + ',' + res.longitude + '&key=' +
-						'LT6BZ-ZAOC6-KUFSB-MR4F4-OOMX5-S6BTW&get_poi=1',
-					success: res2 => {
-						console.log(res2);
-						if (!this.ruleform.address || canUpdate) {
-							//this.getError("ok")
-							this.ruleform.location_x = res.latitude;
-							this.ruleform.location_y = res.longitude;
-							this.ruleform.address = res2.data.result.address;
-							this.ruleform.city = res2.data.result.address_component.city;
-							console.log(res2.data.result.address_component.city)
-							console.log(1)
-						}
-					},
-					fail:res2=>{
-						this.getError(JSON.stringify(res2));
-					}
-				});
+				this.ruleform.location_x = res.latitude;
+				this.ruleform.location_y = res.longitude;
+				// uni.request({
+				// 	url: 'http://apis.map.qq.com/ws/geocoder/v1/?location=' + res.latitude + ',' + res.longitude + '&key=' +
+				// 		'LT6BZ-ZAOC6-KUFSB-MR4F4-OOMX5-S6BTW&get_poi=1',
+				// 	success: res2 => {
+				// 		console.log(res2);
+				// 		if (!this.ruleform.address || canUpdate) {
+				// 			//this.getError("ok")
+				// 			this.ruleform.location_x = res.latitude;
+				// 			this.ruleform.location_y = res.longitude;
+				// 			this.ruleform.address = res2.data.result.address;
+				// 			this.ruleform.city = res2.data.result.address_component.city;
+				// 			console.log(res2.data.result.address_component.city)
+				// 			console.log(1)
+				// 		}
+				// 	},
+				// 	fail:res2=>{
+				// 		this.getError(JSON.stringify(res2));
+				// 	}
+				// });
 			},
 			location(res) {
 				console.log(res);
 				this.ruleform.location_x = res.latitude;
 				this.ruleform.location_y = res.longitude;
+				this.vaildForm(this, res => {
+					if(res){
+						this.postAjax("/user/info",this.ruleform).then(msg=>{
+							
+						});
+					}
+				})
 			},
 			uploadHeaderImg() {
 				this.updateHeadImg(res => {
@@ -176,6 +185,15 @@
 					if(this.ruleform.province){
 						this.$set(this.ruleform,"address2",this.ruleform.province+this.ruleform.city+this.ruleform.country);
 					}
+					if(msg.user.userInfo.marry_condition){
+						 this.ruleform.marry_condition = JSON.parse(msg.user.userInfo.marry_condition);
+						 console.log(this.ruleform.marry_condition)
+					}
+					if(msg.user.userInfo.hobby){
+						 this.hobbyTags = msg.user.userInfo.hobby.split(",");
+						
+					}
+					this.show = true;
 					if(!this.ruleform.address){
 						wx.getLocation({
 							type: 'gcj02', // 默认为wgs84的gps坐标，如果要返回直接给openLocation用的火星坐标，可传入'gcj02'

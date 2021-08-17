@@ -69,7 +69,10 @@
 				this.vaildForm(this, res => {
 					if(res){
 						this.postAjax("/user/info",this.ruleform).then(msg=>{
-							 this.goto("/pages/user/index/main",2);
+							 if(msg.data.status == 2){
+								 this.back();
+							 }
+							
 						});
 					}
 				})

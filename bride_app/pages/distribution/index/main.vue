@@ -32,10 +32,10 @@
 					<view class="icon_img"><image class="img" :src="getSiteName+'/images/wap/A05.png'"></image></view>
 					<view class="name">分享达人注册</view>
 				</button> -->
-				<button class="sec-group m0 p0 bg-f" @click="goto('/pages/distribution/ad/main',1)">
+			<!-- 	<button class="sec-group m0 p0 bg-f" @click="goto('/pages/distribution/ad/main',1)">
 					<view class="icon_img"><image class="img" :src="getSiteName+'/images/wap/A06.jpg'"></image></view>
 					<view class="name">分享广告位</view>
-				</button>
+				</button> -->
 			</view>
 			
 			<view class="sup-account bg-f pt12 mb12">

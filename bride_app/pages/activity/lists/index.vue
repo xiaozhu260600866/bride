@@ -1,8 +1,8 @@
 <template>
 	<view>
 		<page :parentData="data" :formAction="formAction"></page>
-		<view>
-			<activity :data="activityLists"></activity>
+		<view v-if="data.show">
+			<activity :data="data.lists.data"></activity>
 		</view>
 	</view>
 </template>
@@ -13,7 +13,7 @@
 		components:{activity,},
 		data() {
 			return {
-				formAction: '/phone.html?activity=1',
+				formAction: '/activity/lists',
 				mpType: 'page', //用来分清父和子组件
 				data: this.formatData(this),
 				getSiteName: this.getSiteName(),
@@ -42,7 +42,7 @@
 			return this.shareSource(this, '商城');
 		},
 		onLoad(options) {
-			//this.ajax();
+			this.ajax();
 		},
 		methods: {
 			ajax() {

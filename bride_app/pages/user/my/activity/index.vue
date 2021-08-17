@@ -1,8 +1,8 @@
 <template>
 	<view>
 		<page :parentData="data" :formAction="formAction"></page>
-		<view>
-			<orderInfo :data="lists"></orderInfo>
+		<view v-if="data.show">
+			<orderInfo :data="data.lists.data"></orderInfo>
 		</view>
 	</view>
 </template>
@@ -13,7 +13,7 @@
 		components: {orderInfo },
 		data() {
 			return {
-				formAction: '/shop/product/class',
+				formAction: '/user/activity-lists?status=3',
 				mpType: 'page', //用来分清父和子组件
 				data: this.formatData(this),
 				getSiteName: this.getSiteName(),
@@ -46,7 +46,7 @@
 			
 		},
 		onLoad(options) {
-			//this.ajax();
+			this.ajax();
 		},
 		onShareAppMessage() {
 			return this.shareSource(this, '商城');

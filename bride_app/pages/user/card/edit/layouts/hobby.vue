@@ -1,54 +1,21 @@
 <template>
 	<view class="pb60">
 		<page :parentData="data" :formAction="formAction"></page>
-		<view>
-			<view class="datum bg-f">
-				<weui-input v-model="ruleform.course" label="最喜欢的一道菜" placeholder="请输入" type="text" name="course" datatype="require"></weui-input>
-				<weui-input v-model="ruleform.famous_person" label="最喜欢的名人" placeholder="请输入" type="text" name="famous_person" datatype="require"></weui-input>
-				<weui-input v-model="ruleform.book" label="最喜欢的一本书" placeholder="请输入" type="text" name="book" datatype="require"></weui-input>
-				<view class="dx-cell dx-cell_input" @click="hobbyShow = true">
-					<view class="dx-cell_hd">
-						<view class="dx-label">喜欢的事<span class="star">*</span></view>
-					</view>
-					<view class="dx-cell_bd">
-						<view class="picker-label">请选择</view>
-						<view class="value">
-							<view class="tag" v-for="(item,key) in hobby" :key="key">{{item}}<text class="comma">,</text></view>
-						</view>
-					</view>
-					<view class="dx-cell_ft dx_ft-access"></view>
-				</view>
-			</view>
+		<view class="p10" v-if="data.show">
+			<dx-tag class="mr5" v-for="v in hobbyTags" :type="v.checked ? 'success':'info'" @click="v.checked= !v.checked">{{v.label}}</dx-tag>
 			<dxftButton type="primary" size="lg" round @click="submit">确认</dxftButton>
-			<view class="drawer">
-				<view class="dxi-mask" :class="hobbyShow == true?'dxi-mask_show':''" @click="hobbyShow = false"></view>
-				<view class="dxi-drawer dxi-drawer_bottom" :class="hobbyShow == true?'dxi-drawer_show':''">
-					<view class="hobby-box">
-						<view class="title fs-16 lh-30">
-							<view class="name">最喜欢的事<text class="fc-7">(多选)</text></view>
-							<view class="sure main-color" @click="hobbyShow = false">确定</view>
-						</view>
-						<scroll-view scroll-x>
-							<view class="hobby-lists">
-								<view class="hobby-label">
-									<view class="label" :class="[key==1?'cur':'']" v-for="(item,key) in hobby" :key="key">{{item}}</view>
-								</view>
-							</view>
-						</scroll-view>
-					</view>
-				</view>
-			</view>
 		</view>
 	</view>
 </template>
 
 <script>
 	import dxftButton from "doxinui/components/button/footer-button"
+	import dxTag from "doxinui/components/tag/tag"
 	export default {
-		components:{dxftButton},
+		components:{dxftButton,dxTag},
 		data() {
 			return {
-				formAction: '/shop/user',
+				formAction: '/user',
 				mpType: 'page', //用来分清父和子组件
 				data: this.formatData(this),
 				getSiteName: this.getSiteName(),
@@ -56,16 +23,48 @@
 				vaildate:{},
 				cur: 1,
 				hobbyShow: false,
-				hobby:['朋友聚会','DIY','茶艺','插花','极限运动','水世界','游乐场','密室逃脱','工作狂','社交活动','思考人生','文艺小清新','探险','快乐宅','体育竞技','旅行','户外','看电影','看书','画画','舞蹈','健身','美食','街舞']
+				hobbyTags:[
+					{label:'篮球',value:'篮球',checked:false},
+					{label:'跑步',value:'跑步',checked:false},
+					{label:'探险',value:'探险',checked:false},
+					{label:'看书',value:'看书',checked:false},
+					{label:'美食',value:'美食',checked:false},
+					
+				]
 			}
 		},
 		mounted() {
 		
 		},
 		methods: {
-			
+			submit(){
+				let res =[];
+				for (var i = 0; i < this.hobbyTags.length; i++) {
+					 if(this.hobbyTags[i].checked){
+						 res.push(this.hobbyTags[i].value);
+					 }
+				}
+				if(res.length == 0){
+					return this.getError("还没有选择");
+				}
+				this.postAjax("/user/info",{hobby:res.join(","),phone:this.data.user.userInfo.phone}).then(msg=>{
+					if(msg.data.status == 2){
+						this.back();
+					}
+				});
+			},
 			ajax() {
 				this.getAjax(this).then(msg => {
+					if(msg.user.userInfo.hobby){
+						 let hobbyArr = msg.user.userInfo.hobby.split(",");
+						 this.hobbyTags.forEach(hobby=>{
+							 if(this.in_array(hobby.value,hobbyArr)){
+								  hobby.checked = true;
+							 }
+							 
+						 })
+						 
+					}
 				});
 			},
 			

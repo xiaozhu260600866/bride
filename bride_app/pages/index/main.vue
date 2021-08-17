@@ -19,7 +19,7 @@
 				<view class="sec-title">同城置顶</view>
 				<view class="cross-people">
 					<scroll-view :scroll-x="true">
-						<view class="cross-people-item" v-for="item in data.lists.data" @click="goto('/pages/people/show/index',1)">
+						<view class="cross-people-item" v-for="item in data.lists.data" @click="goto('/pages/people/show/index?id='+item.id,1)">
 							<image class="cover" :src="item.headerPic" mode="aspectFill"></image>
 							<view class="txt">
 								<view class="name nowrap">{{item.name}}</view>
@@ -174,14 +174,9 @@
 			if(uni.getStorageSync('city')){
 				this.city = uni.getStorageSync('city');
 			}
-			// #ifdef MP-WEIXIN
 			this.getMyAddress(this,msg=>{
 				this.ajax();
 			})
-			// #endif
-			// #ifdef H5
-				this.ajax();
-			// #endif
 			
 		},
 		methods: {

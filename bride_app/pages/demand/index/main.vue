@@ -42,7 +42,7 @@
 					 :curSize="18" curColor="#000" curBold="bold" :nameSize="16" nameBold="bold" nameColor="#333" :borderHeight="6" :borderRadius="6"
 					 :borderWidth="16"></dx-tabs-scroll>
 					<!-- <demand-lists :data="data.lists.data" @thumb="thumb3" v-if="listsShow"></demand-lists> -->
-					<trendsLists></trendsLists>
+					<trendsLists :data="data.lists.data"></trendsLists>
 				</view>
 				
 				<view class="copyright" @click="phone('13318639080')">版权所有：广东科阅云</view>
@@ -129,11 +129,12 @@
 			if(uni.getStorageSync('city')){
 				this.city = uni.getStorageSync('city');
 			}
-			this.ajax();
-			// this.getMyAddress(this,msg=>{
-			// 	this.ajax();
-			// })
-			//
+			
+			// //this.ajax();
+			this.getMyAddress(this,msg=>{
+				this.ajax();
+			})
+			
 		},
 		methods: {
 			cityCallBack(item){

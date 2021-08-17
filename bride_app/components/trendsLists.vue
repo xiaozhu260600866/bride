@@ -2,16 +2,16 @@
 	<view>
 		<view :class="['trend-list',myclass]">
 			<!-- 循环开始 -->
-			<view :class="['list-item']" v-for="(v,key) in trendLists">
+			<view :class="['list-item']" v-for="(v,key) in data">
 				<view class="top flex">
 					<view class="head mr10">
 						<image class="img" :src="v.headerPic" mode="aspectFill" />
 					</view>
 					<view class="info flex1">
-						<view class="name fs-15">{{ v.nickname }}</view>
+						<view class="name fs-15">{{ v.name }}</view>
 						<view class="flex">
-							<view :class="['age',v.sex == 0 ? 'blue' : 'red']"><span :class="['iconfont',v.sex == 0 ?  'icon-man':'icon-women']"></span>{{v.age}}</view>
-							<view class="city fs-12 fc-9 pl10 lh-20">{{v.city}}</view>
+							<view :class="['age',v.getUser.userInfo.sex == 0 ? 'blue' : 'red']"><span :class="['iconfont',,v.getUser.userInfo.sex == 0 ?  'icon-man':'icon-women']"></span>{{v.getUser.userInfo.age}}</view>
+							<view class="city fs-12 fc-9 pl10 lh-20">{{v.getUser.userInfo.city}}</view>
 						</view>
 					</view>
 					<view class="data fs-12 fc-9 lh-26">{{ v.published_at }}</view>
@@ -52,7 +52,7 @@
 </template>
 <script>
 export default {
-	props: ['myclass'],
+	props: ['myclass','data'],
 	data() {
 		return {
 			thumbs: false,

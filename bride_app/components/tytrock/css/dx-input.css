@@ -1,0 +1,77 @@
+/* order */
+checkbox,switch,radio{display: flex;}
+
+/* 列 */
+.dx-cell{padding: 20upx 30upx;position: relative;display: flex;align-items: center;border-bottom: 1upx #f2f2f2 solid;font-size: 30upx;}
+.dx-cell .dx-cell_hd .dx-label{width: 170upx;word-wrap: break-word;word-break: break-all;padding-right: 16upx;position: relative;}
+.dx-cell .dx-cell_hd .dx-label .star{color: #f31b0c;position: absolute;left: -14upx;top: 0;}
+.dx-cell .dx-cell_bd{flex: 1;line-height: 68upx;min-height: 68upx;}
+.dx-cell .dx-cell_bd .dx-input,
+.dx-cell .dx-cell_bd .order-picker,
+.dx-cell .dx-cell_bd .picker
+{line-height: 68upx;min-height: 68upx;height: 68upx;}
+.dx-cell input{font-size: 30upx;}
+
+/* 开关 */
+.dx-cell_switch .switch{zoom: 74%;}
+
+/* 按钮 */
+.dx-nav{line-height: 68upx;padding: 0 24upx;border-radius: 6upx;font-size: 26upx;}
+
+/* 备注 */
+.dx-text{width: 100%;line-height: 40upx;min-height: 160upx;height: 160upx;}
+
+/* 选择组 */
+.dx-check_label.dx-cell{border-bottom: 0;padding: 0;}
+.dx-checkbox checkbox{transform:scale(0.7)}
+.dx-checkbox radio{zoom: 74%;padding: 0 6upx;}
+.dx-check_label.label_left{flex-direction: row-reverse;}
+.dx-select .dx-cell_bd .dx-label,
+.dx-select .dx-cell_bd .picker,
+.dx-dateTime .dx-cell_bd .picker{text-align: right;}
+
+/* 横向 */
+.col_group{display: flex;align-items: center;justify-content: flex-end;}
+.col_group .dx-cell{margin-left: 30upx;}
+
+/* 竖向 */
+.row_group{}
+
+/* 单选插入 */
+.dx-cell_bd .dx-cell_bd{display: flex;align-items: center;}
+.dx-cell_bd .dx-cell_bd>view,.dx-cell_bd .dx-cell_bd>uni-view{padding: 0 20upx 0 30upx;}
+
+/* 下拉选择 */
+.dx_ft-access{position: relative;padding-right: 26upx;}
+.dx_ft-access:before{content: " ";display: inline-block;height: 12upx;width: 12upx;border-width: 3upx 3upx 0 0;border-color: #c8c8cd;border-style: solid;transform: matrix(.71,1,-.71,1,0,0);position: relative;top: -4upx;position: absolute;top: 50%;margin-top: -6upx;right: 4upx;}
+
+/* 多联下拉样式 */
+.ms_diag{position: fixed;bottom: 0px;left: 0;right: 0;background: white;z-index: 101;height: 600upx;width: 100%;}
+.ms_title{display: flex; justify-content: space-between;padding: 0 30upx;font-size: 34upx;line-height: 96upx;border-bottom: 1upx #f5f5f5 solid;}
+.ms_title .cancel {color: #818181;}
+.ms_title .true {color: #2FB42E;}
+.ms_select{height: 300upx;margin-top: 80upx;}
+.ms_select .ms_item{line-height: 68upx;padding-left: 40upx;font-size: 26upx;z-index: 102;}
+
+/* 图片上传 */
+.dx-upload_img{min-height: 160upx;}
+.dx-upload_img .upload-img{display: flex;flex-wrap: wrap;}
+.dx-upload_img .uploadvalue{width: 120upx;height: 120upx;border: 1upx #eee solid;margin: 8upx 16upx 8upx 0;}
+.dx-upload_img .uploadvalue .upload{display: flex;justify-content: center;align-items: center;align-content: center;flex-wrap: wrap;height: 100%;width: 100%;}
+.dx-upload_img .uploadvalue .add-icon{position: relative;width: 100%;height: 48upx;}
+.dx-upload_img .uploadvalue .add-icon:before{content: '';display: block;position: absolute;top: 50%;margin-top: -2upx;left: 50%;margin-left: -24upx;width: 48upx;height: 4upx;background-color: #ddd;}
+.dx-upload_img .uploadvalue .add-icon:after{content: '';display: block;position: absolute;top: 0;left: 50%;margin-left: -2upx;width: 4upx;height: 48upx;background-color: #ddd;}
+.dx-upload_img .uploadvalue .imgTxt{font-size: 22upx;color: #999;line-height: 32upx;text-align: center;width: 100%;margin-top: 8upx;}
+.dx-upload_img .il-item{margin: 8upx 16upx 8upx 0;position: relative;height: 120upx;}
+.dx-upload_img .il-item .img{width: 120upx;height: 120upx;}
+.dx-upload_img .il-item .del{position: absolute;top: -10upx;right: -10upx;}
+.dx-upload_img .il-item .del .del-icon{background-color: #f00;width: 28upx;height: 28upx;border-radius: 50%;position: relative;transform: rotate(45deg);}
+.dx-upload_img .il-item .del .del-icon:before{content: '';display: block;position: absolute;top: 50%;margin-top: -1upx;margin-left: 5upx;width: 20upx;height: 2upx;background-color: #fff;}
+.dx-upload_img .il-item .del .del-icon:after{content: '';display: block;position: absolute;margin-top: 5upx;left: 50%;margin-left: -1upx;width: 2upx;height: 20upx;background-color: #fff;}
+
+@media screen and (max-width: 350px) {
+	.dx-cell .dx-cell_hd .dx-label{width: 180upx;}
+}
+@media screen and (max-width: 310px) {
+	.dx-cell .dx-cell_hd .dx-label{width: 76px;}
+}
