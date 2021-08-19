@@ -7,7 +7,7 @@
 			</view>
 			<view class="show-block info-sec">
 				<view class="header">
-					<image class="head-img" src="/static/fenxiaobg.jpg" mode="aspectFill"></image>
+					<image class="head-img" :src="data.user.headerPic" mode="aspectFill"></image>
 					<dx-button type="primary" size="medium" round @click="subscribe()">+ {{data.isSubscribe ? '已':''}}关注</dx-button>
 				</view>
 				<view class="name fs-18 lh-24 mtb15 fw-bold">{{data.user.userInfo.name}}</view>

@@ -1,14 +1,14 @@
 <template>
 	<view>
 		<view class="length-people" :class="[myclass,crosswise?'row-people':'']">
-			<view class="length-people-item" v-for="(item,key) in data" @click="goto('/pages/user/card/show/index?user_id='+item.id,1)">
-				<view class="cover"><image class="img" :src="getSiteName + '/upload/images/user/300_'+item.userInfo.pic2" mode="aspectFill"></image></view>
+			<view class="length-people-item" v-for="(item,key) in data" @click="goto('/pages/people/show/index?id='+item.id,1)">
+				<view class="cover"><image class="img" :src="item.headerPic" mode="aspectFill"></image></view>
 				<view class="txt">
 					<view class="name" :class="[crosswise?'wrap2':'nowrap']">{{ item.userInfo.title}}</view>
 					<view class="data">
-						<view class="lab"><text class="Arial">30</text>岁</view>
-						<view class="lab"><text class="Arial">186cm</text></view>
-						<view class="lab">江门市</view>
+						<view class="lab"><text class="Arial">{{item.userInfo.age}}</text>岁</view>
+						<view class="lab"><text class="Arial">{{item.userInfo.height}}</text></view>
+						<view class="lab">{{item.city}}</view>
 					</view>
 						<!-- • -->
 				</view>
