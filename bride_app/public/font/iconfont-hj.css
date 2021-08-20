@@ -1,8 +1,8 @@
 @font-face {
   font-family: 'iconfont';  /* Project id 1704799 */
-  src: url('//at.alicdn.com/t/font_1704799_uz2ui09u1x.woff2?t=1628048314213') format('woff2'),
-       url('//at.alicdn.com/t/font_1704799_uz2ui09u1x.woff?t=1628048314213') format('woff'),
-       url('//at.alicdn.com/t/font_1704799_uz2ui09u1x.ttf?t=1628048314213') format('truetype');
+  src: url('//at.alicdn.com/t/font_1704799_wgl0zvpe53m.woff2?t=1629446225870') format('woff2'),
+       url('//at.alicdn.com/t/font_1704799_wgl0zvpe53m.woff?t=1629446225870') format('woff'),
+       url('//at.alicdn.com/t/font_1704799_wgl0zvpe53m.ttf?t=1629446225870') format('truetype');
 }
 
 .iconfont {
@@ -17,6 +17,12 @@
 .icon-trends-evalute:before{content: "\a003";}/* 评价 */
 .icon-man:before{content: "\a002";}/* 男 */
 .icon-women:before{content: "\a001";}/* 女 */
+
+
+.icon-reg-phone:before{content: "\e68d";}/*  */
+.icon-reg-passwork:before{content: "\e664";}/*  */
+.icon-reg-msg:before{content: "\e63a";}/*  */
+.icon-reg-code:before{content: "\e63d";}/*  */
 
 
 .icon-:before{content: "\e";}/*  */

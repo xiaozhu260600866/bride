@@ -1,18 +1,21 @@
-
-
 page{background: #fff;}
 
 
-.logo{display: flex;justify-content: center;}
-.logo .img{width: 80px;height: 80px;border-radius: 10px;display: flex;}
+.login_bg{position: fixed;z-index: 0;top: 0;left: 0;right: 0;bottom: 0;}
+.login_bg .img{height: 100%;width: 100%;position: absolute;z-index: 1;}
+.login_bg .bg{position: absolute;z-index: 2;background-color: rgba(0,0,0,0.7);height: 100%;width: 100%;}
 
 
-.type{display: flex;justify-content: center;}
-.type .type-name{padding: 5px 15px;}
-.type .cur{font-weight: bold;position: relative;}
-.type .cur:before{content: "";display: block;position: absolute;bottom: 0;left: 50%;width: 30px;height: 3px;background: #33c45d;margin-left: -15px;}
+/* logo */
+.logo{text-align: center;padding-top: 100rpx;}
+.logo .img{width: 300rpx;height: 300rpx;}
+.login_box .logo{padding-top: 230rpx;}
 
 
-.login-list .weui-cell{padding: 10px 0;}
-.login-list .weui-label{width: 60px;font-size: 16px!important;}
-.login-list .weui-input{font-size: 16px!important;}
+/* 填写资料 */
+.write_info{padding: 80rpx 100rpx;position: relative;z-index: 9;}
+.write_info ::v-deep .dx-cell{padding: 20rpx 0!important;}
+.write_info ::v-deep .dx-input{color: #fff;}
+.write_info ::v-deep .dx-nav{background-color: transparent!important;}
+.write_info .slot-icon .iconfont{font-size: 36rpx;color: #fff;margin-right: 30rpx;}
+.write_info  ::v-deep .dx-btn{background-color: #ffd8ad!important;color: #140000!important;border-color: #ffd8ad!important;}

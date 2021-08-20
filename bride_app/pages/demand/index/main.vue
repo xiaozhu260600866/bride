@@ -1,13 +1,15 @@
 <template>
 	<view>
 		<page :parentData="data" :formAction="formAction" Fbottom="bottom: 25px">
-			<div slot="floatBtn" v-if="data.show && data.release == 0">
+			<div slot="floatBtn" v-if="data.show">
 				<view @click="goto(data.show && data.phone ? '/pages/user/demand/create_edit/index' : '/pages/user/card/register/index',1)" >
 					<floatBtn icon="icon-count-plus" myclass="float-nav-blue" iSize="fs-16" nSize="fs-13" title="发布"></floatBtn>
 				</view>
 			</div>
 		</page>
+		555666
 		<div v-if="data.show">
+			777888
 			<!-- <THeader :data="data" :callBack="true" :waterCityData="waterCityData"  title="搜索动态" searchUrl="/pages/search/demand/main" @callBack="$refs.selectCity.init()" noborder></THeader> -->
 			<div>
 				<!-- 轮播图 -->
@@ -37,7 +39,7 @@
 				<!-- <div id="banner" class="pt5" v-if="data.silders && data.silders.data.length">
 					<myswiper :lists="data.silders.data"></myswiper>
 				</div> -->
-				<view :class="[data.location_category.length<0?'mt8':'']">
+				<view>
 					<dx-tabs-scroll :tabs="tabs" v-model="showType" @change="listsShow = false;ajax()" :height="46" borderColor="#387ef8"
 					 :curSize="18" curColor="#000" curBold="bold" :nameSize="16" nameBold="bold" nameColor="#333" :borderHeight="6" :borderRadius="6"
 					 :borderWidth="16"></dx-tabs-scroll>
@@ -53,7 +55,6 @@
 </template>
 
 <script>
-	import "./index.css";
 	import marque from "xiaozhu/uniapp/components/marque";
 	import THeader from '@/components/THeader';
 	import productLists from "@/components/productLists";
@@ -130,10 +131,10 @@
 				this.city = uni.getStorageSync('city');
 			}
 			
-			// //this.ajax();
-			this.getMyAddress(this,msg=>{
-				this.ajax();
-			})
+			this.ajax();
+			// this.getMyAddress(this,msg=>{
+			// 	this.ajax();
+			// })
 			
 		},
 		methods: {
@@ -174,3 +175,6 @@
 		},
 	}
 </script>
+<style>
+@import "./index.css";
+</style>

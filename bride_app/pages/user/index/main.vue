@@ -98,7 +98,7 @@
 					<view class="name">我的特权</view>
 				</view>
 				<view class="ulist-group ptb8 plr5">
-					<myform :append="true" :data="v" @callBack="checkUser(data.user,'/pages/user/card/edit/index')">
+					<myform :append="true" :data="v" @callBack="checkUser(data.user,'/pages/user/card/edit/index',1)">
 						<view slot="content">
 							<view class="ulist-item">
 								<view class="item-icon">
@@ -108,18 +108,18 @@
 							</view>
 						</view>
 					</myform>
-					<myform :append="true" :data="v" @callBack="checkUser(data.user,'/pages/user/card/count/index')">
+					<myform :append="true" :data="v" @callBack="checkUser(data.user,'/pages/user/card/count/index',1)">
 						<!-- 我的访客 -->
 						<view slot="content">
 							<view class="ulist-item">
 								<view class="item-icon">
-									<image class="img" src="https://card.doxinsoft.com/images/wap/unav-a2.png"></image>
+									<image class="img" src="https://card.doxinsoft.com/images/wap/unav-a6.png"></image>
 								</view>
 								<view class="item-name">谁看过我</view>
 							</view>
 						</view>
 					</myform>
-					<myform :append="true" :data="v" @callBack="checkUser(data.user,'/pages/user/card/count/index')">
+					<myform :append="true" :data="v" @callBack="checkUser(data.user,'/pages/user/card/count/index',1)">
 						<!-- 名片夹 -->
 						<view slot="content">
 							<view class="ulist-item">
@@ -130,7 +130,7 @@
 							</view>
 						</view>
 					</myform>
-					<myform :append="true" :data="v" @callBack="checkUser(data.user,'/pages/user/card/photo/index')">
+					<myform :append="true" :data="v" @callBack="checkUser(data.user,'/pages/user/card/photo/index',1)">
 						<view slot="content">
 							<view class="ulist-item">
 								<view class="item-icon">
@@ -183,7 +183,7 @@
 						<view slot="content">
 							<view class="ulist-item">
 								<view class="item-icon">
-									<image class="img" src="https://card.doxinsoft.com/images/wap/unav-b7.png"></image>
+									<image class="img" src="https://card.doxinsoft.com/images/wap/unav-b5.png"></image>
 								</view>
 								<view class="item-name">发布动态</view>
 							</view>
@@ -193,7 +193,7 @@
 						<view slot="content">
 							<view class="ulist-item">
 								<view class="item-icon">
-									<image class="img" src="https://card.doxinsoft.com/images/wap/unav-b7.png"></image>
+									<image class="img" src="https://card.doxinsoft.com/images/wap/unav-a2.png"></image>
 								</view>
 								<view class="item-name">我的活动</view>
 							</view>

@@ -25,7 +25,7 @@
 		{
 			"path": "pages/search/card/main",
 			"style": {
-				"navigationBarTitleText": "名片搜索",
+				"navigationBarTitleText": "会员搜索",
 				"enablePullDownRefresh": true
 			}
 		},
@@ -302,15 +302,21 @@
 			"style": {
 				"navigationBarTitleText": "注册",
 				"enablePullDownRefresh": true,
-				"navigationBarBackgroundColor": "#ed5296",
-				"navigationBarTextStyle": "white",
-				"backgroundColorTop": "#ed5296"
+				"navigationStyle":"custom"
+			}
+		},
+		{
+			"path": "pages/user/card/register/poster",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"enablePullDownRefresh": true,
+				"navigationStyle":"custom"
 			}
 		},
 		{
 			"path": "pages/user/card/edit/index",
 			"style": {
-				"navigationBarTitleText": "编辑名片",
+				"navigationBarTitleText": "编辑信息",
 				"enablePullDownRefresh": true
 			}
 		},
@@ -373,7 +379,7 @@
 		{
 			"path": "pages/user/card/count/index",
 			"style": {
-				"navigationBarTitleText": "名片数据",
+				"navigationBarTitleText": "会员数据",
 				"enablePullDownRefresh": true,
 				"navigationBarBackgroundColor": "#ed5296",
 				"navigationBarTextStyle": "white",
@@ -383,8 +389,9 @@
 		{
 			"path": "pages/user/card/verified/index",
 			"style": {
-				"navigationBarTitleText": "名片认证",
-				"enablePullDownRefresh": true
+				"navigationBarTitleText": "会员认证",
+				"enablePullDownRefresh": true,
+				"navigationStyle":"custom"
 			}
 		},
 		{
@@ -422,7 +429,7 @@
 		{
 			"path": "pages/user/demand/create_edit/index",
 			"style": {
-				"navigationBarTitleText": "发布需求",
+				"navigationBarTitleText": "发布动态",
 				"enablePullDownRefresh": true,
 				"navigationBarBackgroundColor": "#ed5296",
 				"navigationBarTextStyle": "white"
@@ -431,7 +438,7 @@
 		{
 			"path": "pages/user/demand/lists/index",
 			"style": {
-				"navigationBarTitleText": "发布需求",
+				"navigationBarTitleText": "发布动态",
 				"enablePullDownRefresh": true
 			}
 		},
@@ -585,6 +592,21 @@
 			"path": "pages/activity/order/payed/index",
 			"style": {
 				"navigationBarTitleText": "支付结果",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/user/login/main",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"enablePullDownRefresh": true,
+				"navigationStyle":"custom"
+			}
+		},
+		{
+			"path": "pages/user/login/password/main",
+			"style": {
+				"navigationBarTitleText": "找回密码",
 				"enablePullDownRefresh": true
 			}
 		}

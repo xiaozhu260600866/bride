@@ -35,8 +35,8 @@
 				</view>
 			</view>
 			<view class="edit_btn" v-if="edit">
-				<dx-button size="small" myclass="plr20" block round @click="del(item)">删除</dx-button>
-				<dx-button type="primary" size="small" myclass="plr20 ml15" block round  v-if="item.status !=4" @click="goto('/pages/user/demand/create_edit/index?id='+item.id+'&category='+item.category,1)">编辑</dx-button>
+				<dx-button size="small" myclass="plr20" round @click="del(item)">删除</dx-button>
+				<dx-button type="primary" size="small" myclass="plr20 ml15" round  v-if="item.status !=4" @click="goto('/pages/user/demand/create_edit/index?id='+item.id+'&category='+item.category,1)">编辑</dx-button>
 			</view>
 		</view>
 	</view>

@@ -5,13 +5,13 @@
 			<view :class="['list-item']" v-for="(v,key) in data">
 				<view class="top flex">
 					<view class="head mr10">
-						<image class="img" :src="v.headerPic" mode="aspectFill" />
+						<image class="img" :src="v.getLogo" mode="aspectFill" />
 					</view>
 					<view class="info flex1">
 						<view class="name fs-15">{{ v.name }}</view>
 						<view class="flex">
-							<view :class="['age',v.getUser.userInfo.sex == 0 ? 'blue' : 'red']"><span :class="['iconfont',,v.getUser.userInfo.sex == 0 ?  'icon-man':'icon-women']"></span>{{v.getUser.userInfo.age}}</view>
-							<view class="city fs-12 fc-9 pl10 lh-20">{{v.getUser.userInfo.city}}</view>
+							<!-- <view :class="['age',v.getUser.userInfo.sex == 0 ? 'blue' : 'red']"><span :class="['iconfont',,v.getUser.userInfo.sex == 0 ?  'icon-man':'icon-women']"></span>{{v.getUser.userInfo.age}}</view> -->
+							<view class="city fs-12 fc-9 pl10 lh-20">{{v.city}}</view>
 						</view>
 					</view>
 					<view class="data fs-12 fc-9 lh-26">{{ v.published_at }}</view>
@@ -19,7 +19,7 @@
 				<view class="bcon">
 					<view class="con">
 						<view class="rCon">
-							{{v.content}}
+							{{v.title}}
 						</view>
 						<view class="image-group mt5" v-if="v.getCover">
 							<view class="img-item" v-for="(cover,coverIndex) in v.getCover">
@@ -136,7 +136,7 @@ export default {
 .trend-list .info .age.red{background: #ffa1ae;}
 .trend-list .info .age.blue{background: #a3b4fc;}
 .trend-list .info .age .iconfont{font-size: 20rpx;padding-right: 6rpx;}
-.trend-list .con .rCon {text-align: justify;line-height: 44rpx;padding: 30rpx 0 20rpx;}
+.trend-list .con .rCon {text-align: justify;line-height: 44rpx;padding: 20rpx 0 20rpx;}
 .trend-list .con .image-group {display: flex;flex-wrap: wrap;}
 .trend-list .con .image-group .img-item {margin: 0 6rpx 6rpx 0;width: calc(33.33% - 6rpx);}
 .trend-list .con .image-group .img-item .img{height: 180rpx;display: flex;width: 100%;border-radius: 8rpx;}

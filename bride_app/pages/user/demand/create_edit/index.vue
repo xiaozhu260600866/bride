@@ -10,7 +10,7 @@
 			</view>
 			<view class="mb12 bg-f text">
 				<weui-input v-model="ruleform.top" label="是否置顶" type="switch" name="top" v-if="!ruleform.id && !data.a"></weui-input>
-				<weui-input v-model="ruleform.category" label="需求分类" type="select" changeField="label" datatype="require" dataKey="category" name="category" ></weui-input>
+				<weui-input v-model="ruleform.category" label="动态分类" type="select" changeField="label" datatype="require" dataKey="category" name="category" ></weui-input>
 			
 				<view class="block-sec" v-if="ruleform.top && !ruleform.id">
 					<weui-input v-model="ruleform.article_order_expires_id" label="置顶时间" name="article_order_expires_id" changeField="value"
@@ -40,7 +40,7 @@
 				</view>
 				<weui-input v-model="ruleform.red_packet_average" label="是否平均分配福利" type="switch" name="red_packet_average"></weui-input>
 			</view>
-			<view class="pay_method bg-f mb12 fs-16" v-if="!ruleform.id">
+			<!-- <view class="pay_method bg-f mb12 fs-16" v-if="!ruleform.id">
 				<weui-input v-model="ruleform.pay_method" name="pay_method"  label="支付方式" changeField="value" type="radio"
 				 dataKey="pay_methods"></weui-input>
 				<view class="ptb10 plr15">
@@ -53,10 +53,10 @@
 						<view>合计：<text class="Arial plr3">{{amount}}</text>元 </view>
 					</view>
 				</view>
-				<!-- 合计:<text class="Arial plr3">{{amount}}</text>元</view>
+				合计:<text class="Arial plr3">{{amount}}</text>元</view>
 				 帐户只有{{data.user.integral}}</text>积分
-				 积分支付（可用<text class="Arial plr3">{{integral}}</text>分） -->
-			</view>
+				 积分支付（可用<text class="Arial plr3">{{integral}}</text>分）
+			</view> -->
 			<!-- <view class="pay_method bg-f mb12">
 				<radio-group class="radio-group" @change="radioChange">
 					<label class="radio-item">

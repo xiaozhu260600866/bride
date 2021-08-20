@@ -6,7 +6,7 @@
 			<view>
 				<view class="Tuser">
 					<view class="header">
-						<image class="img" src="/static/fenxiaobg.jpg"></image>
+						<image class="img" :src="data.user.headimgurl"></image>
 					</view>
 					<view class="info">
 						<view class="name">{{data.user.nickname}}</view>
@@ -14,7 +14,7 @@
 					</view>
 				</view>
 				<view class="ver-tab" :class="[selectKey == 0?'tabOne':'tabTwo']">
-					<view class="item left" @click="selectKey=key" v-for="(v,key) in data.memberExpire">
+					<view class="item" @click="selectKey=key" v-for="(v,key) in data.memberExpire">
 						<view class="item-box">
 							<view class="icon">
 								<text class="iconfont icon-wechat-all"></text>
@@ -27,13 +27,13 @@
 					</view>
 				</view>
 				<view class="ver-price">
-					<view class="verVip">
+					<view :class="[selectKey == 0?'verVip':'verSVip']">
 						<view class="price-length">
 							<view class="item" :class="[ruleform.amount ==v.amount?'cur':'']"
 								v-for="(v,key) in data.memberExpire[selectKey].expire"
 								@click="ruleform.amount = v.amount">
 								<view class="time"><text class="num">{{v.months}}</text>个月</view>
-								<view class="price">￥<text class="num">{{v.amount}}</text></view>
+								<view class="price">￥<text class="num">{{v.amount.split(".")[0]}}</text></view>
 								<view class="average">日均<text class="num">{{countToDay(v)}}</text>元</view>
 							</view>
 						</view>
@@ -73,7 +73,7 @@
 			</block> -->
 
 		</view>
-		<dxResults txt="支付成功" @click="goto('/pages/index/main',2)" v-if="step == 2"></dxResults>
+		<dxResults txt="会员认证成功" @click="goto('/pages/index/main',2)" v-if="step == 2"></dxResults>
 	</view>
 </template>
 

@@ -19,8 +19,9 @@
 				<weui-input v-model="ruleform.phone" label="手机" type="number" name="phone" datatype="require"></weui-input>
 				<!-- <weui-input v-model="ruleform.email" label="邮箱" type="text" name="email"></weui-input> -->
 				<weui-input v-model="ruleform.wechat" label="微信号" type="text" name="wechat"></weui-input>
-				<dxAddress v-model="ruleform.address2" labeltxt="所在区域" datatype="require" ref="address" addressHidden left></dxAddress>
-				<weui-input v-model="ruleform.address" label="地址" type="location" name="address" datatype="require" navClass="dx-btn-blue" @callback="location"></weui-input>
+				<!--<dxAddress v-model="ruleform.address2" labeltxt="所在区域" datatype="require" ref="address" addressHidden left></dxAddress>
+				 <weui-input v-model="ruleform.address" label="地址" type="location" name="address" datatype="require" navClass="dx-btn-blue" @callback="location"></weui-input> -->
+				<dx-address v-model="ruleform.address" labeltxt="工作生活在" addressHidden left></dx-address>
 			</view>
 			<view class="block-sec edit-write">
 				<view class="edit-write-title">
@@ -40,41 +41,56 @@
 			</view>
 			
 			<view class="block-sec edit-write">
-				<view class="edit-select" @click="goto('/pages/user/card/edit/layouts/info',1)">
-					<weui-input v-model="ruleform.info" label="基础信息" placeholder="请选择" type="text" name="info" :disabled="true" arrow></weui-input>
-				</view>
-				<view class="edit-write-title">
-					<text>基础信息</text>
-					<text class="main-color edit-nav" @click="goto('/pages/user/card/edit/layouts/info',1)">编辑</text>
-				</view>
-				<!-- <view class="tag-group pl12">
-					<view class="tag" v-for="item in condTags">{{ item }}</view>
-				</view> -->
-			</view>
-			
-			<view class="block-sec edit-write">
-				<view class="edit-select" @click="goto('/pages/user/card/edit/layouts/condition',1)">
-					<weui-input v-model="ruleform.condition" label="择偶条件" placeholder="请选择" type="text" name="condition" :disabled="true" arrow></weui-input>
-				</view>
-				<view class="edit-write-title">
-					<text>择偶条件</text>
-					<text class="main-color edit-nav" @click="goto('/pages/user/card/edit/layouts/condition',1)">编辑</text>
-				</view>
-				<view class="tag-group pl12">
-					<view class="tag" v-for="item in ruleform.marry_condition" v-if="item">{{ item }}</view>
+				<block v-if="ruleform.age">
+					<view class="edit-write-title">
+						<text>基础信息</text>
+						<text class="main-color edit-nav" @click="goto('/pages/user/card/edit/layouts/info',1)">编辑</text>
+					</view>
+					<view class="tag-group pl12">
+						<view class="tag" v-if="ruleform.sex">{{ ruleform.sex==0?'男':'女' }}</view>
+						<view class="tag" v-if="ruleform.age"><text class="Arial">{{ ruleform.age }}</text>岁</view>
+						<view class="tag" v-if="ruleform.address">{{ ruleform.address }}</view>
+						<view class="tag" v-if="ruleform.education">{{ ruleform.education }}</view>
+						<view class="tag Arial" v-if="ruleform.height">{{ ruleform.height }}</view>
+						<view class="tag" v-if="ruleform.profession">{{ ruleform.profession }}</view>
+						<view class="tag" v-if="ruleform.salary"><text class="Arial">{{ ruleform.salary }}</text>元</view>
+						<view class="tag" v-if="ruleform.marriage">{{ ruleform.marriage }}</view>
+					</view>
+				</block>
+				<view class="edit-select" @click="goto('/pages/user/card/edit/layouts/info',1)" v-else>
+					<weui-input v-model="ruleform.info" label="基础信息" placeholder="请选择" type="emptySelect" name="info"></weui-input>
 				</view>
 			</view>
 			
 			<view class="block-sec edit-write">
-				<view class="edit-select" @click="goto('/pages/user/card/edit/layouts/hobby',1)">
-					<weui-input v-model="ruleform.hobby" label="兴趣爱好" placeholder="请选择" type="text" name="hobby" :disabled="true" arrow></weui-input>
+				<block v-if="ruleform.marry_condition">
+					<view class="edit-write-title">
+						<text>择偶条件</text>
+						<text class="main-color edit-nav" @click="goto('/pages/user/card/edit/layouts/condition',1)">编辑</text>
+					</view>
+					<view class="tag-group pl12">
+						<view class="tag" v-for="item in ruleform.marry_condition" v-if="item">{{ item }}</view>
+					</view>
+				</block>
+				<view class="edit-select" @click="goto('/pages/user/card/edit/layouts/condition',1)" v-else>
+					<weui-input v-model="ruleform.condition" label="择偶条件" placeholder="请选择" type="emptySelect" name="condition"></weui-input>
 				</view>
-				<view class="edit-write-title">
-					<text>兴趣爱好</text>
-					<text class="main-color edit-nav" @click="goto('/pages/user/card/edit/layouts/hobby',1)">编辑</text>
-				</view>
-				<view class="tag-group pl12">
-					<view class="tag" v-for="item in hobbyTags">{{ item }}</view>
+				
+			</view>
+	
+
+			<view class="block-sec edit-write">
+				<block v-if="hobbyTags.length">
+					<view class="edit-write-title">
+						<text>兴趣爱好</text>
+						<text class="main-color edit-nav" @click="goto('/pages/user/card/edit/layouts/hobby',1)">编辑</text>
+					</view>
+					<view class="tag-group pl12">
+						<view class="tag" v-for="item in hobbyTags">{{ item }}</view>
+					</view>
+				</block>
+				<view class="edit-select" @click="goto('/pages/user/card/edit/layouts/hobby',1)" v-else>
+					<weui-input v-model="ruleform.hobby" label="兴趣爱好" placeholder="请选择" type="emptySelect" name="hobby"></weui-input>
 				</view>
 			</view>
 			

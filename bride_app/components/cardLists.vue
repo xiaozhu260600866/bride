@@ -7,7 +7,7 @@
 			<view class="info plr15">
 				<view class="fs-14 fc-6 lh-20" @click="goto('/pages/user/card/show/index?user_id='+v.id,1)">
 					<view class="name mb5">
-						<text class="fs-17 fc-black">{{ v.userInfo.name?v.userInfo.name: v.nickname }}</text>
+						<text class="fs-17 fc-black">{{ v.userInfo.name?v.userInfo.name: v.username }}2</text>
 						<text class="pl5" v-if="v.userInfo.position">{{ v.userInfo.position }}</text>
 					</view>
 					<view class="company" v-if="v.userInfo.company_name">{{ v.userInfo.company_name }}</view>

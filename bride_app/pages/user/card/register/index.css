@@ -1,7 +1,16 @@
 page,.pages-user-card-register-index{background-color: #fff!important;}
 
-.top-sec{position: relative;}
-.top-bg{background-color: #387ef8;height: 200rpx;}
+.reg-nav ::v-deep .dxi-btn{color: #140000!important;border: 0!important;background-image: linear-gradient(left,#FED3A0,#FAECDB);}
+
+/* 填写资料 */
+.zero-step{position: relative;z-index: 9;}
+.write_info{padding: 80rpx 100rpx;}
+.write_info ::v-deep .dx-cell{padding: 20rpx 0!important;}
+.write_info ::v-deep .dx-input{color: #fff;}
+.write_info ::v-deep .dx-nav{background-color: transparent!important;}
+.write_info .slot-icon .iconfont{font-size: 36rpx;color: #fff;margin-right: 30rpx;}
+.write_info  ::v-deep .dxi-btn{background-color: #ffd8ad!important;color: #140000!important;border-color: #ffd8ad!important;}
+
 
 /* 性别 */
 .sex-sec{}
@@ -21,3 +30,20 @@ page,.pages-user-card-register-index{background-color: #fff!important;}
 .second-step ::v-deep .dx-label{width: 190rpx!important;}
 .second-step ::v-deep .dx-label .star{display: none;}
 .second-step ::v-deep .dx-input{text-align: right!important;}
+.second-step ::v-deep .code .dx-input{padding-right: 20rpx;}
+
+
+.login_bg{position: fixed;z-index: 0;top: 0;left: 0;right: 0;bottom: 0;}
+.login_bg .img{height: 100%;width: 100%;position: absolute;z-index: 1;}
+.login_bg .bg{position: absolute;z-index: 2;background-color: rgba(0,0,0,0.7);height: 100%;width: 100%;}
+
+.select_type{position: fixed;left: 0;bottom: 180rpx;display: flex;padding: 0 30rpx;width: 100%;}
+.select_type .type{width: 100%;margin: 0 30rpx;height: 88rpx;line-height: 86rpx;border-radius: 44rpx;background-color: #ffd8ad;color: #140000;font-size: 32rpx;text-align: center;border: 1rpx #ffd8ad solid;}
+.select_type .type.o{background-color: transparent;color: #ffd8ad;}
+
+
+/* logo */
+.logo{text-align: center;}
+.logo .img{width: 300rpx;height: 300rpx;}
+.login_box .logo{padding-top: 230rpx;}
+.zero-step .logo{padding-top: 100rpx;}

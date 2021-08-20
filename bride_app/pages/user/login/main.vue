@@ -1,7 +1,34 @@
 <template>
 	<view>
 		<page :parentData="data" :formAction="formAction"></page>
-		<div v-if="data.show">
+		<view>
+			<view class="login_bg">
+				<image class="img" src="/static/login-bg.jpg" mode="aspectFill"></image>
+				<view class="bg"></view>
+			</view>
+			<view class="logo">
+				<image class="img" src="/static/logo.png"></image>
+			</view>
+			<view class="write_info">
+				<weui-input v-model="ruleform.username" placeholder="请输入手机号码" type="text" name="username" datatype="require|phone">
+					<view slot="left" class="slot-icon">
+						<view class="iconfont icon-reg-phone"></view>
+					</view>
+				</weui-input>
+				<weui-input v-model="ruleform.password" placeholder="请输入密码" type="password" name="password" datatype="require">
+					<view slot="left" class="slot-icon">
+						<view class="iconfont icon-reg-passwork"></view>
+					</view>
+				</weui-input>
+				<view class="text-right mt15 fs-14 fc-white" @click="goto('/pages/user/password/main',1)">忘记密码</view>
+				<myform :ruleform="ruleform" :vaildate="vaildate" :append="true" @callBack="formSubmit" class="mt30">
+					<div slot="content" class="flex-center">
+						<button class="dx-btn dx-btn-big dx-btn-green w-b70 fs-17 bdr25" form-type="submit">登录</button>
+					</div>
+				</myform>
+			</view>
+		</view>
+		<!-- <div>
 			<div class="logo ptb20">
 				<img style="width: 90px;height: 90px;display: flex" :src="getSiteName+'/images/456LOGO-02.jpg'">
 			</div>
@@ -10,7 +37,7 @@
 					<weui-input v-model="ruleform.username" label="电话" placeholder="请输入手机号码" type="text" name="username" datatype="require|phone"></weui-input>
 					<weui-input v-model="ruleform.password" label="密码" type="password" name="password" datatype="require"></weui-input>
 					<div class="login-btn mt20">
-						<myform :ruleform="ruleform" :vaildate="vaildate" @callBack="formSubmit">
+						<myform :ruleform="ruleform" :vaildate="vaildate" :append="false" @callBack="formSubmit">
 							<div slot="content">
 								<button class="dx-btn dx-btn-big dx-btn-green w-b100 fs-17" form-type="submit">登录</button>
 							</div>
@@ -33,12 +60,12 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 	</view>
 </template>
 
 <script>
-	import "./index.css";
+	
 	export default {
 		data() {
 			return {
@@ -90,3 +117,6 @@
 		}
 	}
 </script>
+<style scoped>
+@import "./index.css";
+</style>

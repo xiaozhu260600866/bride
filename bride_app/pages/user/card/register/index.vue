@@ -2,6 +2,43 @@
 	<view>
 		<page :parentData="data" :formAction="formAction"></page>
 		<view v-if="data.show">
+			<block v-if="step == 0">
+				<view class="login_bg">
+					<image class="img" src="/static/login-bg.jpg" mode="aspectFill"></image>
+					<view class="bg"></view>
+				</view>
+				<view class="zero-step">
+					<view class="logo">
+						<image class="img" src="/static/logo.png"></image>
+					</view>
+					<view class="write_info">
+						<weui-input v-model="ruleform.phone" placeholder="请输入手机号码" type="number" name="phone" datatype="require">
+							<view slot="left" class="slot-icon">
+								<view class="iconfont icon-reg-phone"></view>
+							</view>
+						</weui-input>
+						<weui-input v-model="ruleform.passwork" placeholder="设置6~12位密码" type="password" name="passwork" datatype="require">
+							<view slot="left" class="slot-icon">
+								<view class="iconfont icon-reg-passwork"></view>
+							</view>
+						</weui-input>
+						<weui-input v-model="ruleform.code" placeholder="验证码" type="sms" name="code" myclass="code" action="/auth/sendSms"
+						 :phone="ruleform.phone">
+						 <view slot="left" class="slot-icon">
+							<view class="iconfont icon-reg-msg"></view>
+						 </view></weui-input>
+						<weui-input v-model="ruleform.invitation" placeholder="邀请码" type="text" name="invitation" datatype="require">
+							<view slot="left" class="slot-icon">
+								<view class="iconfont icon-reg-code"></view>
+							</view>
+						</weui-input>
+						<view class="text-right mt15 fs-14 fc-white" @click="goto('/pages/user/card/register/poster',1)">返回登录</view>
+						<view class="nav flex-center">
+							<dx-button type="primary" size="lg" round myclass="plr80 mtb20" @click="step = 1">立即注册</dx-button>
+						</view>
+					</view>
+				</view>
+			</block>
 			<view class="first-step text-center" v-if="step == 1">
 				<view class="fs-19 pt25">您的性别是？</view>
 				<view class="fs-14 fc-7 pt5">选择性别后将无法修改</view>
@@ -20,7 +57,7 @@
 					<view>我已阅读并同意</view>
 					<view class="main-color" @click="goto('/pages/news/show?id=254',1)">《新良缘用户协议》</view>
 				</view>
-				<dx-button type="primary" size="lg" round myclass="plr80 mt20" @click="submit()">下一步</dx-button>
+				<view class="reg-nav"><dx-button type="primary" size="lg" round myclass="plr80 mtb20" @click="submit()">下一步</dx-button></view>
 			</view>
 			<view class="second-step" v-if="step == 2">
 				<view class="text-center">
@@ -29,12 +66,12 @@
 				</view>
 				<view class="mt25 plr20">
 					<weui-input v-model="ruleform.name" label="姓名" type="text" name="name" datatype="require"></weui-input>
-					<weui-input v-model="ruleform.phone" label="手机" type="text" name="phone" datatype="require"></weui-input>
+					
 					<dx-address v-model="ruleform.address" labeltxt="工作生活在" addressHidden></dx-address>
 					<weui-input v-model="ruleform.married" label="婚姻状况" placeholder="请选择" name="married"  datatype="require" changeField="value" type="select" dataKey="maritalArr"></weui-input>
 				</view>
 				<view class="m20 text-center" @click="submit">
-					<dx-button type="primary" size="lg" round myclass="plr80">提交</dx-button>
+					<view class="reg-nav"><dx-button type="primary" size="lg" round myclass="plr80">提交</dx-button></view>
 				</view>
 			</view>
 		</view>
@@ -56,10 +93,9 @@
 					agree:0
 				},
 				vaildate:{},
-				step: 2,
+				step: 0,
 				maritalArr:[
 					{label: '未婚',value: '未婚'},
-					{label: '已婚',value: '已婚'},
 					{label: '离异',value: '离异'},
 				]
 			}
