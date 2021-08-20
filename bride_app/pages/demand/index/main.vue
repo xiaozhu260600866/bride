@@ -2,7 +2,7 @@
 	<view>
 		<page :parentData="data" :formAction="formAction" Fbottom="bottom: 25px">
 			<div slot="floatBtn" v-if="data.show">
-				<view @click="goto(data.show && data.phone ? '/pages/user/demand/create_edit/index' : '/pages/user/card/register/index',1)" >
+				<view @click="goto(data.show && data.phone ? '/pages/user/demand/create_edit/index' : '/pages/user/card/register/poster',1)" >
 					<floatBtn icon="icon-count-plus" myclass="float-nav-blue" iSize="fs-16" nSize="fs-13" title="发布"></floatBtn>
 				</view>
 			</div>

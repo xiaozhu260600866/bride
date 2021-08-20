@@ -20,7 +20,7 @@
 						<view class="iconfont icon-reg-passwork"></view>
 					</view>
 				</weui-input>
-				<view class="text-right mt15 fs-14 fc-white" @click="goto('/pages/user/password/main',1)">忘记密码</view>
+				<view class="text-right mt15 fs-14 fc-white" @click="goto('/pages/user/login/password/main',1)">忘记密码</view>
 				<myform :ruleform="ruleform" :vaildate="vaildate" :append="true" @callBack="formSubmit" class="mt30">
 					<div slot="content" class="flex-center">
 						<button class="dx-btn dx-btn-big dx-btn-green w-b70 fs-17 bdr25" form-type="submit">登录</button>

@@ -128,7 +128,7 @@ myfun.install = (Vue, options) => {
 	}
 	Vue.prototype.checkUser = (user,url, type) => {
 	   if(!user.userInfo.phone){
-		   return Vue.prototype.goto("/pages/user/card/register/index", 1);
+		   return Vue.prototype.goto("/pages/user/card/register/poster", 1);
 	   }else if(!user.is_authentication){
 			  return Vue.prototype.goto("/pages/user/card/verified/index", 1);
 	   }

@@ -9,7 +9,7 @@
 							<image class="img" :src="getSiteName +'/images/nouser01.png'" />
 						</view>
 						<myform :ruleform="ruleform" :vaildate="vaildate" :append="true" :data="v"
-							@callBack="goto('/pages/user/card/register/index',1)">
+							@callBack="goto('/pages/user/card/register/poster',1)">
 							<view slot="content">
 								<view class="login-nav fc-white fs-14">登录/注册<span
 										class="iconfont icon-right fs-10 pl3"></span></view>
@@ -268,7 +268,7 @@
 		methods: {
 			gotoDis() {
 				if (!this.data.user.userInfo.phone) {
-					return this.goto("/pages/user/card/register/index", 1);
+					return this.goto("/pages/user/card/register/poster", 1);
 				} else if (!this.data.user.is_authentication) {
 					return this.goto("/pages/user/card/verified/index", 1);
 				}

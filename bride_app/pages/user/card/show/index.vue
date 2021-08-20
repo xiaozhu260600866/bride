@@ -128,7 +128,7 @@
 				</view>
 				<view class="right flex1 w-b100 pr5">
 					<view class="r-nav">
-						<view class="r-item main-bg" @click="goto('/pages/user/card/register/index',1)">免费创建数字名片</view>
+						<view class="r-item main-bg" @click="goto('/pages/user/card/register/poster',1)">免费创建数字名片</view>
 					</view>
 				</view>
 			</view>
