@@ -215,6 +215,7 @@
 						this.ruleform.area = uni.getStorageSync("waterCityData").area;
 						this.postAjax(this.formAction, this.ruleform).then(msg => {
 							if (msg.data.status == 2) {
+								this.goto("/pages/user/demand/create_edit/payed/main?order_no=" + msg.data.order_no, 1);
 								if (msg.data.config) {
 									this.payUniapp(msg.data.config, msg2 => {
 										this.goto("/pages/user/demand/create_edit/payed/main?order_no=" + msg.data.order_no, 1);

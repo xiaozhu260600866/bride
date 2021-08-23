@@ -180,13 +180,20 @@
 				});
 			},
 			submit(){
-				this.ruleform.province = this.$refs.address.lotusAddressData.provinceName;
-				this.ruleform.city = this.$refs.address.lotusAddressData.cityName;
-				this.ruleform.country = this.$refs.address.lotusAddressData.townName;
+				// this.ruleform.province = this.$refs.address.lotusAddressData.provinceName;
+				// this.ruleform.city = this.$refs.address.lotusAddressData.cityName;
+				// this.ruleform.country = this.$refs.address.lotusAddressData.townName;
 				this.vaildForm(this, res => {
 					if(res){
+						if(this.ruleform.marry_condition){
+								this.$set(this.ruleform,"marry_condition",JSON.stringify(this.ruleform.marry_condition));
+						}
+					
 						this.postAjax("/user/info",this.ruleform).then(msg=>{
-							 this.goto("/pages/user/index/main",2);
+							if(msg.data.status ==2){
+								 this.goto("/pages/user/index/main",2);
+							}
+							
 						});
 					}
 				})

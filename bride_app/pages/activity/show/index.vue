@@ -3,7 +3,7 @@
 		<page :parentData="data" :formAction="formAction" ref="page"></page>
 		<view v-if="data.show">
 			<view class="topPic">
-				<myswiper :lists="data.covers" purl="activity"></myswiper>
+				<myswiper2 :lists="data.covers" purl="activity"></myswiper2>
 				<view class="state state0" v-if="detail.state == 0">已成行</view>
 				<view class="state state1" v-if="detail.state == 1">报名中</view>
 				<view class="state state2" v-if="detail.state == 2">已截止</view>
@@ -32,10 +32,10 @@
 				<view class="block-title"><text>活动要求</text></view>
 				<view class="block-con">{{ detail.intro }}</view>
 			</view>
-			<view class="detail-block">
+			<!-- <view class="detail-block">
 				<view class="block-title"><text>报名人员</text></view>
 				<view class="block-con">已报名（<span>{{ detail.people }}</span>人成行）　总共<span class="fc-red">{{ detail.orderRecord.people }}</span>（男<span class="fc-red">{{detail.orderRecord.mans}}</span>　女<span class="fc-red">{{detail.orderRecord.womens}}</span>）人</view>
-			</view>
+			</view> -->
 			<view class="detail-block">
 				<view class="block-title"><text>活动详情</text></view>
 				<view class="block-con">
@@ -44,11 +44,11 @@
 			</view>
 			<view class="aS-footer-btn">
 				<view class="left-item" @click="goto('/pages/index/index',2)">
-					<view class="iconfont icon-home-o"></view>
+					<view class="iconfont icon-home"></view>
 					<view class="txt">首页</view>
 				</view>
 				<view class="left-item" @click="$refs.share.show = true">
-					<view class="iconfont icon-user-share"></view>
+					<view class="iconfont icon-share"></view>
 					<view class="txt">分享</view>
 				</view>
 				<view class="right-btn flex1">
@@ -129,7 +129,7 @@
 			},
 			ajax() {
 				this.getAjax(this).then(msg => {
-					//this.setTitle(this.data.siteConfig.web_name);
+					this.setTitle(this.data.detail.title);
 					
 					this.detail = msg.detail;
 					console.log(msg);
@@ -137,9 +137,9 @@
 						uni.setStorageSync("distribution",msg.dis);
 						
 					}
-					this.$nextTick(()=>{
-						this.$refs.page.share(this.data.detail.title,this.data.detail.firstCover,this.data.detail.title);
-					})
+					// this.$nextTick(()=>{
+					// 	this.$refs.page.share(this.data.detail.title,this.data.detail.firstCover,this.data.detail.title);
+					// })
 					
 				});
 			}

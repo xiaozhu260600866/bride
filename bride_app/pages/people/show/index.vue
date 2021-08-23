@@ -122,7 +122,7 @@
 					if(msg.user.userInfo.marry_condition){
 						 
 						 this.condTags = msg.user.userInfo.marry_condition.indexOf("{")!=-1 ? JSON.parse(msg.user.userInfo.marry_condition) : msg.user.userInfo.marry_condition.split(",");
-					
+						 
 					}
 					
 				});

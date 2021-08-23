@@ -5,12 +5,12 @@
 			<view :class="['list-item']" v-for="(v,key) in data">
 				<view class="top flex">
 					<view class="head mr10">
-						<image class="img" :src="v.getLogo" mode="aspectFill" />
+						<image class="img" :src="v.getUser ? v.getUser.headerPic :''" mode="aspectFill" />
 					</view>
 					<view class="info flex1">
 						<view class="name fs-15">{{ v.name }}</view>
-						<view class="flex">
-							<!-- <view :class="['age',v.getUser.userInfo.sex == 0 ? 'blue' : 'red']"><span :class="['iconfont',,v.getUser.userInfo.sex == 0 ?  'icon-man':'icon-women']"></span>{{v.getUser.userInfo.age}}</view> -->
+						<view class="flex" v-if="v.getUser">
+							<view :class="['age',v.getUser.userInfo.sex == 0 ? 'blue' : 'red']"><span :class="['iconfont',,v.getUser.userInfo.sex == 0 ?  'icon-man':'icon-women']"></span>{{v.getUser.userInfo.age}}</view>
 							<view class="city fs-12 fc-9 pl10 lh-20">{{v.city}}</view>
 						</view>
 					</view>
@@ -29,8 +29,8 @@
 					</view>
 					<view class="bottom flex-middle fc-6">
 						<view class="item mr20">
-							<span :class="['iconfont icon-trends-thumbs fs-15', thumbs==true ? 'fc-red' : '']" @click="thumbs = !thumbs"></span>
-							<span class="num pl5">0</span>
+							<span :class="['iconfont icon-trends-thumbs fs-15', v.thumb ? 'fc-red' : '']" @click="thumb(v)"></span>
+							<span class="num pl5">{{v.thumbCount}}</span>
 						</view>
 						<!-- <view class="item mr20">
 							<span class="iconfont icon-trends-evalute fs-15"></span>

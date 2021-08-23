@@ -7,9 +7,9 @@
 				</view>
 			</div>
 		</page>
-		555666
+		
 		<div v-if="data.show">
-			777888
+			
 			<!-- <THeader :data="data" :callBack="true" :waterCityData="waterCityData"  title="搜索动态" searchUrl="/pages/search/demand/main" @callBack="$refs.selectCity.init()" noborder></THeader> -->
 			<div>
 				<!-- 轮播图 -->

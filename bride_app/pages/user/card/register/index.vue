@@ -17,7 +17,7 @@
 								<view class="iconfont icon-reg-phone"></view>
 							</view>
 						</weui-input>
-						<weui-input v-model="ruleform.passwork" placeholder="设置6~12位密码" type="password" name="passwork" datatype="require">
+						<weui-input v-model="ruleform.password" placeholder="设置6~12位密码" type="password" name="password" datatype="require">
 							<view slot="left" class="slot-icon">
 								<view class="iconfont icon-reg-passwork"></view>
 							</view>
@@ -27,14 +27,14 @@
 						 <view slot="left" class="slot-icon">
 							<view class="iconfont icon-reg-msg"></view>
 						 </view></weui-input>
-						<weui-input v-model="ruleform.invitation" placeholder="邀请码" type="text" name="invitation" datatype="require">
+						<weui-input v-model="ruleform.invitation" placeholder="邀请码" type="text" name="invitation" >
 							<view slot="left" class="slot-icon">
 								<view class="iconfont icon-reg-code"></view>
 							</view>
 						</weui-input>
 						<view class="text-right mt15 fs-14 fc-white" @click="goto('/pages/user/card/register/poster',1)">返回登录</view>
 						<view class="nav flex-center">
-							<dx-button type="primary" size="lg" round myclass="plr80 mtb20" @click="step = 1">立即注册</dx-button>
+							<dx-button type="primary" size="lg" round myclass="plr80 mtb20" @click="toStep">立即注册</dx-button>
 						</view>
 					</view>
 				</view>
@@ -104,8 +104,16 @@
 		
 		},
 		methods: {
-		
+			toStep(){
+				
+				if (this.ruleform.code != wx.getStorageSync('smsCode')) {
+					this.getError("验证码不正确");
+					return false;
+				}
+				this.step = 1
+			},
 			agree(event){
+				
 				if(event.target.value.length){
 					console.log("a")
 					this.ruleform.agree = 1;	
@@ -123,6 +131,10 @@
 			},
 			submit(){
 				if(this.step == 1){
+					if (!this.ruleform.sex) {
+						this.getError("姓别没有填写");
+						return false;
+					}
 					if(!this.ruleform.agree){
 						return this.getError("请同意协议");	
 					}
@@ -145,6 +157,7 @@
 			ajax() {
 				this.getAjax(this).then(msg => {
 					this.ruleform = msg.user.userInfo;
+					this.ruleform.sex = 0;
 					this.ruleform.remark_pic = msg.user.userInfo.remark_pic ? msg.user.userInfo.remark_pic.split(","): [],
 					this.ruleform.remark_pic_company = msg.user.userInfo.remark_pic_company ? msg.user.userInfo.remark_pic_company.split(","): []
 				});

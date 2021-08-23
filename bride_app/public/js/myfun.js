@@ -4,6 +4,7 @@ myfun.install = (Vue, options) => {
 		Vue.prototype.updateUrl(["/pages/user/card/edit/index","/pages/user/index/main","/pages/index/main","/pages/user/coupon/list/main",'/pages/user/cart/main','/pages/user/index/main']);
 	}
 	Vue.prototype.thumb=(item)=>{
+		console.log("a")
 		Vue.prototype.postAjax("/articleOrder/thumb",{articleOrder_id:item.id},"notloading").then(msg=>{
 			 if(msg.data.status == 2){
 				 item.thumb = !item.thumb;

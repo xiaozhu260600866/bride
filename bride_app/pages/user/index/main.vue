@@ -4,9 +4,9 @@
 		<view v-if="data.show">
 			<view class="head-info">
 				<view class="utop main-bg">
-					<view class="uinfo" v-if="data.user.nickname == '游客'">
+					<view class="uinfo" v-if="!data.user.userInfo.phone">
 						<view class="header-img">
-							<image class="img" :src="getSiteName +'/images/nouser01.png'" />
+							<image class="img" :src="data.user.headimgurl" />
 						</view>
 						<myform :ruleform="ruleform" :vaildate="vaildate" :append="true" :data="v"
 							@callBack="goto('/pages/user/card/register/poster',1)">

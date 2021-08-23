@@ -53,7 +53,7 @@
 		},
 		methods: {
 			toIndex(){
-				this.goto('/pages/index/index',2);
+				this.goto('/pages/index/main',2);
 			},
 			ajax() {
 				this.getAjax(this).then(msg => {
