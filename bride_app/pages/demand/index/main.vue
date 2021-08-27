@@ -3,7 +3,7 @@
 		<page :parentData="data" :formAction="formAction" Fbottom="bottom: 25px">
 			<div slot="floatBtn" v-if="data.show">
 				<view @click="goto(data.show && data.phone ? '/pages/user/demand/create_edit/index' : '/pages/user/card/register/poster',1)" >
-					<floatBtn icon="icon-count-plus" myclass="float-nav-blue" iSize="fs-16" nSize="fs-13" title="发布"></floatBtn>
+					<floatBtn icon="icon-count-plus" myclass="float-nav-blue dxi-btn-primary" iSize="fs-16" nSize="fs-13" title="发布"></floatBtn>
 				</view>
 			</div>
 		</page>
@@ -47,7 +47,7 @@
 					<trendsLists :data="data.lists.data"></trendsLists>
 				</view>
 				
-				<view class="copyright" @click="phone('13318639080')">版权所有：广东科阅云</view>
+				<view class="copyright" @click="phone('13318639080')">技术合作：广东科阅云</view>
 			</div>
 		</div>
 		<selectCity ref="selectCity" title="请选择配送区域" :OFFicon="true" :ruleform="ruleform" :townArr="townArr" :cityArr="cityArr" :provinceArr="provinceArr" :areaArr="areaArr" @callBack="cityCallBack"></selectCity>

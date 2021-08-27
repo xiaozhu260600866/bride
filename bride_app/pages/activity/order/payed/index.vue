@@ -3,13 +3,13 @@
 		<page :parentData="data" :formAction="formAction" ref="page"></page>
 		<div v-if="data.show">
 			<view class="pay-top" v-if="data.detail.status == 3">
-				<dx-icon name="success" size="70" color="rgb(0, 153, 102)"></dx-icon>
-				<view class="p">支付成功</view>
+				<dx-icon name="success" size="96" color="rgb(0, 153, 102)"></dx-icon>
+				<view class="p">报名成功，感谢您的参加！</view>
 			</view>
 			<view class="pay-top" v-else>
 				<!-- <view class="iconfont icon-pay-no"></view> -->
-				<dx-icon name="fail" size="70" color="#E84335"></dx-icon>
-				<view class="p">支付失败</view>
+				<dx-icon name="fail" size="96" color="#E84335"></dx-icon>
+				<view class="p">报名失败</view>
 			</view>
 			<view class="m20 mt0">
 				<!-- <view class="dx-btn dx-btn-lg dx-btn-orange w-b100 mr10" @click="toIndex">返回首页</view> -->

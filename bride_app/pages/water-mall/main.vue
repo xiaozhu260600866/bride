@@ -3,11 +3,11 @@
 		<page :parentData="data" :formAction="formAction"></page>
 		<div v-if="data.show">
 			<div v-if="step == 1">
-				<THeader :data="data" :callBack="true" :waterCityData="waterCityData" @callBack="$refs.selectCity.init()" title="搜索好物" noborder></THeader>
+				<!-- <THeader :data="data" :callBack="true" :waterCityData="waterCityData" @callBack="$refs.selectCity.init()" title="搜索好物" noborder></THeader> -->
 				<div class="bg-f swiper_box bannerSwiper" v-if="data.silders2.data.length">
 					<myswiper :data="data.silders2.data" :tbPadding="0"></myswiper>
 				</div>
-				<view class="navSwiper" v-if="data.location.length">
+				<view class="navSwiper mb8" v-if="data.location.length">
 					<swiper class="swiper bg-f" :vertical="vertical" :autoplay="false" :indicator-dots="true" :duration="duration"
 					 :circular="circular" :style="data.location[0].length<=5 ? 'height: 100px;' : 'height: 410rpx;'" v-if="data.siteConfig.is_index == 1">
 						<swiper-item v-for="(parent,parentKey) in data.location">
@@ -26,36 +26,7 @@
 						</swiper-item>
 					</swiper>
 				</view>
-				<!-- <view class="mt8 data-count bg-f">
-					<view class="title pt15 plr15 fs-16 fc-6 lh-1">实时动态数据</view>
-					<view class="lists flex ptb15">
-						<view class="item">
-							<view class="num main-color">138</view>
-							<view class="txt">入驻服务商</view>
-						</view>
-						<view class="item">
-							<view class="num main-color">650</view>
-							<view class="txt">服务产品</view>
-						</view>
-						<view class="item">
-							<view class="num main-color">365</view>
-							<view class="txt">成交订单</view>
-						</view>
-						<view class="item">
-							<view class="num main-color">235.08</view>
-							<view class="txt">成交额(万)</view>
-						</view>
-					</view>
-				</view>
-				<view class="mt8 bg-f data-sub">
-					<view class="title pt15 plr15 fs-16 fc-0 lh-1">在线询价/找服务</view>
-					<view class="p30 write">
-						<weui-input v-model="ruleform.content" label="我需要" placeholder="请输入我需要的服务" type="text" name="content"  datatype="require"></weui-input>
-						<weui-input v-model="ruleform.phone" label="手机号" type="number" name="phone" datatype="require"></weui-input>
-						<dx-button type="primary" myclass="mt15" size="lg" round block @click="submit">我要询价</dx-button>
-					</view>
-				</view> -->
-				<view class="TopNav mt8">
+				<view class="TopNav">
 					<scroll-view scroll-x="true">
 						<view class="liNav cur" @click="goto('/pages/package/lists/main?fclass=7',1)">
 							<text class="ANav">推荐好物</text>

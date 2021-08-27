@@ -97,6 +97,8 @@
 				maritalArr:[
 					{label: '未婚',value: '未婚'},
 					{label: '离异',value: '离异'},
+					{label: '丧偶',value: '丧偶'},
+					{label: '已婚（申请做红娘）',value: '已婚（申请做红娘）'},
 				]
 			}
 		},

@@ -3,8 +3,8 @@
 		<page :parentData="data" :formAction="formAction"></page>
 		<view v-if="data.show">
 			<view class="datum bg-f">
-				<weui-input v-model="ruleform.nickname" label="昵称" type="txt" name="nickname"></weui-input>
-				<weui-input v-model="ruleform.id" label="ID" type="txt" name="id"></weui-input>
+				<!-- <weui-input v-model="ruleform.nickname" label="昵称" type="txt" name="nickname"></weui-input>
+				<weui-input v-model="ruleform.id" label="ID" type="txt" name="id"></weui-input> -->
 				<weui-input v-model="ruleform.sex" label="性别" name="sex" changeField="value" type="radio" dataKey="sexArr" 
 				 :row="false" myclass="sexArr"></weui-input>
 				<weui-input v-model="ruleform.age" label="年龄" name="age" changeField="value" type="select" dataKey="ageArr"></weui-input>
@@ -56,8 +56,9 @@
 				],
 				marriageArr:[
 					{label:'未婚',value: 1},
-					{label:'离异无小孩',value: 2},
-					{label:'离异有小孩',value: 3},
+					{label:'离异',value: 2},
+					{label:'丧偶',value: 3},
+					{label:'已婚（申请做红娘）',value: 3},
 				]
 			}
 		},

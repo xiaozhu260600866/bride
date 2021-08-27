@@ -8,7 +8,7 @@
 					<view class="header">
 						<image class="img" :src="data.user.headimgurl"></image>
 					</view>
-					<view class="info">
+					<view class="info pl10">
 						<view class="name">{{data.user.nickname}}</view>
 						<view class="time">注册时间：<text class="Arial">{{data.user.updated_at}}</text></view>
 					</view>

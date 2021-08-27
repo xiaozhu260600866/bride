@@ -28,11 +28,11 @@
 					<span class="value">{{ detail.address}}</span>
 				</view>
 			</view>
-			<view class="detail-block" v-if="detail.intro">
+			<!-- <view class="detail-block" v-if="detail.intro">
 				<view class="block-title"><text>活动要求</text></view>
 				<view class="block-con">{{ detail.intro }}</view>
 			</view>
-			<!-- <view class="detail-block">
+			<view class="detail-block">
 				<view class="block-title"><text>报名人员</text></view>
 				<view class="block-con">已报名（<span>{{ detail.people }}</span>人成行）　总共<span class="fc-red">{{ detail.orderRecord.people }}</span>（男<span class="fc-red">{{detail.orderRecord.mans}}</span>　女<span class="fc-red">{{detail.orderRecord.womens}}</span>）人</view>
 			</view> -->

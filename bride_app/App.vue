@@ -22,8 +22,8 @@
 	/*  #ifdef  H5 */
 	/*  #endif  */
 	
-	uni-tabbar .uni-tabbar{background: #fff!important;height: 56px;}
-	uni-tabbar .uni-tabbar__icon{margin-top: 2px;height: 30px;width: 30px;}
-	uni-tabbar .uni-tabbar__label {font-size: 13px!important;color: #333!important;line-height: 20px;}
+	uni-tabbar .uni-tabbar{background: #fff!important;height: 50px;}
+	uni-tabbar .uni-tabbar__icon{margin-top: 2px;height: 28px;width: 30px;}
+	uni-tabbar .uni-tabbar__label {font-size: 12px!important;line-height: 18px;}
 	
 </style>

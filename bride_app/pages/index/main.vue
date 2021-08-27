@@ -15,7 +15,7 @@
 					<dx-nav-class :data="data.location" :isturnpage="true" @click="classNav" :num="5" :namePTop="10" :imgR="16" :tbPadding="10" :pageNum="5"></dx-nav-class>
 				</view>
 			</view>
-			<view class="bg-f mt12">
+			<view class="bg-f">
 				<view class="sec-title">同城置顶</view>
 				<view class="cross-people">
 					<scroll-view :scroll-x="true">
@@ -50,7 +50,7 @@
 			<view v-if="showNav==2">
 				<cardLists :lists="data.lists.data" :data="data" myclass="index-card"></cardLists>
 			</view>
-			<view class="copyright" @click="phone('13318639080')">版权所有：广东科阅云</view>
+			<view class="copyright" @click="phone('13318639080')">技术合作：广东科阅云</view>
 		</view>
 		<selectCity ref="selectCity" title="请选择配送区域" :OFFicon="true" :ruleform="ruleform" :townArr="townArr" :cityArr="cityArr" :provinceArr="provinceArr" :areaArr="areaArr" @callBack="cityCallBack"></selectCity>
 		<dx-diag  :tbPadding="0" :lrPadding="0" v-if="data.diag" ref="diag">

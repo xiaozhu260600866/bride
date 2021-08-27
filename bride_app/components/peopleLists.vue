@@ -33,8 +33,8 @@
 	}
 </script>
 <style scoped="">
-.length-people{padding: 10rpx;background-color: #fff;display: flex;flex-wrap: wrap;}
-.length-people-item{position: relative;height: 440rpx;width: calc(50% - 20rpx);border-radius: 12rpx;overflow: hidden;margin: 10rpx;}
+.length-people{padding: 16rpx;background-color: #fff;display: flex;flex-wrap: wrap;}
+.length-people-item{position: relative;height: 440rpx;width: calc(50% - 32rpx);border-radius: 12rpx;overflow: hidden;margin: 16rpx;}
 .length-people-item .cover{width: 100%;height: 100%;}
 .length-people-item .cover .img{max-width: 100%;max-height: 100%;display: flex;}
 .length-people-item .txt{position: absolute;bottom: 0;left: 0;width: 100%;color: #fff;padding: 12rpx 16rpx;line-height: 1;z-index: 10;}

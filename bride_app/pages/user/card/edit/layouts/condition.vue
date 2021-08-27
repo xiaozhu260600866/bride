@@ -60,8 +60,8 @@
 				],
 				marriageArr:[
 					{label:'未婚',value: '未婚'},
-					{label:'离异无小孩',value: '离异无小孩'},
-					{label:'离异有小孩',value: '离异有小孩'},
+					{label:'离异',value: '离异'},
+					{label:'丧偶',value: '丧偶'},
 				]
 			}
 		},

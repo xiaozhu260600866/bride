@@ -222,7 +222,7 @@
 					</myform>
 				</view>
 			</view>
-			<view class="copyright" @click="phone('13318639080')">版权所有：广东科阅云</view>
+			<view class="copyright" @click="phone('13318639080')">技术合作：广东科阅云</view>
 		</view>
 
 	</view>
