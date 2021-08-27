@@ -7,7 +7,7 @@
 		</page>
 		<view v-if="data.show">
 			<THeader :data="data" :city="city" title="寻找心仪的TA" showCity searchUrl="/pages/search/card/main" noborder></THeader>
-			<view class="groupAd bannerSwiper">
+			<view class="bg-f groupAd bannerSwiper swiper_box">
 				<myswiper :data="data.ad1" :tbPadding="0"></myswiper>
 			</view>
 			<view class="mb8" v-if="data.location.length">
@@ -53,7 +53,7 @@
 			<view class="copyright" @click="phone('13318639080')">技术合作：广东科阅云</view>
 		</view>
 		<selectCity ref="selectCity" title="请选择配送区域" :OFFicon="true" :ruleform="ruleform" :townArr="townArr" :cityArr="cityArr" :provinceArr="provinceArr" :areaArr="areaArr" @callBack="cityCallBack"></selectCity>
-		<dx-diag  :tbPadding="0" :lrPadding="0" v-if="data.diag" ref="diag">
+		<dx-diag :tbPadding="0" :lrPadding="0" v-if="data.diag" ref="diag">
 		　　<view @click="goto(data.diag.url,1)">
 				<image class="w-b100 flex bdr6" :src="getSiteName+'/upload/images/disAd/800_'+ data.diag.poster_cover" mode="widthFix" v-if="data.diag.poster_cover"></image>
 				<image class="w-b100 flex bdr6" :src="getSiteName+'/upload/images/poster/800_'+ data.diag.pic" mode="widthFix" v-if="data.diag.pic"></image>
@@ -61,9 +61,10 @@
 		</dx-diag>
 	</view>
 </template>
-
+<style>
+@import "./index.css";
+</style>
 <script>
-	import "./index.css";
 	import marque from "xiaozhu/uniapp/components/marque";
 	import productLists from "@/components/productLists";
 	import figureLists from "@/components/figureLists";

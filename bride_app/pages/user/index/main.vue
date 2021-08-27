@@ -11,8 +11,7 @@
 						<myform :ruleform="ruleform" :vaildate="vaildate" :append="true" :data="v"
 							@callBack="goto('/pages/user/card/register/poster',1)">
 							<view slot="content">
-								<view class="login-nav fc-white fs-14">登录/注册<span
-										class="iconfont icon-right fs-10 pl3"></span></view>
+								<view class="login-nav fc-white fs-14">登录/注册<span class="iconfont icon-right fs-10 pl3"></span></view>
 							</view>
 						</myform>
 					</view>
@@ -119,7 +118,7 @@
 							</view>
 						</view>
 					</myform>
-					<myform :append="true" :data="v" @callBack="checkUser(data.user,'/pages/user/card/count/index',1)">
+					<myform :append="true" :data="v" @callBack="checkUser(data.user,'/pages/user/card/count/attention',1)">
 						<!-- 名片夹 -->
 						<view slot="content">
 							<view class="ulist-item">
@@ -216,7 +215,7 @@
 								<view class="item-icon">
 									<image class="img" src="https://card.doxinsoft.com/images/wap/unav-a5.png"></image>
 								</view>
-								<view class="item-name">分享达人</view>
+								<view class="item-name">邀请有礼</view>
 							</view>
 						</view>
 					</myform>

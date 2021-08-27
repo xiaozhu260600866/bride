@@ -9,7 +9,7 @@
 				<view class="status fc-red">{{ item.status_message }}</view>
 			</view>
 			<view v-if="item.type == 1">
-				<view class="box_info">
+				<view class="box_info" @click="goto('/pages/activity/show/index?id='+item.getActivity.id,1)">
 					<view class="act_img">
 						<image class="img" :src="item.getActivity.firstCover" mode="aspectFill" />
 					</view>

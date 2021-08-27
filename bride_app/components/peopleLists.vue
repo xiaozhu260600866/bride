@@ -6,8 +6,8 @@
 				<view class="txt">
 					<view class="name" :class="[crosswise?'wrap2':'nowrap']">{{ item.userInfo.name}}</view>
 					<view class="data">
-						<view class="lab"><text class="Arial">{{item.userInfo.age}}</text>岁</view>
-						<view class="lab"><text class="Arial">{{item.userInfo.height}}</text></view>
+						<view class="lab" v-if="item.userInfo.age"><text class="Arial">{{item.userInfo.age}}</text>岁</view>
+						<view class="lab" v-if="item.userInfo.height"><text class="Arial">{{item.userInfo.height}}</text></view>
 						<view class="lab">{{item.city}}</view>
 					</view>
 						<!-- • -->

@@ -1,12 +1,5 @@
 <template>
 	<view >
-		<view class="Tcount bg-f" v-if="TcountShow?TcountShow:''">
-			<view class="item" @click="goto('/pages/package/order/lists/main?historyUrl=del&status=3',1)">水票
-				<text class="price">{{data.packageCount}}</text>张</view>
-			<view class="item"@click="goto('/pages/user/coupon/cash/lists/main?status=12',1)">我的券
-				<text class="price">{{data.couponUserCount}}</text>元</view>
-			<view class="item"@click="goto('',1)">下架信息<text class="price">0</text>条</view>
-		</view>
 		<view class="tsearch" :class="[noborder?'noborder':'',myclass]">
 			<view class="lcity" @click="to" v-if="showCity">{{waterCityData ?waterCityData.area : city}}<text class="icon dxi-icon dxi-icon-down"></text></view>
 			<view class="bg-f plr10 ptb5 flex1" @click="goto(searchUrl ? searchUrl :'/pages/search/product/main',1)">
@@ -21,11 +14,10 @@
 
 <script>
 	export default {
-		props: ["title","data","callBack","waterCityData","city","TcountShow",'searchUrl','noborder','showCity'],
+		props: ["title","waterCityData","city",'searchUrl','noborder','showCity'],
 		data() {
 			return {
 				noborder: true,
-				TcountShow: true,
 			}
 		},
 		methods: {

@@ -3,11 +3,11 @@
 		<view class="demandL" :class="{demandEdit:edit}" v-for="(item,key) in data">
 			<view class="demandL-box">
 				<view class="demandL-list mb10" @click="goto('/pages/demand/show/index?id='+item.id,1)">
-					<view class="list-left">
+					<!-- <view class="list-left">
 						<image class="img" :src="item.getLogo" mode="aspectFill"></image>
-					</view>
+					</view> -->
 					<view class="list-right">
-						<view class="Atitle fs-16 lh-20 fw-bold">{{ item.title}}</view>
+						<view class="Atitle">{{ item.title}}</view>
 						<view class="fs-13 mt5 nowrap fc-9"><text class="iconfont icon-hongbao fs-14 pr2 fc-red" v-if="item.red_packet"></text>{{ item.category }}</view>
 						<view class="fs-15 wrap2 fc-3 mt5 lh-20">{{ item.getUser.userInfo.company_name }}</view>
 					</view>
@@ -98,6 +98,7 @@
 .demandL-list .list-right{flex: 1;overflow: hidden;width: 100%;min-height: 200upx;}
 .demandL-list .list-location{text-align: right;line-height: 40upx;width: 80upx;margin-left: 20upx;}
 .demandL-list .list-location .p{height: 40upx;line-height: 40upx;}
+.demandL-list .Atitle{color: #434343;line-height: 1.6;font-size: 30rpx;text-align: justify;}
 
 .demand-con{text-align: justify;}
 .demand-con .content{overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 4;}

@@ -4,7 +4,7 @@
 		<div v-if="data.show">
 			<div v-if="step == 1">
 				<!-- <THeader :data="data" :callBack="true" :waterCityData="waterCityData" @callBack="$refs.selectCity.init()" title="搜索好物" noborder></THeader> -->
-				<div class="bg-f swiper_box bannerSwiper" v-if="data.silders2.data.length">
+				<div class="bg-f swiper_box bannerSwiper pt10" v-if="data.silders2.data.length">
 					<myswiper :data="data.silders2.data" :tbPadding="0"></myswiper>
 				</div>
 				<view class="navSwiper mb8" v-if="data.location.length">

@@ -76,7 +76,7 @@
 		{
 			"path": "pages/distribution/login/main",
 			"style": {
-				"navigationBarTitleText": "分享达人",
+				"navigationBarTitleText": "邀请有礼",
 				"enablePullDownRefresh": true,
 				"navigationStyle": "custom"
 			}
@@ -100,7 +100,7 @@
 		{
 			"path": "pages/distribution/index/main",
 			"style": {
-				"navigationBarTitleText": "分享达人",
+				"navigationBarTitleText": "邀请有礼",
 				"enablePullDownRefresh": true,
 				"navigationStyle": "custom"
 			}
@@ -124,7 +124,7 @@
 		{
 			"path": "pages/distribution/add/main",
 			"style": {
-				"navigationBarTitleText": "分享达人注册",
+				"navigationBarTitleText": "邀请有礼注册",
 				"enablePullDownRefresh": true,
 				"navigationStyle": "custom"
 			}
@@ -426,7 +426,15 @@
 		{
 			"path": "pages/user/card/count/index",
 			"style": {
-				"navigationBarTitleText": "会员数据",
+				"navigationBarTitleText": "谁看过我",
+				"enablePullDownRefresh": true,
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/user/card/count/attention",
+			"style": {
+				"navigationBarTitleText": "关注我的",
 				"enablePullDownRefresh": true,
 				"navigationStyle": "custom"
 			}
@@ -623,7 +631,7 @@
 		{
 			"path": "pages/people/show/index",
 			"style": {
-				"navigationBarTitleText": "详情",
+				"navigationBarTitleText": "TA的资料",
 				"enablePullDownRefresh": true,
 				"navigationStyle": "custom"
 			}

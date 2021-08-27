@@ -2,19 +2,7 @@
 	<view>
 		<page :parentData="data" :formAction="formAction"></page>
 		<view v-if="data.show">
-			<view class="count-top main-bg">
-				<view class="ct-group">
-					<view class="ct-item">
-						<view class="txt">访问总量(次)</view>
-						<view class="num">{{data.visitCount}}</view>
-					</view>
-					<view class="ct-item">
-						<view class="txt">今日访问量(次)</view>
-						<view class="num">{{data.visitToDayCount}}</view>
-					</view>
-				</view>
-			</view>
-			<dx-tabs-scroll :tabs="tabs" @change="ajax" v-model="data.query.type" :height="52" borderColor="#ed5296" :curSize="16" curColor="#333" curBold="bold" :nameSize="16" :borderHeight="4"></dx-tabs-scroll>
+			<dx-tabs :tabs="tabs" @change="ajax" v-model="data.query.type" :height="100" curBold="bold" selectedColor="#ed5296" sliderBgColor="#ed5296" :size="32" :selectedSize="32" bold></dx-tabs>
 			<view class="count-people">
 				<view class="cp-lists" v-for="v in lists">
 					<view class="cp-left" >
@@ -31,6 +19,11 @@
 						</view>
 						<view class="cpr-row fs-13 fc-9"><!-- 来源：我于{{v.date}}向对方发出了名片 -->{{v.created_at}}</view>
 					</view>
+					<view>
+						<dx-button type="primary" size="mini" round @click="subscribe(v)">
+							取消关注
+						</dx-button>
+					</view>
 				</view>
 				<view  class="fs-14 fc-8 p20 text-center" v-if="data.lists.data.length == 0">
 					暂无数据
@@ -41,10 +34,10 @@
 </template>
 
 <script>
-	import dxTabsScroll from "doxinui/components/tabs/tabs_scroll"
+	import dxTabs from "doxinui/components/tabs/tabs"
 	import dxButton from "doxinui/components/button/button"　　
 	export default {
-		components: {dxTabsScroll,dxButton},
+		components: {dxTabs,dxButton},
 		data() {
 			return {
 				formAction: '/cardCount.html',
@@ -52,7 +45,8 @@
 				data: this.formatData(this),
 				getSiteName: this.getSiteName(),
 				tabs: [
-					{value: 0,name: "我的访客"},
+					{value: 0,name: "关注我的"},
+					{value: 1,name: "我关注的"},
 				],
 				lists:[{
 					created_at:'2021-07-09 08:38:22',

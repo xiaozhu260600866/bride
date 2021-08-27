@@ -13,4 +13,10 @@
 .count-people .cp-lists:last-child::after{height: 0;}
 .count-people .cp-left .img{width: 100rpx;height: 100rpx;display: flex;border-radius: 50%;margin-right: 30rpx;}
 .count-people .cp-right{flex: 1;}
-.count-people .cpr-top .title .nav{color: #387ef8;padding: 0 8rpx;border-radius: 8rpx;height: 40rpx;line-height: 38rpx;border: 1rpx #387ef8 solid;margin-left: 10rpx;}
+.count-people .cpr-top .nav{color: #ed5296;padding: 0 8rpx;border-radius: 8rpx;height: 40rpx;line-height: 38rpx;border: 1rpx #ed5296 solid;margin-left: 16rpx;font-size: 24rpx;}
+
+.count-people .data{font-size: 26rpx;display: flex;align-items: center;}
+.count-people .data .lab{position: relative;padding-right: 12rpx;margin-right: 12rpx;}
+.count-people .data .lab::after{content: "";display: flex;position: absolute;top: 50%;margin-top: -4rpx;right: -4rpx;width: 8rpx;height: 8rpx;background-color: #666;border-radius: 50%;}
+.count-people .data .lab:last-child{padding: 0;margin: 0;}
+.count-people .data .lab:last-child::after{display: none;}

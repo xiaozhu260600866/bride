@@ -81,7 +81,7 @@
 					</div> -->
 				</div>
 			</div>
-			<hasMore :parentData="data" source="order" message="找服务"></hasMore>
+			<hasMore :parentData="data" source="order" message="去购物"></hasMore>
 		</div>
 	</view>
 </template>

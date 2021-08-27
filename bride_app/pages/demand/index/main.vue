@@ -3,7 +3,7 @@
 		<page :parentData="data" :formAction="formAction" Fbottom="bottom: 25px">
 			<div slot="floatBtn" v-if="data.show">
 				<view @click="goto(data.show && data.phone ? '/pages/user/demand/create_edit/index' : '/pages/user/card/register/poster',1)" >
-					<floatBtn icon="icon-count-plus" myclass="float-nav-blue dxi-btn-primary" iSize="fs-16" nSize="fs-13" title="发布"></floatBtn>
+					<floatBtn icon="icon-count-plus" myclass="float-nav-blue dxi-btn-primary" iSize="fs-20"></floatBtn>
 				</view>
 			</div>
 		</page>
@@ -44,7 +44,7 @@
 					 :curSize="18" curColor="#000" curBold="bold" :nameSize="16" nameBold="bold" nameColor="#333" :borderHeight="6" :borderRadius="6"
 					 :borderWidth="16"></dx-tabs-scroll>
 					<!-- <demand-lists :data="data.lists.data" @thumb="thumb3" v-if="listsShow"></demand-lists> -->
-					<trendsLists :data="data.lists.data"></trendsLists>
+					<trendsLists :data="data.lists.data" :type="1"></trendsLists>
 				</view>
 				
 				<view class="copyright" @click="phone('13318639080')">技术合作：广东科阅云</view>

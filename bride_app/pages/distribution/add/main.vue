@@ -1,7 +1,7 @@
 <template>
 	<view>
 		<page :parentData="data" :formAction="formAction"></page>
-		<view class="container" v-if="data.show">
+		<view class="bg-f" v-if="data.show">
 			<!-- <view class="header-bg">
 				<image :src="getSiteName+'images/site/fenxiaobg-02.jpg'" class="flex" mode="widthFix" />
 			</view> -->
@@ -9,10 +9,9 @@
 				<view class="not-add" v-if="data.passing">
 					<view class="not-add2">
 						<view class="p">您的申请已经提交，请等待审核，谢谢!</view>
-						<navigator class="a" @click="goto('/pages/user/index/main',2)">
-							<button type="button" hover-class="none" class="dx-btn-big dx-btn-red">
-								<text class="iconfont icon-car2"></text> 返回</button>
-						</navigator>
+						<button type="button" hover-class="none" class="dx-btn-big dx-btn-red main-bg bdr30" @click="goto('/pages/user/index/main',2)">
+							<text class="iconfont icon-car2"></text> 返回
+						</button>
 					</view>
 				</view>
 				<view v-else>
@@ -39,7 +38,7 @@
 									<view class="dx-cell_ft dx_ft-access"></view>
 								</view> -->
 								<view class="list-group-item">
-									<button hover-class="none" class="dx-btn-big dx-btn-red" form-type="submit">提交</button>
+									<button hover-class="none" class="dx-btn-big dx-btn-red main-bg bdr30" form-type="submit">提交</button>
 								</view>
 							</view>
 						</view>
@@ -52,10 +51,9 @@
 						<view class="p">本店累计消费
 							<text>{{data.candis}}</text>元，才可成为商家，您已消费
 							<text>{{data.order_sum}}</text>元，请继续努力。</view>
-						<navigator class="a" @click="goto('/pages/user/index/main',2)">
-							<button type="button" hover-class="none" class="dx-btn-big dx-btn-red">
-								<text class="iconfont icon-car2"></text> 返回</button>
-						</navigator>
+							<button type="button" hover-class="none" class="dx-btn-big dx-btn-red main-bg bdr30" @click="goto('/pages/user/index/main',2)">
+								<text class="iconfont icon-car2"></text>返回
+							</button>
 					</view>
 				</view>
 			</view>

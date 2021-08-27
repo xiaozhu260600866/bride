@@ -1,19 +1,19 @@
 <template>
 	<view>
 		<page :parentData="data" :formAction="formAction"></page>
-		<view class="bg-f">
-			<dynamicLists :data="dynamic" type="2"></dynamicLists>
+		<view class="bg-f plr15" v-if="data.show">
+			<trendsLists :data="data.articleOrder" :type="2"></trendsLists>
 		</view>
 	</view>
 </template>
 
 <script>
-	import dynamicLists from "@/components/dynamicLists"
+	import trendsLists from "@/components/trendsLists"
 	export default {
-		components: {dynamicLists},
+		components: {trendsLists},
 		data() {
 			return {
-				formAction: '/shop/product/class',
+				formAction: '/people.html',
 				mpType: 'page', //用来分清父和子组件
 				data: this.formatData(this),
 				getSiteName: this.getSiteName(),
@@ -56,7 +56,7 @@
 			
 		},
 		onLoad(options) {
-			//this.ajax();
+			this.ajax();
 		},
 		onShareAppMessage() {
 			return this.shareSource(this, '商城');

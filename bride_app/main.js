@@ -15,7 +15,7 @@ Vue.prototype.$store=store;
 
 
 //全局组件
-import myswiper from 'doxinui/components/swiper/swiper'
+import myswiper from 'doxinui/components/swiper/swiper-h5'
 Vue.component(
 	'myswiper',
 	myswiper

@@ -1,5 +1,5 @@
 /* 头部 */
-.dis-header {position: relative;padding: 50upx 30upx;background-color: #359DF6;display: flex;align-items: center;}
+.dis-header {position: relative;padding: 50upx 30upx;background-color: #ed5296;display: flex;align-items: center;}
 .dis-header .head-img .img{width: 120upx;height: 120upx;border-radius: 50%;border: 8upx solid rgba(255,255,255,0.5);margin-right: 30upx;}
 .dis-header .dis-info{flex: 1;line-height: 1;}
 
