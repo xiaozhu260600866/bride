@@ -23,7 +23,7 @@
 							<image class="cover" :src="item.headerPic" mode="aspectFill"></image>
 							<view class="txt">
 								<view class="name nowrap">{{item.name}}</view>
-								<view class="data"><text class="Arial">{{item.userInfo.age}}</text>岁•<text class="Arial">{{item.userInfo.height}}cm</text></view>
+								<view class="data flex-middle"><text class="Arial">{{item.userInfo.age}}</text>岁<text class="dot dot-w mlr3"></text><text class="Arial">{{item.userInfo.height}}cm</text></view>
 							</view>
 							<view class="bg"></view>
 						</view>
@@ -48,7 +48,12 @@
 				<!-- <view class="bg-f ptb15 text-center fs-14 fc-3" @click="goto('/pages/demand/index/main',2)">点击查看更多</view> -->
 			</view>
 			<view v-if="showNav==2">
-				<cardLists :lists="data.lists.data" :data="data" myclass="index-card"></cardLists>
+				<!-- <cardLists :lists="data.lists.data" :data="data" myclass="index-card"></cardLists> -->
+				<peopleLists :data="data.lists.data" v-if="listsShow"></peopleLists>
+			</view>
+			<view v-if="showNav==3">
+				<peopleLists :data="data.lists2.data" @thumb="thumb3" v-if="listsShow" :ad="data.ad2"></peopleLists>
+				<!-- <view class="no-data">暂无数据</view> -->
 			</view>
 			<view class="copyright" @click="phone('13318639080')">技术合作：广东科阅云</view>
 		</view>

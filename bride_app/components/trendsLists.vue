@@ -21,10 +21,10 @@
 						</view>
 						<view class="data fs-12 fc-9 lh-26">{{ v.created_at }}</view>
 					</view>
-					<view class="left" v-if="type == 2">
+					<!-- <view class="left" v-if="type == 2">
 						<view class="day Arial fs-22 lh-30">{{ v.day }}</view>
 						<view class="month Arial fs-15 lh-20">{{v.date}}</view>
-					</view>
+					</view> -->
 					<view class="bcon">
 						<view class="con">
 							<view class="rCon">
@@ -42,7 +42,7 @@
 								<span class="num pl5">{{v.thumbCount}}</span>
 							</view>
 						</view>
-						<view class="fc-9 fs-13 pt8">
+						<view class="fc-9 fs-13 pt8" v-if="edit">
 							<text class="span Arial">{{v.thumbCount}}</text>
 							<text>点赞</text>
 							<text class="Arial pl15">{{v.created_at}}</text>

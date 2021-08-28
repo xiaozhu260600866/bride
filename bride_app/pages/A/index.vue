@@ -9,7 +9,7 @@
 
 <script>
 	export default {
-		components: { },
+		components: {},
 		data() {
 			return {
 				formAction: '/shop/product/class',

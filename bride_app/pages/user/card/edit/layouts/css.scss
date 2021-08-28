@@ -13,5 +13,5 @@
 .hobby-box .title .sure{padding: 20rpx 30rpx;width: 140rpx;text-align: center;}
 .hobby-lists{height: calc(612rpx);overflow-x: auto;}
 .hobby-label{display: flex;flex-direction: row;flex-wrap: wrap;align-items: center;justify-content: flex-start;padding: 0 10rpx 10rpx;}
-.hobby-label .label{background-color: #F5F6FA;color: #333;line-height: 80rpx;padding: 0 40rpx;margin: 10rpx;font-size: 28rpx;border: 1rpx #F5F6FA solid;}
+.hobby-label .label{background-color: #F5F6FA;color: #333;line-height: 80rpx;padding: 0 40rpx;margin: 10rpx;font-size: 28rpx;border: 1rpx #F5F6FA solid;border-radius: 8rpx;}
 .hobby-label .label.cur{color: $uni-color-primary;border-color: $uni-color-primary;background-color: $uni-bg-color;}

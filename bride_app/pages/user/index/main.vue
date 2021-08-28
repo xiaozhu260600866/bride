@@ -188,7 +188,7 @@
 							</view>
 						</view>
 					</myform>
-					<myform :append="true" :data="v" @callBack="checkUser(data.user,'/pages/user/my/activity/index')">
+					<myform :append="true" :data="v" @callBack="checkUser(data.user,'/pages/user/my/activity/index',1)">
 						<view slot="content">
 							<view class="ulist-item">
 								<view class="item-icon">

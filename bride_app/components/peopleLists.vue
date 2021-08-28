@@ -40,8 +40,8 @@
 .length-people-item .txt{position: absolute;bottom: 0;left: 0;width: 100%;color: #fff;padding: 12rpx 16rpx;line-height: 1;z-index: 10;}
 .length-people-item .name{font-size: 32rpx;}
 .length-people-item .data{font-size: 26rpx;margin-top: 16rpx;display: flex;align-items: center;}
-.length-people-item .data .lab{position: relative;padding-right: 10rpx;margin-right: 10rpx;}
-.length-people-item .data .lab::after{content: "";display: flex;position: absolute;top: 50%;margin-top: -4rpx;right: -4rpx;width: 8rpx;height: 8rpx;background-color: #fff;border-radius: 50%;}
+.length-people-item .data .lab{position: relative;padding-right: 14rpx;margin-right: 10rpx;}
+.length-people-item .data .lab::after{content: "";display: flex;position: absolute;top: 50%;margin-top: -3rpx;right: -3rpx;width: 6rpx;height: 6rpx;background-color: #fff;border-radius: 50%;}
 .length-people-item .data .lab:last-child{padding: 0;margin: 0;}
 .length-people-item .data .lab:last-child::after{display: none;}
 .length-people-item .bg{position: absolute;bottom: 0;left: 0;width: 100%;z-index: 9;height: 120rpx;background-image: linear-gradient(transparent , rgba(0,0,0,0.8));}

@@ -3,7 +3,10 @@
 		<page :parentData="data" :formAction="formAction"></page>
 		<view class="bg-white"></view>
 		<view class="p10 zindex2" v-if="data.show">
-			<dx-tag class="mr5" round myclass="plr18" v-for="v in hobbyTags" :type="v.checked ? 'success':'info'" :plain="v.checked ? false:true" @click="v.checked= !v.checked">{{v.label}}</dx-tag>
+			<view class="hobby-label">
+				<view class="label" v-for="v in hobbyTags" :class="[v.checked ? 'cur':' ']" @click="v.checked= !v.checked">{{v.label}}</view>
+			</view>
+			<!-- <dx-tag class="mr5" round myclass="plr18" v-for="v in hobbyTags" :type="v.checked ? 'success':'info'" :plain="v.checked ? false:true" @click="v.checked= !v.checked">{{v.label}}</dx-tag> -->
 			<dxftButton type="primary" size="lg" round @click="submit">确认</dxftButton>
 		</view>
 	</view>
