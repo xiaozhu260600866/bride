@@ -122,7 +122,7 @@
 									<view class="pro_info">
 										<view class="w-b100">
 											<view class="cms_title Aname fs-17 fc-0">{{ item.name }}</view>
-											<view class="cms_compnay fs-15 fc-6 lh-1 mtb5">{{item.takeMerchant.userInfo.company_name}}</view>
+											<view class="cms_compnay fs-15 fc-6 lh-1 mtb5" v-if="item.takeMerchant">{{item.takeMerchant.userInfo.company_name}}</view>
 											<view class="cms_type">
 												<span class="tig" v-for="tag in item.getTag">{{tag}}</span>
 											</view>

@@ -56,20 +56,9 @@ myfun.install = (Vue, options) => {
 		}
 	}
 	Vue.prototype.gotoProduct = (item) => {
-		if(item.dianxin){
-			Vue.prototype.goto('/pages/dianxin/show/index?id='+item.id ,1)
-			return false
-		}
-		if(item.num > 0){
-			if(item.is_hot){
-				Vue.prototype.goto('/pages/hot/show/index?id='+item.id ,1)
-				return false
-			}else{
-				Vue.prototype.goto(item.is_group ? '/pages/group/show/main?id='+item.id :'/pages/product/show/main?id='+item.id,1)
-				return false
-			}
-			
-		}
+		console.log("aaaa")
+		Vue.prototype.goto(item.is_group ? '/pages/group/show/main?id='+item.id :'/pages/product/show/main?id='+item.id,1)
+		return false
 	}
 	Vue.prototype.checkMerchant = (url, user) => {
 		console.log(url);
