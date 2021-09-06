@@ -12,14 +12,14 @@
 			</view>
 			<view class="mb8" v-if="data.location.length">
 				<view class="InavClass navSwiper">
-					<dx-nav-class :data="data.location" :isturnpage="true" @click="classNav" :num="5" :namePTop="10" :imgR="16" :tbPadding="10" :pageNum="5"></dx-nav-class>
+					<dx-nav-class :data="data.location" :isturnpage="true" @click="classNav" :num="4" :namePTop="10" :imgR="16" :tbPadding="10" :pageNum="5"></dx-nav-class>
 				</view>
 			</view>
 			<view class="bg-f">
 				<view class="sec-title">同城置顶</view>
 				<view class="cross-people">
 					<scroll-view :scroll-x="true">
-						<view class="cross-people-item" v-for="item in data.lists.data" @click="goto('/pages/people/show/index?id='+item.id,1)">
+						<view class="cross-people-item" v-for="item in data.lists.data" @click="checkUserNoAuth(data.myUser,'/pages/people/show/index?id='+item.id,1)">
 							<image class="cover" :src="item.headerPic" mode="aspectFill"></image>
 							<view class="txt">
 								<view class="name nowrap">{{item.name}}</view>
@@ -44,15 +44,15 @@
 				</scroll-view>
 			</view>
 			<view class="infoGroup" v-if="showNav==1">
-				<peopleLists :data="data.lists2.data" @thumb="thumb3" v-if="listsShow" :ad="data.ad2"></peopleLists>
+				<peopleLists :data="data.lists2.data" @thumb="thumb3" v-if="listsShow" :ad="data.ad2" :user="data.myUser"></peopleLists>
 				<!-- <view class="bg-f ptb15 text-center fs-14 fc-3" @click="goto('/pages/demand/index/main',2)">点击查看更多</view> -->
 			</view>
 			<view v-if="showNav==2">
 				<!-- <cardLists :lists="data.lists.data" :data="data" myclass="index-card"></cardLists> -->
-				<peopleLists :data="data.lists.data" v-if="listsShow"></peopleLists>
+				<peopleLists :data="data.lists.data" v-if="listsShow" :user="data.myUser"></peopleLists>
 			</view>
 			<view v-if="showNav==3">
-				<peopleLists :data="data.lists2.data" @thumb="thumb3" v-if="listsShow" :ad="data.ad2"></peopleLists>
+				<peopleLists :data="data.lists3.data" @thumb="thumb3" v-if="listsShow" :ad="data.ad2" :user="data.myUser"></peopleLists>
 				<!-- <view class="no-data">暂无数据</view> -->
 			</view>
 			<view class="copyright" @click="phone('13318639080')">技术合作：广东科阅云</view>

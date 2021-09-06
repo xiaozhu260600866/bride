@@ -125,6 +125,13 @@ myfun.install = (Vue, options) => {
 	   return 	Vue.prototype.goto(url, type);
 		
 	}
+	Vue.prototype.checkUserNoAuth = (user,url, type) => {
+	   if(!user.userInfo.phone){
+		   return Vue.prototype.goto("/pages/user/card/register/poster", 1);
+	   }
+	   return 	Vue.prototype.goto(url, type);
+		
+	}
 
 }
 

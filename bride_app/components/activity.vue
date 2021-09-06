@@ -27,7 +27,7 @@
 </template>
 <script>
 export default {
-	props: ['data'],
+	props: ['data','user'],
 	data() {
 		return {
 			ruleform:{},
@@ -36,7 +36,8 @@ export default {
 	},
 	methods: {
 		toShow(v){
-			return this.goto('/pages/activity/show/index?id='+v.id,1);
+			console.log(this.user)
+			return this.checkUserNoAuth(this.user,'/pages/activity/show/index?id='+v.id,1);
 		}
 	}
 }

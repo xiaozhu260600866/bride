@@ -2,9 +2,9 @@
 	<view>
 		<page :parentData="data" :formAction="formAction"></page>
 		<view v-if="data.show">
-			<dx-tabs :tabs="tabs" @change="ajax" v-model="data.query.type" :height="100" curBold="bold" selectedColor="#ed5296" sliderBgColor="#ed5296" :size="32" :selectedSize="32" bold></dx-tabs>
+			<dx-tabs :tabs="tabs" @change="ajax" v-model="data.query.sub_type" :height="100" curBold="bold" selectedColor="#ed5296" sliderBgColor="#ed5296" :size="32" :selectedSize="32" bold></dx-tabs>
 			<view class="count-people">
-				<view class="cp-lists" v-for="v in lists">
+				<view class="cp-lists" v-for="v in data.lists.data">
 					<view class="cp-left" >
 						<image class="img" :src="v.toUser.headerPic" mode="aspectFill"></image>
 					</view>
@@ -40,7 +40,7 @@
 		components: {dxTabs,dxButton},
 		data() {
 			return {
-				formAction: '/cardCount.html',
+				formAction: '/subscribe.html',
 				mpType: 'page', //用来分清父和子组件
 				data: this.formatData(this),
 				getSiteName: this.getSiteName(),

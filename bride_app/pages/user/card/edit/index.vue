@@ -55,6 +55,10 @@
 						<view class="tag" v-if="ruleform.profession">{{ ruleform.profession }}</view>
 						<view class="tag" v-if="ruleform.salary"><text class="Arial">{{ ruleform.salary }}</text>元</view>
 						<view class="tag" v-if="ruleform.marriage">{{ ruleform.marriage }}</view>
+						<view class="tag" v-if="ruleform.car_record">{{ ruleform.car_record }}</view>
+						<view class="tag" v-if="ruleform.house_record">{{ ruleform.house_record }}</view>
+						<view class="tag" v-if="ruleform.smoking">{{ ruleform.smoking }}</view>
+						<view class="tag" v-if="ruleform.drank">{{ ruleform.drank }}</view>
 					</view>
 				</block>
 				<view class="edit-select" @click="goto('/pages/user/card/edit/layouts/info',1)" v-else>
@@ -69,7 +73,7 @@
 						<text class="main-color edit-nav" @click="goto('/pages/user/card/edit/layouts/condition',1)">编辑</text>
 					</view>
 					<view class="tag-group pl12">
-						<view class="tag" v-for="item in ruleform.marry_condition" v-if="item">{{ item }}</view>
+						<view class="tag" v-for="item in ruleform.marry_condition" v-if="item">{{ item.replace(",","-") }}</view>
 					</view>
 				</block>
 				<view class="edit-select" @click="goto('/pages/user/card/edit/layouts/condition',1)" v-else>

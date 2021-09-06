@@ -1,7 +1,7 @@
 <template>
 	<view>
 		<view class="length-people" :class="[myclass,crosswise?'row-people':'']">
-			<view class="length-people-item" v-for="(item,key) in data" @click="goto('/pages/people/show/index?id='+item.id,1)">
+			<view class="length-people-item" v-for="(item,key) in data" @click="checkUserNoAuth(user,'/pages/people/show/index?id='+item.id,1)">
 				<view class="cover"><image class="img" :src="item.headerPic" mode="aspectFill"></image></view>
 				<view class="txt">
 					<view class="name" :class="[crosswise?'wrap2':'nowrap']">{{ item.userInfo.name}}</view>
@@ -21,7 +21,7 @@
 
 <script>
 	export default {
-		props:["data","myclass","crosswise"],
+		props:["data","myclass","crosswise",'user'],
 	
 		data() {
 			return {

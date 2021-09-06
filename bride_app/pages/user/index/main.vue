@@ -97,7 +97,7 @@
 					<view class="name">我的特权</view>
 				</view>
 				<view class="ulist-group ptb8 plr5">
-					<myform :append="true" :data="v" @callBack="checkUser(data.user,'/pages/user/card/edit/index',1)">
+					<myform :append="true" :data="v" @callBack="checkUserNoAuth(data.user,'/pages/user/card/edit/index',1)">
 						<view slot="content">
 							<view class="ulist-item">
 								<view class="item-icon">
@@ -167,7 +167,7 @@
 				<view class="ulist-group ptb8 plr5">
 
 					<myform :append="true" :data="v"
-						@callBack="checkUser(data.user,'/pages/order/lists/main?status=12&historyUrl=del',1)">
+						@callBack="goto('/pages/order/lists/main?status=12&historyUrl=del',1)">
 						<view slot="content">
 							<view class="ulist-item">
 								<view class="item-icon">

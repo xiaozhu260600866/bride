@@ -3,7 +3,7 @@
 		<page :parentData="data" :formAction="formAction"></page>
 		<view>
 			<view class="datum bg-f">
-				<weui-input v-model="ruleform.age" label="年龄" placeholder="请选择" name="age" changeField="value" type="select"
+				<weui-input v-model="ruleform.age" label="年龄" placeholder="请选择" name="age" changeField="value" type="manyselect"
 				 dataKey="ageArr" datatype="require"></weui-input>
 				<weui-input v-model="ruleform.height" label="身高" placeholder="请选择" name="height" changeField="value" type="select"
 				 dataKey="heightArr" datatype="require"></weui-input>
@@ -15,8 +15,21 @@
 				 dataKey="smokingArr" datatype="require"></weui-input>
 				<weui-input v-model="ruleform.drank" label="是否喝酒" placeholder="请选择" name="drank" changeField="label" type="select"
 				 dataKey="drinkArr" datatype="require"></weui-input>
+				 
+				 
+				 <weui-input v-model="ruleform.car_record" label="是否有车" placeholder="请选择" name="car_record" changeField="label" type="select"
+				  dataKey="carRecordArr" datatype="require"></weui-input>
+			
+				 
+				 <weui-input v-model="ruleform.house_record" label="是否有房" placeholder="请选择" name="house_record" changeField="label" type="select"
+				  dataKey="houseRecordArr" datatype="require"></weui-input>
+				 
+				 
 				<weui-input v-model="ruleform.marriage" label="婚烟状况" placeholder="请选择" type="select" name="marriage" dataKey="marriageArr"
 				 changeField="label" datatype="require"></weui-input>
+				 
+				 
+				 
 			</view>
 			<dxftButton type="primary" size="lg" round @click="submit">确认</dxftButton>
 		</view>
@@ -48,6 +61,14 @@
 				educationArr:[
 					
 				],
+				houseRecordArr:[
+					{label:'有房',value: '有房'},
+					{label:'无房',value: '无房'},
+				],
+				carRecordArr:[
+					{label:'有车',value: '有车'},
+					{label:'无车',value: '无车'},
+				],
 				smokingArr:[
 					{label:'经常抽烟',value: '经常抽烟'},
 					{label:'不抽',value: '不抽'},
@@ -66,7 +87,17 @@
 			}
 		},
 		mounted() {
-		
+			let arr = [];
+			for (var i = 18; i < 60; i++) {
+				arr.push({label:i,value:i,children:[]});
+				for (var j = i+1; j < 60; j++) {
+					arr[arr.length-1].children.push(
+						{label:j,value:j},
+						
+					)	
+				}	
+			}
+			this.ageArr = arr;
 		},
 		methods: {
 			submit(){
@@ -84,7 +115,7 @@
 						this.salaryArr = msg.salaryArr;
 						this.educationArr = msg.educationArr;
 						this.heightArr = msg.heightScopeArr;
-						this.ageArr = msg.ageScopeArr;
+						//this.ageArr = msg.ageScopeArr;
 						if(msg.user.userInfo.marry_condition){
 							 this.ruleform = JSON.parse(msg.user.userInfo.marry_condition);	
 						}

@@ -15,10 +15,22 @@
 				<weui-input v-model="ruleform.height" label="身高" placeholder="请选择" type="select" name="height" dataKey="heightArr"
 				 changeField="label"></weui-input>
 				<weui-input v-model="ruleform.profession" label="职业" placeholder="请输入您的职业" type="text" name="profession" datatype="require"></weui-input>
+				
+				
 				<weui-input v-model="ruleform.salary" label="月收入" placeholder="请选择" name="profession" changeField="label" type="select"
 				 dataKey="salaryArr"></weui-input>
 				<weui-input v-model="ruleform.marriage" label="婚烟状况" placeholder="请选择" type="select" name="marriage" dataKey="marriageArr"
 				 changeField="label"></weui-input>
+				 
+				 <weui-input v-model="ruleform.car_record" label="是否有车" placeholder="请选择" name="car_record" changeField="label" type="select"
+				  dataKey="carRecordArr" datatype="require"></weui-input>
+				 <weui-input v-model="ruleform.house_record" label="是否有房" placeholder="请选择" name="house_record" changeField="label" type="select"
+				  dataKey="houseRecordArr" datatype="require"></weui-input>
+				 
+				 <weui-input v-model="ruleform.smoking" label="是否吸烟" placeholder="请选择" name="smoking" changeField="label" type="select"
+				  dataKey="smokingArr" datatype="require"></weui-input>
+				 <weui-input v-model="ruleform.drank" label="是否喝酒" placeholder="请选择" name="drank" changeField="label" type="select"
+				  dataKey="drinkArr" datatype="require"></weui-input>
 			</view>
 			<dxftButton type="primary" size="lg" round @click="submit">确认</dxftButton>
 		</view>
@@ -53,6 +65,24 @@
 				],
 				salaryArr:[
 				
+				],
+				smokingArr:[
+					{label:'经常抽烟',value: '经常抽烟'},
+					{label:'不抽',value: '不抽'},
+					{label:'特定场合抽',value: '特定场合抽'},
+				],
+				houseRecordArr:[
+					{label:'有房',value: '有房'},
+					{label:'无房',value: '无房'},
+				],
+				carRecordArr:[
+					{label:'有车',value: '有车'},
+					{label:'无车',value: '无车'},
+				],
+				drinkArr:[
+					{label:'经常喝',value: '经常喝'},
+					{label:'不喝',value: '不喝'},
+					{label:'特定场合喝',value: '特定场合喝'},
 				],
 				marriageArr:[
 					{label:'未婚',value: 1},

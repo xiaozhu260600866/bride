@@ -2,7 +2,7 @@
 	<view>
 		<page :parentData="data" :formAction="formAction"></page>
 		<view v-if="data.show">
-			<activity :data="data.lists.data"></activity>
+			<activity :data="data.lists.data" :user="data.myUser"></activity>
 		</view>
 	</view>
 </template>
