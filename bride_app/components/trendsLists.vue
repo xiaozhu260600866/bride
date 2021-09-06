@@ -11,15 +11,17 @@
 						<view class="info flex1">
 							<view class="name fs-16">{{ v.name }}</view>
 							<view class="flex-baseline" v-if="v.getUser">
-								<view :class="['age',v.getUser.userInfo.sex == 0 ? 'blue' : 'red']"><span :class="['iconfont',,v.getUser.userInfo.sex == 0 ?  'icon-man':'icon-women']"></span>{{v.getUser.userInfo.age}}</view>
-								<view class="tag flex-middle fs-13 fc-6 pl10">
+								<!-- <view :class="['age',v.getUser.userInfo.sex == 0 ? 'blue' : 'red']"><span :class="['iconfont',,v.getUser.userInfo.sex == 0 ?  'icon-man':'icon-women']"></span>{{v.getUser.userInfo.age}}</view> -->
+								<view class="tag flex-middle fs-13 fc-6">
+									<view class="lab" v-if="v.getUser.userInfo.age"><text class="Arial">{{v.getUser.userInfo.age}}</text>岁</view>
+									<view class="dot mlr5" v-if="v.getUser.userInfo.age&&v.getUser.userInfo.height"></view>
 									<view class="lab Arial" v-if="v.getUser.userInfo.height">{{v.getUser.userInfo.height}}m</view>
 									<view class="dot mlr5" v-if="v.getUser.userInfo.height&&v.city"></view>
 									<view class="lab">{{v.city}}</view>
 								</view>
 							</view>
 						</view>
-						<view class="data fs-12 fc-9 lh-26">{{ v.created_at }}</view>
+						<!-- <view class="data fs-12 fc-9 lh-26">{{ v.created_at }}</view> -->
 					</view>
 					<!-- <view class="left" v-if="type == 2">
 						<view class="day Arial fs-22 lh-30">{{ v.day }}</view>
@@ -36,13 +38,14 @@
 								</view>
 							</view>
 						</view>
-						<view class="bottom flex-middle fc-6" v-if="!edit">
+						<!-- <view class="bottom flex-middle fc-6">
 							<view class="item mr20">
 								<span :class="['iconfont fs-15', v.thumb ? 'fc-red icon-demand-thumb-fill' : 'icon-trends-thumbs']" @click="thumb(v)"></span>
 								<span class="num pl5">{{v.thumbCount}}</span>
 							</view>
-						</view>
-						<view class="fc-9 fs-13 pt8" v-if="edit">
+						</view> -->
+						<view class="fc-9 fs-13 pt8">
+							<text :class="['iconfont fs-15 pr10', v.thumb ? 'fc-red icon-demand-thumb-fill' : 'icon-trends-thumbs']" @click="thumb(v)" v-if="!edit"></text>
 							<text class="span Arial">{{v.thumbCount}}</text>
 							<text>点赞</text>
 							<text class="Arial pl15">{{v.created_at}}</text>
