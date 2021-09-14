@@ -16,19 +16,21 @@
 			</view>
 			<dx-tabs-scroll :tabs="tabs" @change="ajax" v-model="data.query.type" :height="52" borderColor="#ed5296" :curSize="16" curColor="#333" curBold="bold" :nameSize="16" :borderHeight="4"></dx-tabs-scroll>
 			<view class="count-people">
-				<view class="cp-lists" v-for="v in lists">
+				<view class="cp-lists" v-for="v in data.lists.data">
 					<view class="cp-left" >
-						<image class="img" :src="v.toUser.headerPic" mode="aspectFill"></image>
+						<image class="img" :src="v.getUser.headerPic" mode="aspectFill"></image>
 					</view>
 					<view class="cp-right">
-						<view class="cpr-top flex-between">
-							<view class="name fs-16 flex-middle">{{ v.toUser.userInfo.name }}</view>
-						</view><!-- <text class="nav" v-if="v.status == 1">互存名片</text> -->
-						<view class="data mt6">
-							<view class="lab" v-if="v.toUser.userInfo.age"><text class="Arial">{{v.toUser.userInfo.age}}</text>岁</view>
-							<view class="lab" v-if="v.toUser.userInfo.height"><text class="Arial">{{v.toUser.userInfo.height}}</text></view>
-							<view class="lab">{{v.toUser.userInfo.city}}</view>
+						<view class="cpr-top flex-between lh-1">
+							<view class="name fs-16">{{ v.getUser.userInfo.name?v.getUser.userInfo.name: v.getUser.nickname }}<text class="nav" v-if="v.status == 1">互存名片</text></view>
+							<view class="time fs-13 fc-9 Arial">{{ v.time }}</view>
 						</view>
+						<view class="cpr-row fs-13 fc-9 mt8">
+							<text class="txt" v-if="v.getUser.userInfo.position">{{ v.getUser.userInfo.position }}</text>
+							<text class="line plr10" v-if="v.getUser.userInfo.company_name">|</text>
+							<text class="txt" v-if="v.getUser.userInfo.company_name">{{ v.getUser.userInfo.company_name }}</text>
+						</view>
+						<view class="cpr-row fs-15 fc-6 mb5">{{v.getType}}</view>
 						<view class="cpr-row fs-13 fc-9"><!-- 来源：我于{{v.date}}向对方发出了名片 -->{{v.created_at}}</view>
 					</view>
 				</view>
