@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 915979 */
+  src: url('//at.alicdn.com/t/font_915979_a7cbxxxiqz.eot');
+  src: url('//at.alicdn.com/t/font_915979_a7cbxxxiqz.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_915979_a7cbxxxiqz.woff') format('woff'),
+  url('//at.alicdn.com/t/font_915979_a7cbxxxiqz.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_915979_a7cbxxxiqz.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-up:before { content: "\ea01"; }/* 箭头上 */
+.icon-arrow-down:before { content: "\ea02"; }/* 箭头下 */
+.icon-off:before { content: "\ea03"; }/* 关闭 */
+
+.icon-aboutus:before { content: "\ef01"; }/* 企业简介 */
+.icon-news:before { content: "\ef02"; }/* 企业资讯 */
+.icon-team:before { content: "\ef03"; }/* 管理团队 */
+.icon-partner:before { content: "\ef04"; }/* 合作伙伴 */
+.icon-contactus:before { content: "\ef05"; }/* 联系我们 */
+.icon-hire:before { content: "\ef06"; }/* 企业招聘 */
+.icon-title:before { content: "\ef07"; }/* 标题 */
+.icon-txt:before { content: "\ef08"; }/* 文本 */
+.icon-pic:before { content: "\ef09"; }/* 图片 */
+.icon-picTxt:before { content: "\ef10"; }/* 图文 */
+.icon-swiper:before { content: "\ef11"; }/* 轮播图 */
+.icon-placeholder:before { content: "\ef12"; }/* 占位符 */
+.icon-video:before { content: "\ef13"; }/* 视频 */
+
+
+.icon-:before { content: "\e"; }/*  */

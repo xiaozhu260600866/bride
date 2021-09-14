@@ -1,0 +1,118 @@
+body,#app{font-family:"microsoft YaHei" !important;}
+
+.el-form-item{margin-bottom: 10px;}
+
+
+a:link {color: blue; text-decoration:none;} 
+a{color:#333 !important}
+
+
+.websiteIndex{background-color: #F0F0F0;height: 100vh;}
+.header{height: 60px;width:100%;background-color: #324057;position: relative;}
+.header .logo {width: 40px;height: 40px;margin: 0px 28px;vertical-align: middle;}
+.header h1 {line-height: 60px;font-size: 22px;color: #fff;display: inline-block;font-weight: 500;}
+.header button{font-size: 16px;color: #fff;border: 1px solid #fff;border-radius: 4px;background: transparent;width: 66px;height: 32px;float: right;margin-right: 14px;}
+
+
+/* left style start  */
+.left{width: 225px;background: white;height: calc(100vh - 61px);}
+.left .nav a{width:50%;font-size:14px;height:40px;position:relative;border-bottom: 1px solid #E1E1E1;}
+
+.ivu-tabs-tab-active:after{content: '';width: 80px;height: 2px;background-color: #58B7FF;position: absolute;bottom: 0px;left: 10px;}
+
+.ivu-tabs .ivu-tabs-tabpane {-ms-flex-negative: 0;flex-shrink: 0;width: 100%;-webkit-transition: opacity .3s;transition: opacity .3s;opacity: 1;}
+.coms-item[data-v-41f3c5c2] {float: left;}
+.coms-item:nth-child(2n+1) {border-right: 1px dotted #E1E1E1;}
+.coms-item {width: 50%;height: 111.5px;text-align: center;background-color: #fff;cursor: pointer;float: left;border-bottom: 1px dotted #E1E1E1;}
+.coms-item:hover{color: #6ebffe;background: #eff2f7;}
+.icon-temp {display: block;font-size: 30px;margin: 21px auto 6px;}
+/* left style end  */
+
+
+/* center style start  */
+
+	/* 全局标题 */
+.primary_title {padding: 30px 15px 15px;display: -webkit-box;display: -ms-flexbox;display: flex;align-items: center;font-weight: bold;}
+.primary_title .title-icon {width: 18px;height: 18px;padding: 0;margin-right: 5px;}
+
+
+	/* 阴影 */
+.box-shadow{background: #fff;-webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10);box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10);border-radius: 6px;}
+
+
+	/* 公司简介 */
+.companyInfo .con{-webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.10);box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.10);border-radius: 6px;line-height: 1.8;text-align: justify;}
+
+.center{width: 100%;flex: 1;height: calc(100vh - 61px);overflow-y: scroll;}
+
+
+	/* 模块标题 */
+.mainTitle{line-height: 20px;}
+.subTitle{line-height: 20px;}
+
+
+	/*定义滚动条轨道 内阴影+圆角*/
+.center::-webkit-scrollbar{width: 10px;height: 16px;background-color: #F5F5F5;}
+.center::-webkit-scrollbar-track{-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);border-radius: 10px;background-color: #F5F5F5;}
+.center::-webkit-scrollbar-thumb{border-radius: 10px;-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);background-color: #b8b8b8;}
+
+
+	/*中间*/
+.center .phone-screen{width:375px;min-height:745px;background:white;border: 1px solid #c1cddb;}
+.center .phone-screen .design-content{background: #efeff4;min-height: 745px;}
+
+
+	/* 调整按钮 */
+.edit-coms-item .module_m {/* padding-bottom: 15px; */background: #efeff4;position:relative}
+.edit-coms-item .module_m .auth{width: 45px;position: absolute;top: 0;right: -45px;background: #324057;flex-flow: column;display:flex;z-index: 90;}
+.edit-coms-item .module_m .auth .down-auth{width: 100%;flex: 1;height: 45px;}
+.edit-coms-item .module_m:hover{cursor: pointer;}
+
+
+	/* 透明遮层 */
+.mask_compo {position: absolute;top: 0;width: 100%;height: 100%;background: rgba(0, 0, 0, 0.68);z-index: 11;}
+
+
+	/* 头部 */
+.wp-config {position: relative;text-align: center;font-size: 16px;color: #FFFFFF;background: #1F2D3D;height: 41.5px;line-height: 41.5px;}
+.wp-config img {display: block;position: absolute;right: 12px;top: 9px;width: 80px;}
+
+/* center style end  */
+
+
+/* right style end  */
+.right{width: 500px;height: calc(100vh - 61px);background: white;overflow-y: auto;}
+
+    /*定义滚动条轨道 内阴影+圆角*/
+.right::-webkit-scrollbar{width: 10px;height: 16px;background-color: #F5F5F5;}
+.right::-webkit-scrollbar-track{-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);border-radius: 10px;background-color: #F5F5F5;}
+.right::-webkit-scrollbar-thumb{border-radius: 10px;-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);background-color: #b8b8b8;}
+
+.companylink-none {width: 345px;height: 277px;margin: 0 15px 0;text-align: center;line-height: 277px;font-size: 16px;color: #324057;background: #FFFFFF;-webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.10);box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.10);border-radius: 4px;}
+
+.right .el-form-item__label{color: #324057;font-weight: bold;}
+
+.right .edit-shop-header {text-align: center;height: 40px;line-height: 26px;background-color: #fff;border-bottom: 1px solid #E1E1E1 !important;border-radius: 0px !important;}
+.right .edit-page-header h3, .right .edit-shop-header h3 {display: inline-block;margin: 0 15px 0 0;font-size: 14px;font-weight: 400;}
+.right .edit-page-content, .right .edit-shop-content {position: relative;min-height: 44px;padding: 15px 10px;border: 1px solid #dddee1;border-top: none;background-color: #fff;}
+.right .ivu-input-wrapper {display: inline-block;position: relative;vertical-align: middle;line-height: normal;}
+.checkedIcon {background: url(../../assets/12.png) no-repeat top;background-size: 40px 40px;}
+
+.config-out {display: inline-block;width: 40px;height: 40px;cursor: pointer;margin: 0 20px 16px 0;}
+.config-icon {width: 40px;height: 40px;padding: 9px;}
+
+
+.edit-item {padding: 15px;padding-left: 10px;padding-top: 20px;background-color: #f5f5f5;position: relative;border-radius: 6px;margin-bottom: 11px;border: 1px solid #ededed;}
+.chose_box {overflow: auto;margin-bottom: 20px;}
+
+.chose_box .items {float: left;margin-right: 26px; cursor: pointer;}
+.items .r_style_box{border: 1px solid transparent;}
+.is-active .r_style_box{border: 1px solid #7fc0f6;}
+.is-active span{color:#7fc0f6}
+
+.demo-ruleForm .el-input{width: 185px;}
+.demo-ruleForm .el-form-item__label{line-height: 40px;}
+
+.el-button--mini{padding: 7px 14px;}
+
+.chose_box .items span {display: block;text-align: center;}
