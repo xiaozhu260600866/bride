@@ -36,7 +36,7 @@
 		{
 			"path": "pages/search/product/main",
 			"style": {
-				"navigationBarTitleText": "好物搜索",
+				"navigationBarTitleText": "有物搜索",
 				"enablePullDownRefresh": true,
 				"navigationStyle": "custom"
 			}
@@ -474,7 +474,7 @@
 		{
 			"path": "pages/water-mall/main",
 			"style": {
-				"navigationBarTitleText": "好物",
+				"navigationBarTitleText": "有物",
 				"enablePullDownRefresh": true,
 				"navigationStyle": "custom"
 			}
@@ -711,7 +711,7 @@
 			"selectedIconPath": "static/image/C02.png"
 		},{
 			"pagePath": "pages/water-mall/main",
-			"text": "好物",
+			"text": "有物",
 			"iconPath": "static/image/F01.png",
 			"selectedIconPath": "static/image/F02.png"
 		},{

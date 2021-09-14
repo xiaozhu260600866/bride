@@ -9,28 +9,24 @@
 				 :row="false" myclass="sexArr"></weui-input>
 				<weui-input v-model="ruleform.age" label="年龄" name="age" changeField="value" type="select" dataKey="ageArr"></weui-input>
 				<!-- <dxAddress v-model="ruleform.address" labeltxt="城市" datatype="require" addressHidden left></dxAddress> -->
-				<dx-address v-model="ruleform.address" addressHidden class="address" left></dx-address>
+				<dx-address v-model="ruleform.address" addressHidden class="address" left labeltxt="工作生活在"></dx-address>
 				<weui-input v-model="ruleform.education" label="学历" placeholder="请选择" type="select" name="education" dataKey="educationArr"
 				 changeField="label"></weui-input>
 				<weui-input v-model="ruleform.height" label="身高" placeholder="请选择" type="select" name="height" dataKey="heightArr"
 				 changeField="label"></weui-input>
 				<weui-input v-model="ruleform.profession" label="职业" placeholder="请输入您的职业" type="text" name="profession" datatype="require"></weui-input>
-				
-				
 				<weui-input v-model="ruleform.salary" label="月收入" placeholder="请选择" name="profession" changeField="label" type="select"
 				 dataKey="salaryArr"></weui-input>
 				<weui-input v-model="ruleform.marriage" label="婚烟状况" placeholder="请选择" type="select" name="marriage" dataKey="marriageArr"
 				 changeField="label"></weui-input>
-				 
-				 <weui-input v-model="ruleform.car_record" label="是否有车" placeholder="请选择" name="car_record" changeField="label" type="select"
-				  dataKey="carRecordArr" datatype="require"></weui-input>
-				 <weui-input v-model="ruleform.house_record" label="是否有房" placeholder="请选择" name="house_record" changeField="label" type="select"
-				  dataKey="houseRecordArr" datatype="require"></weui-input>
-				 
-				 <weui-input v-model="ruleform.smoking" label="是否吸烟" placeholder="请选择" name="smoking" changeField="label" type="select"
-				  dataKey="smokingArr" datatype="require"></weui-input>
-				 <weui-input v-model="ruleform.drank" label="是否喝酒" placeholder="请选择" name="drank" changeField="label" type="select"
-				  dataKey="drinkArr" datatype="require"></weui-input>
+				<weui-input v-model="ruleform.car_record" label="是否有车" placeholder="请选择" name="car_record" changeField="label" type="select"
+				 dataKey="carRecordArr"></weui-input>
+				<weui-input v-model="ruleform.house_record" label="是否有房" placeholder="请选择" name="house_record" changeField="label" type="select"
+				 dataKey="houseRecordArr"></weui-input>
+				<weui-input v-model="ruleform.smoking" label="是否吸烟" placeholder="请选择" name="smoking" changeField="label" type="select"
+				 dataKey="smokingArr"></weui-input>
+				<weui-input v-model="ruleform.drank" label="是否喝酒" placeholder="请选择" name="drank" changeField="label" type="select"
+				 dataKey="drinkArr"></weui-input>
 			</view>
 			<dxftButton type="primary" size="lg" round @click="submit">确认</dxftButton>
 		</view>
@@ -47,25 +43,16 @@
 				mpType: 'page', //用来分清父和子组件
 				data: this.formatData(this),
 				getSiteName: this.getSiteName(),
-				ruleform:{
-
-				},
+				ruleform:{},
 				vaildate:{},
 				sexArr:[
-					{label:'男',value: 0},
-					{label:'女',value: 1},
+					{label:'男',value: 1},
+					{label:'女',value: 2},
 				],
-				ageArr:[
-				],
-				educationArr:[
-				
-				],
-				heightArr:[
-				
-				],
-				salaryArr:[
-				
-				],
+				ageArr:[],
+				educationArr:[],
+				heightArr:[],
+				salaryArr:[],
 				smokingArr:[
 					{label:'经常抽烟',value: '经常抽烟'},
 					{label:'不抽',value: '不抽'},
@@ -140,6 +127,7 @@
 	::v-deep .dx-cell{
 		display: block;padding: 24rpx 0;
 		.dx-cell_hd{
+			.dx-label{width: 100%;}
 			.star{display: none;}
 		}
 		.dx-cell_bd{

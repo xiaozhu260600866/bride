@@ -29,7 +29,7 @@
 				<view class="TopNav">
 					<scroll-view scroll-x="true">
 						<view class="liNav cur" @click="goto('/pages/package/lists/main?fclass=7',1)">
-							<text class="ANav">推荐好物</text>
+							<text class="ANav">精选推荐</text>
 						</view>
 					</scroll-view>
 				</view>

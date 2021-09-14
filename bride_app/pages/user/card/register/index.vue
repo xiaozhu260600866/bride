@@ -134,7 +134,7 @@
 			submit(){
 				if(this.step == 1){
 					if (!this.ruleform.sex) {
-						this.getError("姓别没有填写");
+						this.getError("请选择您的性别");
 						return false;
 					}
 					if(!this.ruleform.agree){

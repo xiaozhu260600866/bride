@@ -21,7 +21,8 @@
 							</view>
 							<view class="info">
 								<view class="name">{{v.name}}</view>
-								<view class="tips">结识海量认证客户</view>
+								<view class="tips" v-if="key == 0">结识海量认证用户</view>
+								<view class="tips" v-else>专属一对一服务</view>
 							</view>
 						</view>
 					</view>
@@ -51,27 +52,6 @@
 					</view>
 				</view>
 			</view>
-		
-
-			<!-- <block v-if="data.user.is_authentication == 0 ">
-				<view v-if="step == 1">
-					<view class="content p15 fs-16">
-						<u-parse :content="data.article.content" />
-					</view>
-					<dxftButton type="primary" size="lg" @click="submit">名片认证(<text class="Arial">{{data.siteConfig.verify_amount}}</text>)元</dxftButton>
-				</view>
-				<dx-results txt="支付成功" @click="goto('/pages/index/main',2)" v-if="step == 2"></dx-results>
-			</block>
-			<block v-else>
-				<view class="payed-content">
-					<view class="pay-success">
-						<image class="img" :src="getSiteName +'/images/wap/pay-ad.jpg'" mode="widthFix"></image>
-						<view class="text">名片已认证，您可以发布服务需求、企业简介，开启线上互动服务。</view>
-					</view>
-					<view class="m20"><dxButton type="primary" size="lg" @click="goto('/pages/index/main',2)" block round>返回</dxButton></view>
-				</view>
-			</block> -->
-
 		</view>
 		<dxResults txt="会员认证成功" @click="goto('/pages/index/main',2)" v-if="step == 2"></dxResults>
 	</view>
@@ -126,7 +106,7 @@
 			},
 			submit() {
 				if (!this.ruleform.amount) {
-					return this.getError("请选择金额");
+					return this.getError("请选择会员认证服务项目");
 				}
 				this.ruleform.lev_id = this.data.memberExpire[this.selectKey].id;
 				this.postAjax("/user/auth", this.ruleform).then(msg => {

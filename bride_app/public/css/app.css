@@ -25,6 +25,7 @@ button::after{border: 0;}
 .dx-btn-green,.dx-btn-blue{background: #ed5296!important;border-radius: 8upx;color: #fff;}
 .dx-btn-green-o,.dx-btn-blue-o{border: 2upx #ed5296 solid!important;background: #fff;border-radius: 8upx;color: #ed5296!important;}
 .dxi-btn-primary{background-color: #ed5296!important;border-color: #ed5296!important;}
+.dxi-btn-primary.is-plain{color: #ed5296!important;background-color: rgba(237,82,150,0.1)!important;border-color: rgba(237,82,150,0.05)!important;}
 .fc-4{color: #434343!important;}
 
 

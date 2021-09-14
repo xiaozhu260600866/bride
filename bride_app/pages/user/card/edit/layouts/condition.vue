@@ -12,24 +12,15 @@
 				<weui-input v-model="ruleform.education" label="学历" placeholder="请选择" type="select" name="education" dataKey="educationArr"
 				 changeField="value" datatype="require"></weui-input>
 				<weui-input v-model="ruleform.smoking" label="是否吸烟" placeholder="请选择" name="smoking" changeField="label" type="select"
-				 dataKey="smokingArr" datatype="require"></weui-input>
+				 dataKey="smokingArr"></weui-input>
 				<weui-input v-model="ruleform.drank" label="是否喝酒" placeholder="请选择" name="drank" changeField="label" type="select"
-				 dataKey="drinkArr" datatype="require"></weui-input>
-				 
-				 
-				 <weui-input v-model="ruleform.car_record" label="是否有车" placeholder="请选择" name="car_record" changeField="label" type="select"
-				  dataKey="carRecordArr" datatype="require"></weui-input>
-			
-				 
-				 <weui-input v-model="ruleform.house_record" label="是否有房" placeholder="请选择" name="house_record" changeField="label" type="select"
-				  dataKey="houseRecordArr" datatype="require"></weui-input>
-				 
-				 
+				 dataKey="drinkArr"></weui-input>
+				<weui-input v-model="ruleform.car_record" label="是否有车" placeholder="请选择" name="car_record" changeField="label" type="select"
+				 dataKey="carRecordArr"></weui-input>
+				<weui-input v-model="ruleform.house_record" label="是否有房" placeholder="请选择" name="house_record" changeField="label" type="select"
+				 dataKey="houseRecordArr"></weui-input>
 				<weui-input v-model="ruleform.marriage" label="婚烟状况" placeholder="请选择" type="select" name="marriage" dataKey="marriageArr"
 				 changeField="label" datatype="require"></weui-input>
-				 
-				 
-				 
 			</view>
 			<dxftButton type="primary" size="lg" round @click="submit">确认</dxftButton>
 		</view>
@@ -55,12 +46,8 @@
 				ageValue: [0, 0],
 				heightArr: [],
 				ageArr: [],
-				salaryArr:[
-					
-				],
-				educationArr:[
-					
-				],
+				salaryArr:[],
+				educationArr:[],
 				houseRecordArr:[
 					{label:'有房',value: '有房'},
 					{label:'无房',value: '无房'},

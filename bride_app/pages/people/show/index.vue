@@ -8,7 +8,7 @@
 			<view class="show-block info-sec">
 				<view class="header">
 					<image class="head-img" :src="data.user.headerPic" mode="aspectFill"></image>
-					<dx-button :type="[data.isSubscribe ?'info':'primary']" size="medium" round @click="subscribe()">+ {{data.isSubscribe ? '已':''}}关注</dx-button>
+					<dx-button type="primary" :plain="data.isSubscribe?true:false" :txtColor="data.isSubscribe?'#333':''" size="medium" round @click="subscribe()">+ {{data.isSubscribe ? '已':''}}关注</dx-button>
 				</view>
 				<view class="name fs-18 lh-24 mtb15 fw-bold">{{data.user.userInfo.name}}</view>
 				<view class="label-group fc-4">
@@ -41,14 +41,21 @@
 					<view class="tag" v-if="data.user.userInfo.education">{{data.user.userInfo.education}}</view>
 					<view class="tag" v-if="data.user.userInfo.profession">{{data.user.userInfo.profession}}</view>
 					<view class="tag" v-if="data.user.userInfo.salary">{{data.user.userInfo.salary}}</view>
-					<view class="tag" >{{data.user.userInfo.sex == 0 ? '男' :'女'}}</view>
+					<view class="tag" >{{data.user.userInfo.sex == 1 ? '男' :'女'}}</view>
 					<view class="tag" v-if="data.user.userInfo.marriage">{{data.user.userInfo.marriage}}</view>
 				</view>
 			</view>
-			<view class="show-block condition plr20" v-if="condTags.length">
+
+			<view class="show-block condition plr20" v-if="condTags.age">
 				<view class="sec-title">择偶条件</view>
 				<view class="tag-group">
 					<view class="tag" v-for="item in condTags" v-if="item">{{ item }}</view>
+				</view>
+			</view>
+			<view class="show-block condition plr20" v-if="data.user.userInfo.hobby">
+				<view class="sec-title">兴趣爱好</view>
+				<view class="tag-group">
+					<view class="tag" v-for="item in data.user.userInfo.hobby.split(',')" v-if="item">{{ item }}</view>
 				</view>
 			</view>
 		</view>

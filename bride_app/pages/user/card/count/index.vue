@@ -22,8 +22,8 @@
 					</view>
 					<view class="cp-right">
 						<view class="cpr-top flex-between">
-							<view class="name fs-16 flex-middle">{{ v.toUser.userInfo.name }}<text class="nav" v-if="v.status == 1">互存名片</text></view>
-						</view>
+							<view class="name fs-16 flex-middle">{{ v.toUser.userInfo.name }}</view>
+						</view><!-- <text class="nav" v-if="v.status == 1">互存名片</text> -->
 						<view class="data mt6">
 							<view class="lab" v-if="v.toUser.userInfo.age"><text class="Arial">{{v.toUser.userInfo.age}}</text>岁</view>
 							<view class="lab" v-if="v.toUser.userInfo.height"><text class="Arial">{{v.toUser.userInfo.height}}</text></view>
