@@ -34,7 +34,7 @@
 							</view>
 							<view class="image-group" v-if="v.getCover">
 								<view class="img-item" v-for="(cover,coverIndex) in v.getCover">
-									<image class="img" :src="cover.img " mode="aspectFill" @click="previewImage(img,'article')" />
+									<image class="img" :src="cover.img " mode="aspectFill" @click="previewImage(cover.img,'article')" />
 								</view>
 							</view>
 						</view>
