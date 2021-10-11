@@ -19,7 +19,7 @@
 				<view class="sec-title">同城置顶</view>
 				<view class="cross-people">
 					<scroll-view :scroll-x="true">
-						<view class="cross-people-item" v-for="item in data.lists.data" @click="checkUserNoAuth(data.myUser,'/pages/people/show/index?id='+item.id,1)">
+						<view class="cross-people-item" v-for="item in data.lists2.data" @click="checkUserNoAuth(data.myUser,'/pages/people/show/index?id='+item.id,1)">
 							<image class="cover" :src="item.headerPic" mode="aspectFill"></image>
 							<view class="txt">
 								<view class="name nowrap">{{item.name}}</view>
@@ -44,7 +44,7 @@
 				</scroll-view>
 			</view>
 			<view class="infoGroup" v-if="showNav==1">
-				<peopleLists :data="data.lists2.data" @thumb="thumb3" v-if="listsShow" :ad="data.ad2" :user="data.myUser"></peopleLists>
+				<peopleLists :data="data.lists.data" @thumb="thumb3" v-if="listsShow" :ad="data.ad2" :user="data.myUser"></peopleLists>
 				<!-- <view class="bg-f ptb15 text-center fs-14 fc-3" @click="goto('/pages/demand/index/main',2)">点击查看更多</view> -->
 			</view>
 			<view v-if="showNav==2">
