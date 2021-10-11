@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<page :parentData="data" :formAction="formAction" Fbottom="bottom: 25px">
+		<page :parentData="data" :formAction="formAction" Fbottom="bottom: 25px" ref="page">
 			<!-- <view slot="floatBtn">
 				<floatBtn type="2" icon="icon-float-feedback" myclass="float-nav-blue" iSize="fs-22" openType="contact" title="咨询" shadow></floatBtn>
 			</view> -->
@@ -149,11 +149,11 @@
 			if(uni.getStorageSync('city')){
 				this.city = uni.getStorageSync('city');
 			}
-			this.onShow(this);
+			//this.onShow(this);
 		},
 		onShareAppMessage() {
 			if (this.data.dis) this.data.query.distribution = this.data.dis.id;
-			return this.shareSource(this, '找人脉，找服务，选到数字名片',"notshare");
+			return this.shareSource(this, '青春不常在，抓紧谈恋爱',"notshare");
 		},
 		onLoad(options) {
 			let obj = {};
@@ -218,9 +218,10 @@
 				if(!this.waterCityData)this.waterCityData = uni.getStorageSync("waterCityData");
 				this.getAjax(this,{showType:this.showType}).then(msg => {
 					this.listsShow = true;
-					if(this.data.nextPage == 1){
-						this.$refs.diag.thisDiag  = true;
+					if(this.data.nextPage ==1){
+						this.$refs.page.share("找对象，新娘缘","https://bride.doxinsoft.com/images/logo.png","青春不常在，抓紧谈恋爱");
 					}
+					
 					
 				});
 			},
