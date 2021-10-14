@@ -151,7 +151,7 @@
 							</view>
 						</view>
 					</myform>
-					<button class="ulist-item" openType="contact">
+					<button class="ulist-item" @click="previewImage(getSiteName+'/images/wap/kf_qrcode.jpg')">
 						<view class="item-icon">
 							<image class="img" src="https://card.doxinsoft.com/images/wap/unav-a4.png"></image>
 						</view>
@@ -276,6 +276,11 @@
 			},
 			checkAuth(v) {
 				return this.goto(v.url, v.type);
+			},
+			previewImage:function(url){
+				uni.previewImage({
+					urls: [url]
+				})
 			},
 			ajax() {
 				this.getAjax(this).then(msg => {

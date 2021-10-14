@@ -15,7 +15,7 @@
 								<view class="tag flex-middle fs-13 fc-6">
 									<view class="lab" v-if="v.getUser.userInfo.age"><text class="Arial">{{v.getUser.userInfo.age}}</text>岁</view>
 									<view class="dot mlr5" v-if="v.getUser.userInfo.age&&v.getUser.userInfo.height"></view>
-									<view class="lab Arial" v-if="v.getUser.userInfo.height">{{v.getUser.userInfo.height}}m</view>
+									<view class="lab Arial" v-if="v.getUser.userInfo.height">{{v.getUser.userInfo.height}}cm</view>
 									<view class="dot mlr5" v-if="v.getUser.userInfo.height&&v.city"></view>
 									<view class="lab">{{v.city}}</view>
 								</view>
