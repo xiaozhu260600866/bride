@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<page :parentData="data" :formAction="formAction"></page>
+		<page :parentData="data" :formAction="formAction" ref="page"></page>
 		<view class="pb10" v-if="data.show">
 			<view class="top-bg">
 				<image class="w-b100 flex" src="/static/show-top-bg.jpg" mode="widthFix"></image>
@@ -113,6 +113,10 @@
 					if(msg.user.userInfo.marry_condition){
 						this.condTags = msg.user.userInfo.marry_condition.indexOf("{")!=-1 ? JSON.parse(msg.user.userInfo.marry_condition) : msg.user.userInfo.marry_condition.split(",");
 					}
+					if(this.data.nextPage ==1){
+						this.$refs.page.share(msg.user.userInfo.name+"的资料","https://bride.doxinsoft.com/images/logo.png","青春不常在，抓紧谈恋爱");
+					}
+					
 				});
 			},
 		},

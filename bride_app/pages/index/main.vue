@@ -219,7 +219,7 @@
 				this.getAjax(this,{showType:this.showType}).then(msg => {
 					this.listsShow = true;
 					if(this.data.nextPage ==1){
-						this.$refs.page.share("找对象，新娘缘","https://bride.doxinsoft.com/images/logo.png","青春不常在，抓紧谈恋爱");
+						this.$refs.page.share("找对象，新良缘","https://bride.doxinsoft.com/images/logo.png","青春不常在，抓紧谈恋爱");
 					}
 					
 					

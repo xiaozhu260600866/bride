@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<page :parentData="data" :formAction="formAction" Fbottom="bottom: 25px">
+		<page :parentData="data" :formAction="formAction" Fbottom="bottom: 25px" ref="page">
 			<div slot="floatBtn" v-if="data.show">
 				<view @click="goto(data.show && data.phone ? '/pages/user/demand/create_edit/index' : '/pages/user/card/register/poster',1)" >
 					<floatBtn icon="icon-count-plus" myclass="float-nav-blue dxi-btn-primary" iSize="fs-20"></floatBtn>
@@ -170,6 +170,7 @@
 				this.getAjax(this,{showType:this.showType}).then(msg => {
 					console.log(this.data);
 					this.listsShow = true;
+						this.$refs.page.share("动态","https://bride.doxinsoft.com/images/logo.png","青春不常在，抓紧谈恋爱");
 				});
 			}
 		},
