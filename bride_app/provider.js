@@ -3,7 +3,7 @@ let siteName = 'https://bride.doxinsoft.com';
 uni.setStorageSync('siteName', siteName);
 wx.setStorageSync('site_name', 'bride');
 let site_name = uni.getStorageSync('siteName');
-let gotoWechat = uni.getStorageSync("gotoWechat179");
+let gotoWechat = uni.getStorageSync("gotoWechat180");
 let userInfo = uni.getStorageSync('userInfo');
 if (getOptions('openid') && getOptions('new2') && gotoWechat) {
 	let userInfo = {
@@ -57,7 +57,7 @@ if (!gotoWechat) {
 	//alert(url);
 	let newUrl_ = url.replace("/?from=singlemessage#", "");
 	console.log(newUrl_);
-	uni.setStorageSync("gotoWechat179", 1);
+	uni.setStorageSync("gotoWechat180", 1);
 	window.location.href = newUrl_;
 }
 
