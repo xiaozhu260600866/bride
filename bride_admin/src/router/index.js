@@ -858,6 +858,18 @@ export default new Router({
 							}, ],
 						},
 						{
+						
+							path: '2-lists*',
+							url: '/vueadmin/user/2-lists?show_index=1',
+							name: '同城置顶会员',
+							iconCls: 'iconfont icon8', //图标样式class
+							component: resolve => require(['../pages/user/lists2'], resolve),
+							permission: [{
+								name: '删除',
+								url: '/vueadmin/user/lists/del'
+							}, ],
+						},
+						{
 							path: 'expire-lists*',
 							url: '/vueadmin/user/expire-lists',
 							name: '会员等级购买配置',

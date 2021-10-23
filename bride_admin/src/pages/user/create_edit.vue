@@ -25,8 +25,8 @@
 			</el-form-item>
 			<el-form-item label="姓别" prop="sex" :rules="[{ required: true, message: '姓别不能为空'},]">
 				<el-select v-model="ruleForm.sex" placeholder="请选择姓别">
-					<el-option  label="男" :value="0"></el-option>
-					<el-option  label="女" :value="1"></el-option>
+					<el-option  label="男" :value="1"></el-option>
+					<el-option  label="女" :value="2"></el-option>
 				</el-select>
 			</el-form-item>
 			<el-form-item label="学历" prop="education" >
