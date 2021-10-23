@@ -8,7 +8,8 @@
 				<weui-input v-model="ruleform.remark" myclass="textarea" label="描述" type="textarea" name="remark" datatype="require"></weui-input>
 				<view class="fs-16 fc-red pb10">（申请红娘需要支付10000元）</view>
 			</view>
-			<dxftButton type="primary" size="lg" @click="goto('/pages/distribution/add/payed',1)">提交</dxftButton>
+			<!-- <dxftButton type="primary" size="lg" @click="goto('/pages/distribution/add/payed',1)">提交</dxftButton> -->
+			<dxftButton type="primary" size="lg" @click="formSubmit()">提交</dxftButton>
 		</view>
 	</view>
 </template>
@@ -39,13 +40,20 @@
 			this.ajax();
 		},
 		methods: {
+			formSubmitForH5(){
+				this.payUniapp(this.config,msg=>{
+					this.goto("/pages/distribution/add/payed");
+				});
+			},
 			formSubmit: function(e) {
 				this.vaildForm(this, res => {
 					if (res) {
-						this.ruleform.formId = e.mp.detail.formId;
+						
 						this.postAjax(this.formAction, this.ruleform).then(msg => {
 							if (msg.data.status == 2) {
-								this.goto('/pages/distribution/index/main');
+								//this.goto('/pages/distribution/index/main');
+								this.config = msg.data.config;
+								this.formSubmitForH5();
 							}
 						});
 					}

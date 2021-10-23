@@ -5,9 +5,9 @@
 			<block><!-- v-if="detail.payed_at" -->
 				<dx-results txt="支付成功" @click="goto('/pages/user/index/main',2)"></dx-results>
 			</block>
-			<block v-if="!detail.payed_at">
+		<!-- 	<block v-if="!detail.payed_at">
 				<dx-results txt="支付失败" :success="false"  @click="goto('/pages/user/index/main',2)"></dx-results>
-			</block>
+			</block> -->
 		</view>
 	</view>
 </template>
