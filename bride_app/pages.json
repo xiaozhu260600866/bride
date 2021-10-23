@@ -36,7 +36,7 @@
 		{
 			"path": "pages/search/product/main",
 			"style": {
-				"navigationBarTitleText": "有物搜索",
+				"navigationBarTitleText": "商品搜索",
 				"enablePullDownRefresh": true,
 				"navigationStyle": "custom"
 			}
@@ -76,7 +76,7 @@
 		{
 			"path": "pages/distribution/login/main",
 			"style": {
-				"navigationBarTitleText": "邀请有礼",
+				"navigationBarTitleText": "注册红娘",
 				"enablePullDownRefresh": true,
 				"navigationStyle": "custom"
 			}
@@ -100,7 +100,7 @@
 		{
 			"path": "pages/distribution/index/main",
 			"style": {
-				"navigationBarTitleText": "邀请有礼",
+				"navigationBarTitleText": "红娘中心",
 				"enablePullDownRefresh": true,
 				"navigationStyle": "custom"
 			}
@@ -124,7 +124,15 @@
 		{
 			"path": "pages/distribution/add/main",
 			"style": {
-				"navigationBarTitleText": "邀请有礼注册",
+				"navigationBarTitleText": "红娘注册",
+				"enablePullDownRefresh": true,
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/distribution/add/payed",
+			"style": {
+				"navigationBarTitleText": "支付结果",
 				"enablePullDownRefresh": true,
 				"navigationStyle": "custom"
 			}
@@ -474,7 +482,7 @@
 		{
 			"path": "pages/water-mall/main",
 			"style": {
-				"navigationBarTitleText": "有物",
+				"navigationBarTitleText": "商城",
 				"enablePullDownRefresh": true,
 				"navigationStyle": "custom"
 			}
@@ -711,7 +719,7 @@
 			"selectedIconPath": "static/image/C02.png"
 		},{
 			"pagePath": "pages/water-mall/main",
-			"text": "有物",
+			"text": "商城",
 			"iconPath": "static/image/F01.png",
 			"selectedIconPath": "static/image/F02.png"
 		},{

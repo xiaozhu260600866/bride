@@ -8,7 +8,7 @@
 						<view class="header-img">
 							<image class="img" :src="data.user.headimgurl" />
 						</view>
-						<myform :ruleform="ruleform" :vaildate="vaildate" :append="true" :data="v"
+						<myform :ruleform="ruleform" :vaildate="vaildate" :append="true"
 							@callBack="goto('/pages/user/card/register/poster',1)">
 							<view slot="content">
 								<view class="login-nav fc-white fs-14">登录/注册<span class="iconfont icon-right fs-10 pl3"></span></view>
@@ -37,7 +37,7 @@
 								</view>
 							</myform>
 						</view>
-						<!-- <myform :ruleform="ruleform" :vaildate="vaildate" :append="true" :data="v" @callBack="goto('/pages/user/integral/sign/main',1)">
+						<!-- <myform :ruleform="ruleform" :vaildate="vaildate" :append="true" @callBack="goto('/pages/user/integral/sign/main',1)">
 							<view slot="content">
 								<view class="gosign fs-13 fc-white">
 									<span class="iconfont icon-user-integral-sign fc-white pr5 fs-12"></span>签到
@@ -63,7 +63,7 @@
 			</view>
 			
 			<view class="ugorup-box">
-				<myform :ruleform="ruleform" :vaildate="vaildate" :append="true" :data="v"
+				<myform :ruleform="ruleform" :vaildate="vaildate" :append="true"
 				 @callBack="goto('/pages/order/lists/main?status=12&historyUrl=del',1)">
 					<view slot="content" class="black-title">
 						<view class="name">我的订单</view>
@@ -97,7 +97,7 @@
 					<view class="name">我的特权</view>
 				</view>
 				<view class="ulist-group ptb8 plr5">
-					<myform :append="true" :data="v" @callBack="checkUserNoAuth(data.user,'/pages/user/card/edit/index',1)">
+					<myform :append="true" @callBack="checkUserNoAuth(data.user,'/pages/user/card/edit/index',1)">
 						<view slot="content">
 							<view class="ulist-item">
 								<view class="item-icon">
@@ -107,7 +107,7 @@
 							</view>
 						</view>
 					</myform>
-					<myform :append="true" :data="v" @callBack="checkUser(data.user,'/pages/user/card/count/index',1)">
+					<myform :append="true" @callBack="checkUser(data.user,'/pages/user/card/count/index',1)">
 						<!-- 我的访客 -->
 						<view slot="content">
 							<view class="ulist-item">
@@ -118,7 +118,7 @@
 							</view>
 						</view>
 					</myform>
-					<myform :append="true" :data="v" @callBack="checkUser(data.user,'/pages/user/card/count/attention',1)">
+					<myform :append="true" @callBack="checkUser(data.user,'/pages/user/card/count/attention',1)">
 						<!-- 名片夹 -->
 						<view slot="content">
 							<view class="ulist-item">
@@ -129,7 +129,7 @@
 							</view>
 						</view>
 					</myform>
-					<myform :append="true" :data="v" @callBack="checkUser(data.user,'/pages/user/card/photo/index',1)">
+					<myform :append="true" @callBack="checkUser(data.user,'/pages/user/card/photo/index',1)">
 						<view slot="content">
 							<view class="ulist-item">
 								<view class="item-icon">
@@ -139,8 +139,7 @@
 							</view>
 						</view>
 					</myform>
-					<myform :append="true" :data="v"
-						@callBack="checkUser(data.user,'/pages/user/card/verified/index',1)"
+					<myform :append="true" @callBack="checkUser(data.user,'/pages/user/card/verified/index',1)"
 						v-if="data.user.is_authentication == 0">
 						<view slot="content">
 							<view class="ulist-item">
@@ -165,9 +164,7 @@
 					<view class="name">工具与服务</view>
 				</view>
 				<view class="ulist-group ptb8 plr5">
-
-					<myform :append="true" :data="v"
-						@callBack="goto('/pages/order/lists/main?status=12&historyUrl=del',1)">
+					<myform :append="true" @callBack="goto('/pages/order/lists/main?status=12&historyUrl=del',1)">
 						<view slot="content">
 							<view class="ulist-item">
 								<view class="item-icon">
@@ -177,8 +174,7 @@
 							</view>
 						</view>
 					</myform>
-					<myform :append="true" :data="v"
-						@callBack="checkUser(data.user,'/pages/user/demand/lists/index',1)">
+					<myform :append="true" @callBack="checkUser(data.user,'/pages/user/demand/lists/index',1)">
 						<view slot="content">
 							<view class="ulist-item">
 								<view class="item-icon">
@@ -188,7 +184,7 @@
 							</view>
 						</view>
 					</myform>
-					<myform :append="true" :data="v" @callBack="checkUser(data.user,'/pages/user/my/activity/index',1)">
+					<myform :append="true" @callBack="checkUser(data.user,'/pages/user/my/activity/index',1)">
 						<view slot="content">
 							<view class="ulist-item">
 								<view class="item-icon">
@@ -198,8 +194,7 @@
 							</view>
 						</view>
 					</myform>
-					<myform :append="true" :data="v"
-						@callBack="checkUser(data.user,'/pages/user/integral/count/main',1)">
+					<myform :append="true" @callBack="checkUser(data.user,'/pages/user/integral/count/main',1)">
 						<view slot="content">
 							<view class="ulist-item">
 								<view class="item-icon">
@@ -209,13 +204,13 @@
 							</view>
 						</view>
 					</myform>
-					<myform :append="true" :data="v" @callBack="gotoDis()">
+					<myform :append="true" @callBack="gotoDis()">
 						<view slot="content">
 							<view class="ulist-item">
 								<view class="item-icon">
 									<image class="img" src="https://card.doxinsoft.com/images/wap/unav-a5.png"></image>
 								</view>
-								<view class="item-name">邀请有礼</view>
+								<view class="item-name">{{data.isDis == 0?'红娘注册':'红娘中心'}}</view>
 							</view>
 						</view>
 					</myform>

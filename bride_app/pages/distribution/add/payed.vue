@@ -1,12 +1,12 @@
 <template>
 	<view>
 		<page :parentData="data" :formAction="formAction"></page>
-		<view v-if="data.show ">
-			<block v-if="detail.payed_at">
-				<dx-results txt="支付成功" @click="goto('/pages/index/main',2)"></dx-results>
+		<view>
+			<block><!-- v-if="detail.payed_at" -->
+				<dx-results txt="支付成功" @click="goto('/pages/user/index/main',2)"></dx-results>
 			</block>
 			<block v-if="!detail.payed_at">
-				<dx-results txt="支付失败" :success="false"  @click="goto('/pages/index/main',2)"></dx-results>
+				<dx-results txt="支付失败" :success="false"  @click="goto('/pages/user/index/main',2)"></dx-results>
 			</block>
 		</view>
 	</view>
@@ -36,7 +36,7 @@
 			this.shareSource(this, '商城');
 		},
 		onLoad(options) {
-			this.ajax();
+			//this.ajax();
 		},
 		methods: {
 			wechatCard(){

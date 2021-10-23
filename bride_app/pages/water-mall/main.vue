@@ -33,7 +33,7 @@
 						</view>
 					</scroll-view>
 				</view>
-				<productLists :data="data" :type="2" v-if="data.lists.data.length"></productLists>
+				<productLists :data="data" :type="1" v-if="data.lists.data.length"></productLists>
 				<hasMore :parentData="data"></hasMore>
 				<view class="copyright" @click="phone('13318639080')">版权所有：广东科阅云</view>
 			</div>
